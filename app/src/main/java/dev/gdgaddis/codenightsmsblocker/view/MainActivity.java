@@ -1,8 +1,10 @@
-package dev.gdgaddis.codenightsmsblocker;
+package dev.gdgaddis.codenightsmsblocker.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import dev.gdgaddis.codenightsmsblocker.R;
 
 public class MainActivity extends AppCompatActivity {
 
