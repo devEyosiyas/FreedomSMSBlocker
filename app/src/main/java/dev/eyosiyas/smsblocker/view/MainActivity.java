@@ -1,4 +1,4 @@
-package dev.gdgaddis.codenightsmsblocker.view;
+package dev.eyosiyas.smsblocker.view;
 
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -15,14 +15,14 @@ import androidx.fragment.app.Fragment;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-import dev.gdgaddis.codenightsmsblocker.R;
-import dev.gdgaddis.codenightsmsblocker.fragment.BlockFragment;
-import dev.gdgaddis.codenightsmsblocker.fragment.MessageFragment;
-import dev.gdgaddis.codenightsmsblocker.util.Constant;
-import dev.gdgaddis.codenightsmsblocker.util.Core;
+import dev.eyosiyas.smsblocker.R;
+import dev.eyosiyas.smsblocker.fragment.BlockFragment;
+import dev.eyosiyas.smsblocker.fragment.MessageFragment;
+import dev.eyosiyas.smsblocker.util.Constant;
+import dev.eyosiyas.smsblocker.util.Core;
 
-import static dev.gdgaddis.codenightsmsblocker.util.Constant.PERMISSION_REQUEST_READ_CONTACTS;
-import static dev.gdgaddis.codenightsmsblocker.util.Constant.PERMISSION_REQUEST_READ_SMS;
+import static dev.eyosiyas.smsblocker.util.Constant.PERMISSION_REQUEST_READ_CONTACTS;
+import static dev.eyosiyas.smsblocker.util.Constant.PERMISSION_REQUEST_READ_SMS;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
     private BottomNavigationView bottomNavigationView;

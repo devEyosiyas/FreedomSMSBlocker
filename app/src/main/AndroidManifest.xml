@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="dev.gdgaddis.codenightsmsblocker">
+    package="dev.eyosiyas.smsblocker">
 
     <uses-permission android:name="android.permission.READ_SMS" />
     <uses-permission android:name="android.permission.SEND_SMS" />
@@ -15,7 +15,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".view.DetailSmsActivity"></activity>
+        <activity android:name=".view.DetailSmsActivity" />
         <activity android:name=".view.SendMessageActivity" />
         <activity android:name=".view.MainActivity">
             <intent-filter>

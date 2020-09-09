@@ -1,4 +1,4 @@
-package dev.gdgaddis.codenightsmsblocker.view;
+package dev.eyosiyas.smsblocker.view;
 
 import android.database.Cursor;
 import android.net.Uri;
@@ -12,10 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 import java.util.List;
 
-import dev.gdgaddis.codenightsmsblocker.R;
-import dev.gdgaddis.codenightsmsblocker.adapter.MessageListAdapter;
-import dev.gdgaddis.codenightsmsblocker.model.Message;
-import dev.gdgaddis.codenightsmsblocker.util.Core;
+import dev.eyosiyas.smsblocker.R;
+import dev.eyosiyas.smsblocker.adapter.MessageListAdapter;
+import dev.eyosiyas.smsblocker.model.Message;
+import dev.eyosiyas.smsblocker.util.Core;
 
 public class DetailSmsActivity extends AppCompatActivity {
     private RecyclerView recyclerView;

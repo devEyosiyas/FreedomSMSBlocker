@@ -1,4 +1,4 @@
-package dev.gdgaddis.codenightsmsblocker.model;
+package dev.eyosiyas.smsblocker.model;
 
 public class Message {
     String type;

@@ -1,4 +1,4 @@
-package dev.gdgaddis.codenightsmsblocker.view;
+package dev.eyosiyas.smsblocker.view;
 
 import android.app.Activity;
 import android.app.PendingIntent;
@@ -23,15 +23,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 
-import dev.gdgaddis.codenightsmsblocker.R;
-import dev.gdgaddis.codenightsmsblocker.util.Constant;
-import dev.gdgaddis.codenightsmsblocker.util.Core;
+import dev.eyosiyas.smsblocker.R;
+import dev.eyosiyas.smsblocker.util.Constant;
+import dev.eyosiyas.smsblocker.util.Core;
 
-import static dev.gdgaddis.codenightsmsblocker.util.Constant.FILTER_SMS_DELIVERED;
-import static dev.gdgaddis.codenightsmsblocker.util.Constant.FILTER_SMS_SENT;
-import static dev.gdgaddis.codenightsmsblocker.util.Constant.PERMISSION_REQUEST_READ_CONTACTS;
-import static dev.gdgaddis.codenightsmsblocker.util.Constant.READ_CONTACTS;
-import static dev.gdgaddis.codenightsmsblocker.util.Constant.REQUEST_SELECT_CONTACT;
+import static dev.eyosiyas.smsblocker.util.Constant.FILTER_SMS_DELIVERED;
+import static dev.eyosiyas.smsblocker.util.Constant.FILTER_SMS_SENT;
+import static dev.eyosiyas.smsblocker.util.Constant.PERMISSION_REQUEST_READ_CONTACTS;
+import static dev.eyosiyas.smsblocker.util.Constant.READ_CONTACTS;
+import static dev.eyosiyas.smsblocker.util.Constant.REQUEST_SELECT_CONTACT;
 
 public class SendMessageActivity extends AppCompatActivity {
     private EditText receiver, message;

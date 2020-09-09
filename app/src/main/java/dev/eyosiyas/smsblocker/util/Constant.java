@@ -1,4 +1,4 @@
-package dev.gdgaddis.codenightsmsblocker.util;
+package dev.eyosiyas.smsblocker.util;
 
 import android.Manifest;
 import android.provider.ContactsContract;

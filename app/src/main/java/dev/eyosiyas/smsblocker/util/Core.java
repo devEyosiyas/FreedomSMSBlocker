@@ -1,4 +1,4 @@
-package dev.gdgaddis.codenightsmsblocker.util;
+package dev.eyosiyas.smsblocker.util;
 
 import android.app.Activity;
 import android.content.Context;
@@ -20,12 +20,12 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-import static dev.gdgaddis.codenightsmsblocker.util.Constant.DATE_PATTERN;
-import static dev.gdgaddis.codenightsmsblocker.util.Constant.DATE_TIME_PATTERN;
-import static dev.gdgaddis.codenightsmsblocker.util.Constant.NUMBER;
-import static dev.gdgaddis.codenightsmsblocker.util.Constant.READ_CONTACTS;
-import static dev.gdgaddis.codenightsmsblocker.util.Constant.REQUEST_SETTING;
-import static dev.gdgaddis.codenightsmsblocker.util.Constant.TIME_PATTERN;
+import static dev.eyosiyas.smsblocker.util.Constant.DATE_PATTERN;
+import static dev.eyosiyas.smsblocker.util.Constant.DATE_TIME_PATTERN;
+import static dev.eyosiyas.smsblocker.util.Constant.NUMBER;
+import static dev.eyosiyas.smsblocker.util.Constant.READ_CONTACTS;
+import static dev.eyosiyas.smsblocker.util.Constant.REQUEST_SETTING;
+import static dev.eyosiyas.smsblocker.util.Constant.TIME_PATTERN;
 
 public class Core {
     public static String getReadableTime(long timestamp) {

@@ -1,4 +1,4 @@
-package dev.gdgaddis.codenightsmsblocker.fragment;
+package dev.eyosiyas.smsblocker.fragment;
 
 import android.os.Bundle;
 import android.text.Editable;
@@ -20,10 +20,10 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import java.util.ArrayList;
 import java.util.List;
 
-import dev.gdgaddis.codenightsmsblocker.R;
-import dev.gdgaddis.codenightsmsblocker.adapter.BlacklistAdapter;
-import dev.gdgaddis.codenightsmsblocker.database.DatabaseManager;
-import dev.gdgaddis.codenightsmsblocker.model.Blacklist;
+import dev.eyosiyas.smsblocker.R;
+import dev.eyosiyas.smsblocker.adapter.BlacklistAdapter;
+import dev.eyosiyas.smsblocker.database.DatabaseManager;
+import dev.eyosiyas.smsblocker.model.Blacklist;
 
 public class BlockFragment extends Fragment {
     private RecyclerView recyclerView;

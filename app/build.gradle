@@ -5,7 +5,7 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "dev.gdgaddis.codenightsmsblocker"
+        applicationId "dev.eyosiyas.smsblocker"
         minSdkVersion 14
         targetSdkVersion 29
         versionCode 1

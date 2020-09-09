@@ -1,4 +1,4 @@
-package dev.gdgaddis.codenightsmsblocker.database;
+package dev.eyosiyas.smsblocker.database;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -10,7 +10,7 @@ import android.util.Log;
 import java.util.ArrayList;
 import java.util.List;
 
-import dev.gdgaddis.codenightsmsblocker.model.Blacklist;
+import dev.eyosiyas.smsblocker.model.Blacklist;
 
 public class DatabaseManager extends SQLiteOpenHelper {
     private static final String TAG = "DatabaseManager";

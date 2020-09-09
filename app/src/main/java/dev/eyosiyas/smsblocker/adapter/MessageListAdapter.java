@@ -1,4 +1,4 @@
-package dev.gdgaddis.codenightsmsblocker.adapter;
+package dev.eyosiyas.smsblocker.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,9 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
 
-import dev.gdgaddis.codenightsmsblocker.R;
-import dev.gdgaddis.codenightsmsblocker.model.Message;
-import dev.gdgaddis.codenightsmsblocker.util.Core;
+import dev.eyosiyas.smsblocker.R;
+import dev.eyosiyas.smsblocker.model.Message;
+import dev.eyosiyas.smsblocker.util.Core;
 
 public class MessageListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private static final int VIEW_TYPE_MESSAGE_SENT = 1;

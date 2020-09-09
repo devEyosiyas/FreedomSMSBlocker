@@ -1,4 +1,4 @@
-package dev.gdgaddis.codenightsmsblocker.service;
+package dev.eyosiyas.smsblocker.service;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

@@ -1,4 +1,4 @@
-package dev.gdgaddis.codenightsmsblocker.adapter;
+package dev.eyosiyas.smsblocker.adapter;
 
 import android.content.Context;
 import android.content.DialogInterface;
@@ -15,10 +15,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 import java.util.Locale;
 
-import dev.gdgaddis.codenightsmsblocker.R;
-import dev.gdgaddis.codenightsmsblocker.database.DatabaseManager;
-import dev.gdgaddis.codenightsmsblocker.model.Blacklist;
-import dev.gdgaddis.codenightsmsblocker.util.Core;
+import dev.eyosiyas.smsblocker.R;
+import dev.eyosiyas.smsblocker.database.DatabaseManager;
+import dev.eyosiyas.smsblocker.model.Blacklist;
+import dev.eyosiyas.smsblocker.util.Core;
 
 public class BlacklistAdapter extends RecyclerView.Adapter<BlacklistAdapter.ViewHolder> {
     private Context context;
