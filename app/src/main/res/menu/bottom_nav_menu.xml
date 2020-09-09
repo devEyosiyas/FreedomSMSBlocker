@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navMenuSms"
+        android:icon="@drawable/ic_sms"
+        android:title="SMS" />
+    <item
+        android:id="@+id/navMenuBlock"
+        android:icon="@drawable/ic_block"
+        android:title="Block" />
+    <item
+        android:id="@+id/navMenuSetting"
+        android:icon="@drawable/ic_setting"
+        android:title="Setting" />
+    <item
+        android:id="@+id/navMenuAbout"
+        android:icon="@drawable/ic_about"
+        android:title="About" />
+</menu>
