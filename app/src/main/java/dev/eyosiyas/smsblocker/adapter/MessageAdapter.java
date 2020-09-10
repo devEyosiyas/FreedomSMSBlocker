@@ -35,7 +35,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, int position) {
         final Message message = messages.get(position);
         if (!message.getSender().equals(message.getDisplayName()))
             holder.sender.setText(message.getDisplayName());
@@ -46,7 +46,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.ViewHold
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                context.startActivity(new Intent(context, DetailSmsActivity.class).putExtra("KEY", message.getSender()));
+                context.startActivity(new Intent(context, DetailSmsActivity.class).putExtra("KEY", message.getSender()).putExtra("DISPLAY", holder.sender.getText().toString()));
             }
         });
     }

@@ -4,23 +4,37 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/inputBlacklistNumber"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="4dp"
-        android:digits="0123456789"
-        android:hint="@string/number"
-        android:inputType="number"
-        android:maxLength="12" />
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/inputBlacklistNumber"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:digits="0123456789"
+            android:hint="@string/number"
+            android:inputType="number"
+            android:maxLength="12" />
+
+        <Button
+            android:id="@+id/btnSelectNumber"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:background="@drawable/ic_contacts" />
+    </LinearLayout>
+
 
     <Button
-        android:enabled="false"
         android:id="@+id/btnInsertUpdate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginTop="4dp"
         android:layout_marginBottom="10dp"
+        android:enabled="false"
         android:text="@string/insert" />
 </LinearLayout>

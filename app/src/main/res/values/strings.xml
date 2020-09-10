@@ -3,4 +3,7 @@
     <string name="insert">Insert</string>
     <string name="number">Number</string>
     <string name="local">Local</string>
+    <string name="enter_message">Enter message</string>
+    <string name="send">SEND</string>
+    <string name="update">Update</string>
 </resources>

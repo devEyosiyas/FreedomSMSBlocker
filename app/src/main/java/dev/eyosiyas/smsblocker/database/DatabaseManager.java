@@ -5,7 +5,6 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.util.Log;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +12,6 @@ import java.util.List;
 import dev.eyosiyas.smsblocker.model.Blacklist;
 
 public class DatabaseManager extends SQLiteOpenHelper {
-    private static final String TAG = "DatabaseManager";
     private static final int DB_VERSION = 1;
     private static final String DB_NAME = "BlacklistDB";
     private static final String TABLE_BLACKLIST = "Blacklist";
@@ -43,17 +41,15 @@ public class DatabaseManager extends SQLiteOpenHelper {
         values.put(COLUMN_SOURCE, "local");
         values.put(COLUMN_TIMESTAMP, System.currentTimeMillis());
         database.insert(TABLE_BLACKLIST, null, values);
-        Log.d(TAG, "insert: data written");
-        Log.d(TAG, "insert() returned: " + values.toString());
         database.close();
     }
 
-    public void update(int id, String number, long timestamp, String source) {
+    public void update(int id, String number) {
         SQLiteDatabase database = this.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(COLUMN_NUMBER, number);
-        values.put(COLUMN_SOURCE, source);
-        values.put(COLUMN_TIMESTAMP, timestamp);
+        values.put(COLUMN_SOURCE, "local");
+        values.put(COLUMN_TIMESTAMP, System.currentTimeMillis());
         database.update(TABLE_BLACKLIST, values, "ID=" + id, null);
         database.close();
     }
@@ -82,7 +78,6 @@ public class DatabaseManager extends SQLiteOpenHelper {
             blacklist.setTimestamp(cursor.getLong(2));
             cursor.close();
         }
-        Log.d(TAG, "getBlacklist() returned: " + blacklist);
         return blacklist;
     }
 
@@ -112,5 +107,4 @@ public class DatabaseManager extends SQLiteOpenHelper {
         cursor.close();
         return count;
     }
-
 }

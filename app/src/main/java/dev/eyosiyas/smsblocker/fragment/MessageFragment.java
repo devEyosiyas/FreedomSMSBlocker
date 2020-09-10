@@ -64,10 +64,7 @@ public class MessageFragment extends Fragment {
         List<Message> messages = new ArrayList<>();
         List<String> list = new ArrayList<>();
         Message message;
-        Uri messageUri = Uri.parse("content://sms/");
-        Cursor cursor = getActivity().getContentResolver().query(messageUri, null, null, null, null);
-        int totalSMS = cursor.getCount();
-        Toast.makeText(getContext(), "Total message count " + totalSMS, Toast.LENGTH_SHORT).show();
+        Cursor cursor = getActivity().getContentResolver().query(Uri.parse("content://sms/"), null, null, null, null);
         while (cursor.moveToNext()) {
             if (!list.contains(cursor.getString(cursor.getColumnIndex("address")))) {
                 message = new Message();

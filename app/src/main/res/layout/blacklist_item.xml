@@ -16,10 +16,10 @@
             android:id="@+id/txtBlacklistNumber"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:lines="1"
             android:layout_marginStart="10dp"
             android:layout_marginLeft="10dp"
-            android:layout_centerVertical="true"
-            android:text="John Smith"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -32,8 +32,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="15dp"
             android:layout_marginRight="15dp"
-            android:layout_marginBottom="5dp"
-            android:text="2:00AM" />
+            android:layout_marginBottom="2dp" />
 
         <ImageView
             android:id="@+id/imgDeleteNumber"
@@ -41,8 +40,21 @@
             android:layout_height="32dp"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
+            android:contentDescription="@string/app_name"
             android:src="@drawable/ic_delete" />
+
+        <ImageView
+            android:id="@+id/imgEditNumber"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_toStartOf="@id/imgDeleteNumber"
+            android:layout_toLeftOf="@id/imgDeleteNumber"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_update" />
     </RelativeLayout>
 
 

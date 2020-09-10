@@ -25,7 +25,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="4dp"
-        android:text="John Doe"
         android:textSize="12sp"
         app:layout_constraintLeft_toRightOf="@+id/SenderProfile"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,7 +39,6 @@
         android:background="@drawable/rounded_rectangle_inbox"
         android:maxWidth="240dp"
         android:padding="8dp"
-        android:text="hi man, how are you?"
         android:textColor="#ffffff"
         app:layout_constraintLeft_toRightOf="@+id/SenderProfile"
         app:layout_constraintTop_toBottomOf="@+id/txtSenderName" />
@@ -51,7 +49,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
-        android:text="11:40"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/txtSenderMessage"
         app:layout_constraintLeft_toRightOf="@+id/txtSenderMessage" />
