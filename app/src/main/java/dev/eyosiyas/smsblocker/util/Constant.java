@@ -1,6 +1,7 @@
 package dev.eyosiyas.smsblocker.util;
 
 import android.Manifest;
+import android.net.Uri;
 import android.provider.ContactsContract;
 
 public class Constant {
@@ -17,4 +18,15 @@ public class Constant {
     public static final String NUMBER = ContactsContract.CommonDataKinds.Phone.NUMBER;
     public static final String FILTER_SMS_DELIVERED = "SMS_DELIVERED";
     public static final String FILTER_SMS_SENT = "SMS_SENT";
+    public static final String FIELD_NAME = "address";
+    public static final String FIELD_BODY = "body";
+    public static final String FIELD_READ = "read";
+    public static final String FIELD_SEEN = "seen";
+    public static final String FIELD_DATE = "date";
+    public static final String FIELD_TYPE = "type";
+    public static final String FIELD_RECEIVED = "received";
+    public static final String FIELD_SENT = "sent";
+    public static final Uri CONTENT_PROVIDER_SMS = Uri.parse("content://sms/");
+    public static final Uri CONTENT_PROVIDER_INBOX = Uri.parse("content://sms/inbox");
+    public static final String SMS_BUNDLE = "pdus";
 }

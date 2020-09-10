@@ -8,7 +8,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.pm.PackageManager;
 import android.database.Cursor;
-import android.net.Uri;
 import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.text.Editable;
@@ -33,6 +32,15 @@ import dev.eyosiyas.smsblocker.model.Message;
 import dev.eyosiyas.smsblocker.util.Constant;
 import dev.eyosiyas.smsblocker.util.Core;
 
+import static dev.eyosiyas.smsblocker.util.Constant.CONTENT_PROVIDER_SMS;
+import static dev.eyosiyas.smsblocker.util.Constant.FIELD_BODY;
+import static dev.eyosiyas.smsblocker.util.Constant.FIELD_DATE;
+import static dev.eyosiyas.smsblocker.util.Constant.FIELD_NAME;
+import static dev.eyosiyas.smsblocker.util.Constant.FIELD_READ;
+import static dev.eyosiyas.smsblocker.util.Constant.FIELD_RECEIVED;
+import static dev.eyosiyas.smsblocker.util.Constant.FIELD_SEEN;
+import static dev.eyosiyas.smsblocker.util.Constant.FIELD_SENT;
+import static dev.eyosiyas.smsblocker.util.Constant.FIELD_TYPE;
 import static dev.eyosiyas.smsblocker.util.Constant.FILTER_SMS_DELIVERED;
 import static dev.eyosiyas.smsblocker.util.Constant.FILTER_SMS_SENT;
 
@@ -150,18 +158,18 @@ public class DetailSmsActivity extends AppCompatActivity {
     public List<Message> getMessages(String search) {
         List<Message> messages = new ArrayList<>();
         Message message;
-        Cursor cursor = getContentResolver().query(Uri.parse("content://sms/"), null, "address=?", new String[]{search}, null);
+        Cursor cursor = getContentResolver().query(CONTENT_PROVIDER_SMS, null, FIELD_NAME + "=?", new String[]{search}, null);
         while (cursor.moveToNext()) {
             message = new Message();
-            number = cursor.getString(cursor.getColumnIndex("address"));
+            number = cursor.getString(cursor.getColumnIndex(FIELD_NAME));
             isNumber = number.matches("[0-9]+") && number.length() > 2;
             message.setSender(number);
-            message.setDisplayName(Core.getDisplayName(this, cursor.getString(cursor.getColumnIndex("address"))));
-            message.setBody(cursor.getString(cursor.getColumnIndex("body")));
-            message.setRead(cursor.getInt(cursor.getColumnIndex("read")) != 0);
-            message.setSeen(cursor.getInt(cursor.getColumnIndex("seen")) != 0);
-            message.setTimestamp(cursor.getLong(cursor.getColumnIndex("date")));
-            message.setType(cursor.getInt(cursor.getColumnIndex("type")) == 1 ? "received" : "sent");
+            message.setDisplayName(Core.getDisplayName(this, cursor.getString(cursor.getColumnIndex(FIELD_NAME))));
+            message.setBody(cursor.getString(cursor.getColumnIndex(FIELD_BODY)));
+            message.setRead(cursor.getInt(cursor.getColumnIndex(FIELD_READ)) != 0);
+            message.setSeen(cursor.getInt(cursor.getColumnIndex(FIELD_SEEN)) != 0);
+            message.setTimestamp(cursor.getLong(cursor.getColumnIndex(FIELD_DATE)));
+            message.setType(cursor.getInt(cursor.getColumnIndex(FIELD_TYPE)) == 1 ? FIELD_RECEIVED : FIELD_SENT);
             messages.add(message);
         }
         cursor.close();

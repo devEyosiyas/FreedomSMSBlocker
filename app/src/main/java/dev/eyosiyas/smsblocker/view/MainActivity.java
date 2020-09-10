@@ -25,20 +25,14 @@ import static dev.eyosiyas.smsblocker.util.Constant.PERMISSION_REQUEST_READ_CONT
 import static dev.eyosiyas.smsblocker.util.Constant.PERMISSION_REQUEST_READ_SMS;
 
 public class MainActivity extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
-    private BottomNavigationView bottomNavigationView;
-
-    //    private List<Message> messages;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        bottomNavigationView = findViewById(R.id.bottomNavView);
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottomNavView);
         bottomNavigationView.setOnNavigationItemSelectedListener(this);
-
         Core.defaultSMS(this);
-
         checkSMSPermission();
     }
 
@@ -107,11 +101,10 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 fragment = new BlockFragment();
                 break;
             case R.id.navMenuSetting:
-//                fragment = new BlockFragment();
+                Toast.makeText(this, "Coming soon", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.navMenuAbout:
-                Toast.makeText(this, "About", Toast.LENGTH_SHORT).show();
-//                fragment = new CameraFragment();
+                Toast.makeText(this, "About is coming soon", Toast.LENGTH_SHORT).show();
                 break;
         }
         if (fragment != null)

@@ -1,39 +1,67 @@
 package dev.eyosiyas.smsblocker.service;
 
 import android.content.BroadcastReceiver;
+import android.content.ContentResolver;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.SmsMessage;
-import android.util.Log;
+
+import androidx.core.app.NotificationCompat;
+
+import dev.eyosiyas.smsblocker.database.DatabaseManager;
+import dev.eyosiyas.smsblocker.model.Blacklist;
+import dev.eyosiyas.smsblocker.util.InformManager;
+
+import static dev.eyosiyas.smsblocker.util.Constant.CONTENT_PROVIDER_INBOX;
+import static dev.eyosiyas.smsblocker.util.Constant.FIELD_BODY;
+import static dev.eyosiyas.smsblocker.util.Constant.FIELD_DATE;
+import static dev.eyosiyas.smsblocker.util.Constant.FIELD_NAME;
+import static dev.eyosiyas.smsblocker.util.Constant.SMS_BUNDLE;
 
 public class BlockerService extends BroadcastReceiver {
-    private static final String TAG = "BlockerService";
-    public static final String SMS_BUNDLE = "pdus";
+    private DatabaseManager databaseManager;
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        Bundle intentExtras = intent.getExtras();
-
-        if (intentExtras != null) {
-            Object[] sms = (Object[]) intentExtras.get(SMS_BUNDLE);
-            String smsMessageStr = "";
-            for (int i = 0; i < sms.length; ++i) {
-                String format = intentExtras.getString("format");
-                SmsMessage smsMessage;
-                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.M)
-                    smsMessage = SmsMessage.createFromPdu((byte[]) sms[i], format);
-                else
-                    smsMessage = SmsMessage.createFromPdu((byte[]) sms[i]);
-
-                String smsBody = smsMessage.getMessageBody().toString();
-                String address = smsMessage.getOriginatingAddress();
-
-                smsMessageStr += "SMS From: " + address + "\n";
-                smsMessageStr += smsBody + "\n";
+        StringBuilder body = new StringBuilder();
+        String number = "";
+        long timestamp = System.currentTimeMillis();
+        Bundle bundle = intent.getExtras();
+        SmsMessage[] messages;
+        if (bundle != null) {
+            databaseManager = new DatabaseManager(context);
+            Object[] msgObjects = (Object[]) bundle.get(SMS_BUNDLE);
+            messages = new SmsMessage[msgObjects.length];
+            for (int i = 0; i < messages.length; i++) {
+                messages[i] = SmsMessage.createFromPdu((byte[]) msgObjects[i]);
+                body.append(messages[i].getMessageBody());
+                number = messages[i].getOriginatingAddress();
+                timestamp = messages[i].getTimestampMillis();
             }
-            Log.d(TAG, "onReceive() returned: " + smsMessageStr);
-
+            createMessage(context, number, body.toString(), timestamp);
         }
+    }
+
+    private void createMessage(Context context, String address, String body, long timestamp) {
+        boolean isClean = false;
+        for (Blacklist blacklist : databaseManager.getBlacklist())
+            isClean = !address.equalsIgnoreCase(blacklist.getNumber());
+        if (isClean) {
+            ContentValues contentValues = new ContentValues();
+            contentValues.put(FIELD_NAME, address);
+            contentValues.put(FIELD_BODY, body);
+            contentValues.put(FIELD_DATE, timestamp);
+            ContentResolver contentResolver = context.getContentResolver();
+            contentResolver.insert(CONTENT_PROVIDER_INBOX, contentValues);
+            notifyUser(context, address, body);
+        }
+    }
+
+    private void notifyUser(Context context, String title, String message) {
+        InformManager inform = new InformManager(context);
+        NotificationCompat.Builder builder = inform.showNotification(title, message);
+        inform.getManager().notify((int) (1 + Math.random() * 9999), builder.build());
     }
 }
