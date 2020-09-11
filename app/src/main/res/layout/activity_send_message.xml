@@ -16,13 +16,14 @@
         android:layout_marginLeft="8dp"
         android:background="@android:color/transparent"
         android:digits="0123456789"
-        android:hint="Recipient"
+        android:hint="@string/recipient"
         android:inputType="number"
         android:maxLength="15"
         android:maxLines="1"
         app:layout_constraintEnd_toStartOf="@+id/btnSelectContact"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:importantForAutofill="no" />
 
     <Button
         android:id="@+id/btnSelectContact"
@@ -41,11 +42,13 @@
         android:layout_marginLeft="8dp"
         android:layout_marginBottom="28dp"
         android:background="@android:color/transparent"
-        android:hint="Enter message"
+        android:hint="@string/enter_message"
         android:maxLines="6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btnSendMessage"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        android:importantForAutofill="no"
+        android:inputType="text" />
 
     <Button
         android:id="@+id/btnSendMessage"
@@ -56,7 +59,7 @@
         android:layout_marginBottom="16dp"
         android:background="?attr/selectableItemBackground"
         android:enabled="false"
-        android:text="SEND"
+        android:text="@string/send"
         android:textSize="17sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />

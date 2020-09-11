@@ -2,8 +2,18 @@
     <string name="app_name">Freedom SMS Blocker</string>
     <string name="insert">Insert</string>
     <string name="number">Number</string>
-    <string name="local">Local</string>
-    <string name="enter_message">Enter message</string>
     <string name="send">SEND</string>
     <string name="update">Update</string>
+    <string name="recipient">Recipient</string>
+    <string name="enter_message">Enter message</string>
+    <string name="menu_sms">SMS</string>
+    <string name="menu_block">Block</string>
+    <string name="menu_setting">Setting</string>
+    <string name="menu_about">About</string>
+    <string name="rules_for_blocking_sms">Rules for Blocking SMS</string>
+    <string name="starts_with">Starts with</string>
+    <string name="ends_with">Ends with</string>
+    <string name="nuclear_option">Nuclear Option</string>
+    <string name="change_rule">Change Rule</string>
+    <string name="keyword">Keyword</string>
 </resources>

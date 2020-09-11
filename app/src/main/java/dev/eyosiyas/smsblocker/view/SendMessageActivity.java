@@ -35,7 +35,7 @@ import static dev.eyosiyas.smsblocker.util.Constant.REQUEST_SELECT_CONTACT;
 
 public class SendMessageActivity extends AppCompatActivity {
     private EditText receiver, message;
-    private Button send, contact;
+    private Button send;
 
     private final BroadcastReceiver sentBroadcastReceiver = new BroadcastReceiver() {
         @Override
@@ -97,7 +97,7 @@ public class SendMessageActivity extends AppCompatActivity {
         receiver = findViewById(R.id.editReceiver);
         message = findViewById(R.id.editMessageBox);
         send = findViewById(R.id.btnSendMessage);
-        contact = findViewById(R.id.btnSelectContact);
+        Button contact = findViewById(R.id.btnSelectContact);
 
         receiver.addTextChangedListener(new TextWatcher() {
             @Override

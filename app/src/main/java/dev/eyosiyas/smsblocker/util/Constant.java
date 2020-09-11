@@ -29,4 +29,7 @@ public class Constant {
     public static final Uri CONTENT_PROVIDER_SMS = Uri.parse("content://sms/");
     public static final Uri CONTENT_PROVIDER_INBOX = Uri.parse("content://sms/inbox");
     public static final String SMS_BUNDLE = "pdus";
+    public static final String NUCLEAR = "nuclear";
+    public static final String STARTS_WITH = "startsWith";
+    public static final String ENDS_WITH = "endsWith";
 }

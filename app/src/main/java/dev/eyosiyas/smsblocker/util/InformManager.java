@@ -55,8 +55,6 @@ public class InformManager extends ContextWrapper {
     }
 
     public NotificationCompat.Builder showNotification(String title, String message) {
-        Intent intent = new Intent(this, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
-        PendingIntent pendingIntent = PendingIntent.getActivity(this, 0, intent, 0);
-        return new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID).setContentTitle(title).setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)).setAutoCancel(true).setContentText(message).setSmallIcon(R.mipmap.ic_launcher).setContentIntent(pendingIntent);
+        return new NotificationCompat.Builder(getApplicationContext(), CHANNEL_ID).setContentTitle(title).setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)).setAutoCancel(true).setContentText(message).setSmallIcon(R.mipmap.ic_launcher).setContentIntent(PendingIntent.getActivity(this, 0, new Intent(this, MainActivity.class).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP), 0));
     }
 }

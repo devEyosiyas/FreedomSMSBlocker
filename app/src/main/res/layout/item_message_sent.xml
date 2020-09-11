@@ -1,32 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingTop="8dp">
+    android:layout_margin="8dp">
 
     <TextView
         android:id="@+id/txtSentMessage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:background="@drawable/rounded_rectangle_outbox"
         android:maxWidth="240dp"
         android:padding="8dp"
-        android:textColor="#ffffff"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:textColor="#ffffff" />
 
     <TextView
         android:id="@+id/txtMessageSentTime"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
+        android:layout_below="@id/txtSentMessage"
+        android:layout_alignEnd="@id/txtSentMessage"
+        android:layout_alignRight="@id/txtSentMessage"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
         android:layout_marginRight="4dp"
-        android:textSize="12sp"
-        app:layout_constraintBottom_toBottomOf="@+id/txtSentMessage"
-        app:layout_constraintRight_toLeftOf="@+id/txtSentMessage" />
+        android:textSize="12sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

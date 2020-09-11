@@ -18,6 +18,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import dev.eyosiyas.smsblocker.R;
 import dev.eyosiyas.smsblocker.fragment.BlockFragment;
 import dev.eyosiyas.smsblocker.fragment.MessageFragment;
+import dev.eyosiyas.smsblocker.fragment.SettingFragment;
 import dev.eyosiyas.smsblocker.util.Constant;
 import dev.eyosiyas.smsblocker.util.Core;
 
@@ -48,13 +49,6 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
             ActivityCompat.requestPermissions(this, new String[]{Constant.READ_CONTACTS}, PERMISSION_REQUEST_READ_CONTACTS);
         else
             init();
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-//        if (ContextCompat.checkSelfPermission(this, Constant.READ_SMS) == PackageManager.PERMISSION_GRANTED)
-//            init();
     }
 
     @Override
@@ -101,7 +95,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 fragment = new BlockFragment();
                 break;
             case R.id.navMenuSetting:
-                Toast.makeText(this, "Coming soon", Toast.LENGTH_SHORT).show();
+                fragment = new SettingFragment();
                 break;
             case R.id.navMenuAbout:
                 Toast.makeText(this, "About is coming soon", Toast.LENGTH_SHORT).show();

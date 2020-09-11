@@ -7,12 +7,18 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.telephony.SmsMessage;
+import android.util.Log;
 
 import androidx.core.app.NotificationCompat;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 import dev.eyosiyas.smsblocker.database.DatabaseManager;
 import dev.eyosiyas.smsblocker.model.Blacklist;
+import dev.eyosiyas.smsblocker.util.Core;
 import dev.eyosiyas.smsblocker.util.InformManager;
+import dev.eyosiyas.smsblocker.util.PrefManager;
 
 import static dev.eyosiyas.smsblocker.util.Constant.CONTENT_PROVIDER_INBOX;
 import static dev.eyosiyas.smsblocker.util.Constant.FIELD_BODY;
@@ -21,6 +27,7 @@ import static dev.eyosiyas.smsblocker.util.Constant.FIELD_NAME;
 import static dev.eyosiyas.smsblocker.util.Constant.SMS_BUNDLE;
 
 public class BlockerService extends BroadcastReceiver {
+    private static final String TAG = "BlockerService";
     private DatabaseManager databaseManager;
 
     @Override
@@ -39,15 +46,35 @@ public class BlockerService extends BroadcastReceiver {
                 body.append(messages[i].getMessageBody());
                 number = messages[i].getOriginatingAddress();
                 timestamp = messages[i].getTimestampMillis();
+                Log.d(TAG, "onReceive: loop " + i + " number " + number + " message " + body.toString() + " timestamp " + timestamp);
             }
+            Log.d(TAG, "onReceive: final number " + number + " message " + body.toString() + " timestamp " + timestamp);
             createMessage(context, number, body.toString(), timestamp);
         }
     }
 
     private void createMessage(Context context, String address, String body, long timestamp) {
+        PrefManager manager = new PrefManager(context);
         boolean isClean = false;
         for (Blacklist blacklist : databaseManager.getBlacklist())
             isClean = !address.equalsIgnoreCase(blacklist.getNumber());
+
+        if (isClean && manager.isNuclearEnabled()) {
+            Pattern nuclearPattern = Pattern.compile("(?<!\\d)\\d{3,4}(?!\\d)");
+            Matcher matcher = nuclearPattern.matcher(address);
+            isClean = !matcher.find();
+        }
+        if (isClean && manager.isStartsWithEnabled()) {
+            Pattern startsWithPattern = Pattern.compile(String.format("^%s", manager.getStartsWith()));
+            Matcher matcher = startsWithPattern.matcher(address);
+            isClean = !matcher.find();
+        }
+        if (isClean && manager.isEndsWithEnabled()) {
+            Pattern endsWithPattern = Pattern.compile(String.format("%s$", manager.getEndsWith()));
+            Matcher matcher = endsWithPattern.matcher(address);
+            isClean = !matcher.find();
+        }
+
         if (isClean) {
             ContentValues contentValues = new ContentValues();
             contentValues.put(FIELD_NAME, address);
@@ -56,12 +83,15 @@ public class BlockerService extends BroadcastReceiver {
             ContentResolver contentResolver = context.getContentResolver();
             contentResolver.insert(CONTENT_PROVIDER_INBOX, contentValues);
             notifyUser(context, address, body);
+            Log.d(TAG, "createMessage: clean sender show message");
         }
+
+
     }
 
-    private void notifyUser(Context context, String title, String message) {
+    private void notifyUser(Context context, String number, String message) {
         InformManager inform = new InformManager(context);
-        NotificationCompat.Builder builder = inform.showNotification(title, message);
+        NotificationCompat.Builder builder = inform.showNotification(Core.getDisplayName(context, number), message);
         inform.getManager().notify((int) (1 + Math.random() * 9999), builder.build());
     }
 }

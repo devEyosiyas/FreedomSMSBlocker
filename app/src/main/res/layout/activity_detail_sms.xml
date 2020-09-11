@@ -40,7 +40,9 @@
         android:layout_toLeftOf="@+id/btnSendMessage"
         android:background="@android:color/transparent"
         android:hint="@string/enter_message"
-        android:maxLines="6" />
+        android:maxLines="6"
+        android:importantForAutofill="no"
+        android:inputType="text" />
 
     <Button
         android:id="@+id/btnSendMessage"

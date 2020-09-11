@@ -1,6 +1,5 @@
 package dev.eyosiyas.smsblocker.adapter;
 
-import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,12 +18,9 @@ import dev.eyosiyas.smsblocker.util.Core;
 public class MessageListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
     private static final int VIEW_TYPE_MESSAGE_SENT = 1;
     private static final int VIEW_TYPE_MESSAGE_RECEIVED = 2;
-
-    private Context context;
     private List<Message> messages;
 
-    public MessageListAdapter(Context context, List<Message> messages) {
-        this.context = context;
+    public MessageListAdapter(List<Message> messages) {
         this.messages = messages;
     }
 
@@ -85,22 +81,17 @@ public class MessageListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     }
 
     public class ReceivedVH extends RecyclerView.ViewHolder {
-        private ImageView profile;
-        private TextView name, message, time;
+        private ImageView profile; // TODO: 9/10/2020 Acquire profile picture
+        private TextView message, time;
 
         public ReceivedVH(@NonNull View itemView) {
             super(itemView);
             profile = itemView.findViewById(R.id.SenderProfile);
-            name = itemView.findViewById(R.id.txtSenderName);
             message = itemView.findViewById(R.id.txtSenderMessage);
             time = itemView.findViewById(R.id.txtSenderTimestamp);
         }
 
         void bind(Message receivedMessage) {
-            if (!receivedMessage.getSender().equals(receivedMessage.getDisplayName()))
-                name.setText(receivedMessage.getDisplayName());
-            else
-                name.setText(receivedMessage.getSender());
             message.setText(receivedMessage.getBody());
             time.setText(Core.getReadableTime(receivedMessage.getTimestamp()));
         }

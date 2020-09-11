@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.SettingFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|center"
+            android:layout_marginTop="8dp"
+            android:text="@string/rules_for_blocking_sms"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editStartsWith"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:digits="0123456789"
+                android:hint="@string/starts_with"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="2" />
+
+            <EditText
+                android:id="@+id/editEndsWith"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:digits="0123456789"
+                android:hint="@string/ends_with"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="2" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnKeyword"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginTop="5dp"
+            android:text="@string/keyword" />
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/nuclearOption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:layout_marginLeft="4dp"
+            android:text="@string/nuclear_option" />
+
+        <Button
+            android:id="@+id/btnChangeRule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center"
+            android:layout_marginTop="5dp"
+            android:text="@string/change_rule" />
+    </LinearLayout>
+</FrameLayout>

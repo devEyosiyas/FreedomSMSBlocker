@@ -3,17 +3,17 @@
     <item
         android:id="@+id/navMenuSms"
         android:icon="@drawable/ic_sms"
-        android:title="SMS" />
+        android:title="@string/menu_sms" />
     <item
         android:id="@+id/navMenuBlock"
         android:icon="@drawable/ic_block"
-        android:title="Block" />
+        android:title="@string/menu_block" />
     <item
         android:id="@+id/navMenuSetting"
         android:icon="@drawable/ic_setting"
-        android:title="Setting" />
+        android:title="@string/menu_setting" />
     <item
         android:id="@+id/navMenuAbout"
         android:icon="@drawable/ic_about"
-        android:title="About" />
+        android:title="@string/menu_about" />
 </menu>

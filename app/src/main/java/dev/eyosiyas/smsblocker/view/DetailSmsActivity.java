@@ -24,6 +24,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import dev.eyosiyas.smsblocker.R;
@@ -58,9 +59,7 @@ public class DetailSmsActivity extends AppCompatActivity {
             switch (getResultCode()) {
                 case Activity.RESULT_OK:
                     Toast.makeText(context, "Message sent successfully.", Toast.LENGTH_SHORT).show();
-                    messageListAdapter = new MessageListAdapter(DetailSmsActivity.this, getMessages(KEY));
-                    recyclerView.setAdapter(messageListAdapter);
-                    resetUI();
+                    reload();
                     break;
                 case SmsManager.RESULT_ERROR_GENERIC_FAILURE:
                     Toast.makeText(context, "RESULT_ERROR_GENERIC_FAILURE", Toast.LENGTH_SHORT).show();
@@ -78,6 +77,17 @@ public class DetailSmsActivity extends AppCompatActivity {
             }
         }
     };
+
+    private void reload() {
+        messageListAdapter = new MessageListAdapter(getMessages(KEY));
+        recyclerView.setAdapter(messageListAdapter);
+        recyclerView.post(new Runnable() {
+            @Override
+            public void run() {
+                recyclerView.scrollToPosition(messageListAdapter.getItemCount() - 1);
+            }
+        });
+    }
 
     private final BroadcastReceiver deliveredBroadcastReceiver = new BroadcastReceiver() {
         @Override
@@ -126,7 +136,6 @@ public class DetailSmsActivity extends AppCompatActivity {
         if (KEY == null)
             onBackPressed();
         toolbar.setTitle(DISPLAY != null ? DISPLAY : KEY);
-        messageListAdapter = new MessageListAdapter(this, getMessages(KEY));
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -135,7 +144,7 @@ public class DetailSmsActivity extends AppCompatActivity {
         });
         recyclerView = findViewById(R.id.detailMessageRecyclerView);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setAdapter(messageListAdapter);
+        reload();
         message.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -162,7 +171,7 @@ public class DetailSmsActivity extends AppCompatActivity {
         while (cursor.moveToNext()) {
             message = new Message();
             number = cursor.getString(cursor.getColumnIndex(FIELD_NAME));
-            isNumber = number.matches("[0-9]+") && number.length() > 2;
+            isNumber = number.matches("\\+*[0-9]*") && number.length() > 2;
             message.setSender(number);
             message.setDisplayName(Core.getDisplayName(this, cursor.getString(cursor.getColumnIndex(FIELD_NAME))));
             message.setBody(cursor.getString(cursor.getColumnIndex(FIELD_BODY)));
@@ -173,6 +182,7 @@ public class DetailSmsActivity extends AppCompatActivity {
             messages.add(message);
         }
         cursor.close();
+        Collections.reverse(messages);
         return messages;
     }
 
@@ -186,12 +196,9 @@ public class DetailSmsActivity extends AppCompatActivity {
         if (ContextCompat.checkSelfPermission(DetailSmsActivity.this, Constant.SEND_SMS) == PackageManager.PERMISSION_GRANTED) {
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(number, null, message.getText().toString(), sentPendingIntent, deliveredPendingIntent);
+            message.setText("");
+            send.setEnabled(false);
         } else
             Toast.makeText(DetailSmsActivity.this, "Permission missing.", Toast.LENGTH_SHORT).show();
-    }
-
-    private void resetUI() {
-        message.setText("");
-        send.setEnabled(false);
     }
 }
