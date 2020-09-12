@@ -1,10 +1,14 @@
 package dev.eyosiyas.smsblocker.adapter;
 
+import android.content.Context;
+import android.view.ContextMenu;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -19,9 +23,11 @@ public class MessageListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     private static final int VIEW_TYPE_MESSAGE_SENT = 1;
     private static final int VIEW_TYPE_MESSAGE_RECEIVED = 2;
     private List<Message> messages;
+    private Context context;
 
-    public MessageListAdapter(List<Message> messages) {
+    public MessageListAdapter(List<Message> messages, Context context) {
         this.messages = messages;
+        this.context = context;
     }
 
     @NonNull
@@ -40,7 +46,6 @@ public class MessageListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, int position) {
         Message message = messages.get(position);
-
         switch (holder.getItemViewType()) {
             case VIEW_TYPE_MESSAGE_SENT:
                 ((SentVH) holder).bind(message);
@@ -64,8 +69,7 @@ public class MessageListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
             return VIEW_TYPE_MESSAGE_SENT;
     }
 
-
-    public class SentVH extends RecyclerView.ViewHolder {
+    public class SentVH extends RecyclerView.ViewHolder implements View.OnCreateContextMenuListener {
         private TextView message, time;
 
         public SentVH(@NonNull View itemView) {
@@ -77,10 +81,16 @@ public class MessageListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         void bind(Message sentMessage) {
             message.setText(sentMessage.getBody());
             time.setText(Core.getReadableTime(sentMessage.getTimestamp()));
+            itemView.setOnCreateContextMenuListener(this);
+        }
+
+        @Override
+        public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+            getContextMenu(menu, v);
         }
     }
 
-    public class ReceivedVH extends RecyclerView.ViewHolder {
+    public class ReceivedVH extends RecyclerView.ViewHolder implements View.OnCreateContextMenuListener {
         private ImageView profile; // TODO: 9/10/2020 Acquire profile picture
         private TextView message, time;
 
@@ -94,6 +104,37 @@ public class MessageListAdapter extends RecyclerView.Adapter<RecyclerView.ViewHo
         void bind(Message receivedMessage) {
             message.setText(receivedMessage.getBody());
             time.setText(Core.getReadableTime(receivedMessage.getTimestamp()));
+            itemView.setOnCreateContextMenuListener(this);
         }
+
+        @Override
+        public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+            getContextMenu(menu, v);
+        }
+    }
+
+    private void getContextMenu(ContextMenu menu, View v) {
+        menu.setHeaderTitle("Message options");
+        menu.add(0, v.getId(), 0, "Delete").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Toast.makeText(context, "Delete coming soon!", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+        menu.add(0, v.getId(), 0, "Copy text").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Toast.makeText(context, "Copy text coming soon!", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
+        menu.add(0, v.getId(), 0, "Forward").setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+            @Override
+            public boolean onMenuItemClick(MenuItem item) {
+                Toast.makeText(context, "Forward text coming soon!", Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
     }
 }

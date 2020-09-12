@@ -79,7 +79,7 @@ public class DetailSmsActivity extends AppCompatActivity {
     };
 
     private void reload() {
-        messageListAdapter = new MessageListAdapter(getMessages(KEY));
+        messageListAdapter = new MessageListAdapter(getMessages(KEY), this);
         recyclerView.setAdapter(messageListAdapter);
         recyclerView.post(new Runnable() {
             @Override

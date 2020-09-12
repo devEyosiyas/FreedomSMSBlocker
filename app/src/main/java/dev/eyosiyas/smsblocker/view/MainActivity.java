@@ -16,6 +16,7 @@ import androidx.fragment.app.Fragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import dev.eyosiyas.smsblocker.R;
+import dev.eyosiyas.smsblocker.fragment.AboutFragment;
 import dev.eyosiyas.smsblocker.fragment.BlockFragment;
 import dev.eyosiyas.smsblocker.fragment.MessageFragment;
 import dev.eyosiyas.smsblocker.fragment.SettingFragment;
@@ -98,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
                 fragment = new SettingFragment();
                 break;
             case R.id.navMenuAbout:
-                Toast.makeText(this, "About is coming soon", Toast.LENGTH_SHORT).show();
+                fragment = new AboutFragment();
                 break;
         }
         if (fragment != null)

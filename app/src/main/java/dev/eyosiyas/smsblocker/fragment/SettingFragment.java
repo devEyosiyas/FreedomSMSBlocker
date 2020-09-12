@@ -9,13 +9,20 @@ import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.widget.SwitchCompat;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import dev.eyosiyas.smsblocker.R;
+import dev.eyosiyas.smsblocker.adapter.KeywordAdapter;
+import dev.eyosiyas.smsblocker.database.DatabaseManager;
 import dev.eyosiyas.smsblocker.util.PrefManager;
 
 public class SettingFragment extends Fragment {
+    private DatabaseManager databaseManager;
+    private RecyclerView recyclerView;
 
     public SettingFragment() {
     }
@@ -23,7 +30,7 @@ public class SettingFragment extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        databaseManager = new DatabaseManager(getContext());
     }
 
     @Override
@@ -68,6 +75,43 @@ public class SettingFragment extends Fragment {
                     manager.setNuclear(false);
             }
         });
+
+        keyword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                insertKeywordUI();
+            }
+        });
         return view;
+    }
+
+    private void insertKeywordUI() {
+        final View view = View.inflate(getContext(), R.layout.keyword_management, null);
+        final AlertDialog dialog = new AlertDialog.Builder(getContext()).create();
+        final DatabaseManager databaseManager = new DatabaseManager(getContext());
+        final EditText editKeyword = view.findViewById(R.id.editKeyword);
+        final Button insert = view.findViewById(R.id.btnInsertUpdateKeyword);
+        recyclerView = view.findViewById(R.id.keywordRecyclerView);
+        insert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if (editKeyword.getText().toString().length() > 2) {
+                    databaseManager.insertKeyword(editKeyword.getText().toString());
+                    Toast.makeText(getContext(), editKeyword.getText().toString() + " saved to the database.", Toast.LENGTH_SHORT).show();
+                    editKeyword.setText("");
+                    refreshKeyword();
+                } else
+                    Toast.makeText(getContext(), "Please use a keyword of length more than three.", Toast.LENGTH_SHORT).show();
+            }
+        });
+        refreshKeyword();
+        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        dialog.setView(view);
+        dialog.show();
+    }
+
+    private void refreshKeyword() {
+        KeywordAdapter keywordAdapter = new KeywordAdapter(databaseManager.getKeywords(), getContext());
+        recyclerView.setAdapter(keywordAdapter);
     }
 }

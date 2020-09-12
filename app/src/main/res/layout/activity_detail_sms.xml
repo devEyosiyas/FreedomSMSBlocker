@@ -11,9 +11,10 @@
         android:id="@+id/detailToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         app:navigationIcon="@drawable/ic_back"
         app:title="@string/number"
+        app:titleTextColor="@android:color/white"
         tools:layout_editor_absoluteX="8dp" />
 
     <androidx.recyclerview.widget.RecyclerView
@@ -40,9 +41,9 @@
         android:layout_toLeftOf="@+id/btnSendMessage"
         android:background="@android:color/transparent"
         android:hint="@string/enter_message"
-        android:maxLines="6"
         android:importantForAutofill="no"
-        android:inputType="text" />
+        android:inputType="text"
+        android:maxLines="6" />
 
     <Button
         android:id="@+id/btnSendMessage"

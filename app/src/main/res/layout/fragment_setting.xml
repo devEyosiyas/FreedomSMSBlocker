@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
     tools:context=".fragment.SettingFragment">
 
     <LinearLayout
@@ -16,6 +17,7 @@
             android:layout_gravity="top|center"
             android:layout_marginTop="8dp"
             android:text="@string/rules_for_blocking_sms"
+            android:textColor="@android:color/white"
             android:textSize="20sp"
             android:textStyle="bold" />
 
@@ -31,11 +33,14 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:background="@color/colorPrimary"
                 android:digits="0123456789"
                 android:hint="@string/starts_with"
                 android:importantForAutofill="no"
                 android:inputType="number"
-                android:maxLength="2" />
+                android:maxLength="2"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white" />
 
             <EditText
                 android:id="@+id/editEndsWith"
@@ -43,11 +48,14 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="5dp"
                 android:layout_weight="1"
+                android:background="@color/colorPrimary"
                 android:digits="0123456789"
                 android:hint="@string/ends_with"
                 android:importantForAutofill="no"
                 android:inputType="number"
-                android:maxLength="2" />
+                android:maxLength="2"
+                android:textColor="@android:color/white"
+                android:textColorHint="@android:color/white" />
         </LinearLayout>
 
         <Button
@@ -56,7 +64,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
             android:layout_marginTop="5dp"
-            android:text="@string/keyword" />
+            android:background="@color/colorPrimaryDark"
+            android:text="@string/keyword"
+            android:textColor="@android:color/white" />
 
         <androidx.appcompat.widget.SwitchCompat
             android:id="@+id/nuclearOption"
@@ -65,7 +75,8 @@
             android:layout_gravity="center"
             android:layout_marginStart="4dp"
             android:layout_marginLeft="4dp"
-            android:text="@string/nuclear_option" />
+            android:text="@string/nuclear_option"
+            android:textColor="@android:color/white" />
 
         <Button
             android:id="@+id/btnChangeRule"
@@ -73,6 +84,9 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom|center"
             android:layout_marginTop="5dp"
-            android:text="@string/change_rule" />
+            android:background="@color/colorPrimaryDark"
+            android:padding="8dp"
+            android:text="@string/change_rule"
+            android:textColor="@android:color/white" />
     </LinearLayout>
 </FrameLayout>

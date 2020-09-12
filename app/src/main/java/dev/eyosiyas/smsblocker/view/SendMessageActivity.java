@@ -163,7 +163,7 @@ public class SendMessageActivity extends AppCompatActivity {
             SmsManager smsManager = SmsManager.getDefault();
             smsManager.sendTextMessage(receiver.getText().toString(), null, message.getText().toString(), sentPendingIntent, deliveredPendingIntent);
         } else
-            Toast.makeText(SendMessageActivity.this, "Permission missing.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SendMessageActivity.this, R.string.permission_missing, Toast.LENGTH_SHORT).show();
     }
 
     @Override
