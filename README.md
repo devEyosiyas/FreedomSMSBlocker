@@ -8,8 +8,9 @@ These days Using a SMS spam blocker app is essential.
 
 ###### Key Features
 * Blacklist
-* Numbers starting with ^0911XXXXXX
-* Numbers ending with XXXXXXXX24^
+* Numbers starting with ^81XX
+* Numbers ending with XX24^
 * Block certain words
+* Block all three and four digit numbers(Nuclear Option).
 
 More features will be added soon.
