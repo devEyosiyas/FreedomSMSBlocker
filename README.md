@@ -17,15 +17,24 @@ These days Using a SMS spam blocker app is essential.
 
 More features will be added soon.
 
-## Core Messaging
-![Screenshot](https://github.com/devEyosiyas/FreedomSMSBlocker/blob/master/1.png?raw=true)
-![Screenshot](https://github.com/devEyosiyas/FreedomSMSBlocker/blob/master/2.png?raw=true)
-## Blacklist
-![Screenshot](https://github.com/devEyosiyas/FreedomSMSBlocker/blob/master/3.png?raw=true)
-## Advanced Blocking
-![Screenshot](https://github.com/devEyosiyas/FreedomSMSBlocker/blob/master/4.png?raw=true)
-## About
-![Screenshot](https://github.com/devEyosiyas/FreedomSMSBlocker/blob/master/5.png?raw=true)
+## Screenshots
+<p align="center">
+<table border="1">
+<tr>
+<td><img src="screenshot/1.png" width="150" /></td>
+<td><img src="screenshot/2.png" width="150" /></td>
+<td><img src="screenshot/3.png" width="150" /></td>
+<td><img src="screenshot/4.png" width="150" /></td>
+<td><img src="screenshot/5.png" width="150" /></td>
+</tr>
+<tr>
+<td><p align="center">Conversation</p></td>
+<td><p align="center">Core Messaging</p></td>
+<td><p align="center">Blacklist</p></td>
+<td><p align="center">Advanced Blocking</p></td>
+ <td><p align="center">About</p></td>
+</tr>
+</table>
 
 ### Simple and fast Spam blocker.
 Test the [app](https://raw.githubusercontent.com/devEyosiyas/FreedomSMSBlocker/master/Freedom%20SMS%20Blocker.apk) and tell us what you think.
