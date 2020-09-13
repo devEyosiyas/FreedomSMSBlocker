@@ -1,5 +1,7 @@
 # Freedom SMS Blocker
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![API](https://img.shields.io/badge/API-16%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=16)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://opensource.org/licenses/Apache-2.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/devEyosiyas/FreedomSMSBlocker/blob/master/LICENSE)
 
 While it may be an asset that most people have a phone and are reachable much easier, it creates a solid ground for spam messaging and annoying for the recipients.
 Freedom SMS Blocker created to ensure smoother mobile experience for users. 
