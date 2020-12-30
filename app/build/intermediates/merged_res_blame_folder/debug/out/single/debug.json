@@ -1,0 +1,454 @@
+[
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_about.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_about.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_back.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_back.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\menu_context_menu.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\menu\\context_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_about.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_about.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_block.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_block.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_user.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_user.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_insert.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_insert.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_setting.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_setting.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_rectangle_outbox.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\drawable\\rounded_rectangle_outbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_about.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_about.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_delete.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_delete.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_block.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_block.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_contacts.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_contacts.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\layout_keyword_management.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\keyword_management.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_delete.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_delete.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_block.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_block.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_sms.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_sms.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_main.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\activity_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_block.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_block.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_about.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_about.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_delete.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_delete.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_update.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_update.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_sms.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_sms.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\mipmap-xhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_detail_sms.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\activity_detail_sms.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\layout_sms_item.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\sms_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_update.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_update.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable_rounded_rectangle_inbox.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\drawable\\rounded_rectangle_inbox.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\layout_activity_send_message.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\activity_send_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_setting.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_about.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_about.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_block.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_block.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_update.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_update.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_sms.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_sms.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_user.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_user.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_contacts.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_contacts.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_setting.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_setting.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_setting.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\fragment_setting.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_user.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_user.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_user.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_user.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_update.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_update.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_block.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\fragment_block.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_contacts.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_contacts.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_about.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\fragment_about.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_contacts.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_contacts.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_insert.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_insert.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_back.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_back.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_about.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_about.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_delete.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_delete.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\menu_bottom_nav_menu.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\menu\\bottom_nav_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_message_sent.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\item_message_sent.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\layout_fragment_message.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\fragment_message.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_update.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_update.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\layout_blacklist_item.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\blacklist_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_back.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_back.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_block.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_block.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_contacts.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_contacts.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\layout_blacklist_managment.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\blacklist_managment.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_update.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_update.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_delete.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_delete.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi_ic_insert.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxhdpi\\ic_insert.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_back.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_back.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\mipmap-mdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\layout_item_message_received.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\item_message_received.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_insert.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_insert.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_user.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_user.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\layout_keyword_item.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\keyword_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_setting.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_setting.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_round.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_setting.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_setting.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_back.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_back.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_sms.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_sms.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_setting.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_setting.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_back.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_back.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\mipmap-anydpi-v26\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_about.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_about.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_delete.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_delete.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_delete.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_delete.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_contacts.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_contacts.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_sms.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_sms.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_user.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_user.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\mipmap-hdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_setting.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_setting.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_block.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_block.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_sms.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_sms.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_sms.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_sms.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\mipmap-xxxhdpi\\ic_launcher.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-mdpi_ic_insert.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-mdpi\\ic_insert.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_update.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_update.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xhdpi_ic_launcher_background.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xhdpi\\ic_launcher_background.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-hdpi_ic_user.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-hdpi\\ic_user.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_launcher_background.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_launcher_background.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v24_ic_launcher_foreground.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v24\\ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-anydpi-v21_ic_insert.xml.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-anydpi-v21\\ic_insert.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_contacts.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_contacts.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxxhdpi_ic_back.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-xxxhdpi\\ic_back.png"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\res\\merged\\debug\\drawable-ldpi_ic_insert.png.flat",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\generated\\res\\pngs\\debug\\drawable-ldpi\\ic_insert.png"
+    }
+]

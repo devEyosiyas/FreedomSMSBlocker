@@ -6,9 +6,8 @@
     android:layout_height="match_parent"
     tools:context=".view.SendMessageActivity">
 
-
     <EditText
-        android:id="@+id/editReceiver"
+        android:id="@+id/receiverEditText"
         android:layout_width="365dp"
         android:layout_height="23dp"
         android:layout_margin="8dp"
@@ -17,16 +16,16 @@
         android:background="@android:color/transparent"
         android:digits="0123456789"
         android:hint="@string/recipient"
+        android:importantForAutofill="no"
         android:inputType="number"
         android:maxLength="15"
         android:maxLines="1"
-        app:layout_constraintEnd_toStartOf="@+id/btnSelectContact"
+        app:layout_constraintEnd_toStartOf="@+id/selectContactBtn"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:importantForAutofill="no" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnSelectContact"
+        android:id="@+id/selectContactBtn"
         android:layout_width="32dp"
         android:layout_height="32dp"
         android:layout_marginTop="8dp"
@@ -35,7 +34,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editMessageBox"
+        android:id="@+id/messageBoxEditText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -43,15 +42,15 @@
         android:layout_marginBottom="28dp"
         android:background="@android:color/transparent"
         android:hint="@string/enter_message"
+        android:importantForAutofill="no"
+        android:inputType="text"
         android:maxLines="6"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnSendMessage"
-        app:layout_constraintStart_toStartOf="parent"
-        android:importantForAutofill="no"
-        android:inputType="text" />
+        app:layout_constraintEnd_toStartOf="@+id/sendMessageBtn"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/btnSendMessage"
+        android:id="@+id/sendMessageBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"

@@ -1,0 +1,30 @@
+dev/eyosiyas/smsblocker/databinding/ItemMessageSentBinding.java
+ dev.eyosiyas.smsblocker.databinding.ItemMessageSentBinding
+dev/eyosiyas/smsblocker/databinding/SmsItemBinding.java
+ dev.eyosiyas.smsblocker.databinding.SmsItemBinding
+dev/eyosiyas/smsblocker/databinding/FragmentSettingBinding.java
+ dev.eyosiyas.smsblocker.databinding.FragmentSettingBinding
+dev/eyosiyas/smsblocker/databinding/ItemMessageReceivedBinding.java
+ dev.eyosiyas.smsblocker.databinding.ItemMessageReceivedBinding
+dev/eyosiyas/smsblocker/databinding/ActivitySendMessageBinding.java
+ dev.eyosiyas.smsblocker.databinding.ActivitySendMessageBinding
+dev/eyosiyas/smsblocker/databinding/ActivityMainBinding.java
+ dev.eyosiyas.smsblocker.databinding.ActivityMainBinding
+dev/eyosiyas/smsblocker/databinding/FragmentAboutBinding.java
+ dev.eyosiyas.smsblocker.databinding.FragmentAboutBinding
+dev/eyosiyas/smsblocker/BuildConfig.java
+ dev.eyosiyas.smsblocker.BuildConfig
+dev/eyosiyas/smsblocker/databinding/KeywordItemBinding.java
+ dev.eyosiyas.smsblocker.databinding.KeywordItemBinding
+dev/eyosiyas/smsblocker/databinding/FragmentBlockBinding.java
+ dev.eyosiyas.smsblocker.databinding.FragmentBlockBinding
+dev/eyosiyas/smsblocker/databinding/KeywordManagementBinding.java
+ dev.eyosiyas.smsblocker.databinding.KeywordManagementBinding
+dev/eyosiyas/smsblocker/databinding/BlacklistItemBinding.java
+ dev.eyosiyas.smsblocker.databinding.BlacklistItemBinding
+dev/eyosiyas/smsblocker/databinding/FragmentMessageBinding.java
+ dev.eyosiyas.smsblocker.databinding.FragmentMessageBinding
+dev/eyosiyas/smsblocker/databinding/ActivityDetailSmsBinding.java
+ dev.eyosiyas.smsblocker.databinding.ActivityDetailSmsBinding
+dev/eyosiyas/smsblocker/databinding/BlacklistManagmentBinding.java
+ dev.eyosiyas.smsblocker.databinding.BlacklistManagmentBinding
