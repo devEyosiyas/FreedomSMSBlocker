@@ -20,23 +20,12 @@ These days Using a SMS spam blocker app is essential.
 More features will be added soon.
 
 ## Screenshots
-<p align="center">
-<table border="1">
-<tr>
-<td><img src="screenshot/1.png" width="150" /></td>
-<td><img src="screenshot/2.png" width="150" /></td>
-<td><img src="screenshot/3.png" width="150" /></td>
-<td><img src="screenshot/4.png" width="150" /></td>
-<td><img src="screenshot/5.png" width="150" /></td>
-</tr>
-<tr>
-<td><p align="center">Conversation</p></td>
-<td><p align="center">Core Messaging</p></td>
-<td><p align="center">Blacklist</p></td>
-<td><p align="center">Advanced Blocking</p></td>
- <td><p align="center">About</p></td>
-</tr>
-</table>
+
+<img src="screenshot/1.png" width="150" /> | <img src="screenshot/2.png" width="150" /> | <img src="screenshot/3.png" width="150" /> | <img src="screenshot/4.png" width="150" /> | <img src="screenshot/5.png" width="150" />
+-------------|----------------|-----------|-------------------|-------
+Conversation | Core Messaging | Blacklist | Advanced Blocking | About
+
+
 
 ### Simple and fast Spam blocker.
 Test the [app](https://raw.githubusercontent.com/devEyosiyas/FreedomSMSBlocker/master/Freedom%20SMS%20Blocker.apk) and tell us what you think.
