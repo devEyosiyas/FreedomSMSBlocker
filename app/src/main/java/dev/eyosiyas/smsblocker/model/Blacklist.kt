@@ -1,3 +1,12 @@
 package dev.eyosiyas.smsblocker.model
 
-class Blacklist(var id: Int, var number: String?, var timestamp: Long)
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity(tableName = "Blacklist")
+data class Blacklist(
+        @PrimaryKey(autoGenerate = true)
+        val id: Int,
+        val number: String,
+        val timestamp: Long
+)

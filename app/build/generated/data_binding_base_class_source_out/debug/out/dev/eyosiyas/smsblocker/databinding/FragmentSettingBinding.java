@@ -5,8 +5,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.EditText;
-import android.widget.FrameLayout;
+import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SwitchCompat;
@@ -18,37 +17,28 @@ import java.lang.String;
 
 public final class FragmentSettingBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final LinearLayout rootView;
 
   @NonNull
-  public final Button btnChangeRule;
+  public final Button btnApply;
 
   @NonNull
   public final Button btnKeyword;
 
   @NonNull
-  public final EditText editEndsWith;
-
-  @NonNull
-  public final EditText editStartsWith;
-
-  @NonNull
   public final SwitchCompat nuclearOption;
 
-  private FragmentSettingBinding(@NonNull FrameLayout rootView, @NonNull Button btnChangeRule,
-      @NonNull Button btnKeyword, @NonNull EditText editEndsWith, @NonNull EditText editStartsWith,
-      @NonNull SwitchCompat nuclearOption) {
+  private FragmentSettingBinding(@NonNull LinearLayout rootView, @NonNull Button btnApply,
+      @NonNull Button btnKeyword, @NonNull SwitchCompat nuclearOption) {
     this.rootView = rootView;
-    this.btnChangeRule = btnChangeRule;
+    this.btnApply = btnApply;
     this.btnKeyword = btnKeyword;
-    this.editEndsWith = editEndsWith;
-    this.editStartsWith = editStartsWith;
     this.nuclearOption = nuclearOption;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -73,9 +63,9 @@ public final class FragmentSettingBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.btnChangeRule;
-      Button btnChangeRule = rootView.findViewById(id);
-      if (btnChangeRule == null) {
+      id = R.id.btnApply;
+      Button btnApply = rootView.findViewById(id);
+      if (btnApply == null) {
         break missingId;
       }
 
@@ -85,26 +75,14 @@ public final class FragmentSettingBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.editEndsWith;
-      EditText editEndsWith = rootView.findViewById(id);
-      if (editEndsWith == null) {
-        break missingId;
-      }
-
-      id = R.id.editStartsWith;
-      EditText editStartsWith = rootView.findViewById(id);
-      if (editStartsWith == null) {
-        break missingId;
-      }
-
       id = R.id.nuclearOption;
       SwitchCompat nuclearOption = rootView.findViewById(id);
       if (nuclearOption == null) {
         break missingId;
       }
 
-      return new FragmentSettingBinding((FrameLayout) rootView, btnChangeRule, btnKeyword,
-          editEndsWith, editStartsWith, nuclearOption);
+      return new FragmentSettingBinding((LinearLayout) rootView, btnApply, btnKeyword,
+          nuclearOption);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

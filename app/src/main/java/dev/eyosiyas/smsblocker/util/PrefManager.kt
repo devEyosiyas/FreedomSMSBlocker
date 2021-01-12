@@ -2,47 +2,35 @@ package dev.eyosiyas.smsblocker.util
 
 import android.content.Context
 import android.content.SharedPreferences
-import android.content.SharedPreferences.Editor
 import androidx.preference.PreferenceManager
+import java.util.*
 
-class PrefManager constructor(private val context: Context?) {
+class PrefManager constructor(context: Context) {
     private val preferences: SharedPreferences = PreferenceManager.getDefaultSharedPreferences(context)
-    val isNuclearEnabled: Boolean
-        get() {
-            return preferences.getBoolean(Constant.NUCLEAR, false)
-        }
 
-    fun setNuclear(enable: Boolean) {
-        val editor: Editor = preferences.edit()
-        editor.putBoolean(Constant.NUCLEAR, enable)
-        editor.apply()
-    }
+    var nuclearOption: Boolean
+        get() = preferences.getBoolean(Constant.NUCLEAR, false)
+        set(value) = preferences.edit().putBoolean(Constant.NUCLEAR, value).apply()
 
     val isStartsWithEnabled: Boolean
-        get() {
-            return preferences.getString(Constant.STARTS_WITH, "")!!.length > 1
-        }
-    var startsWith: String?
-        get() {
-            return preferences.getString(Constant.STARTS_WITH, "")
-        }
-        set(startsWith) {
-            val editor: Editor = preferences.edit()
-            editor.putString(Constant.STARTS_WITH, startsWith)
-            editor.apply()
-        }
-    val isEndsWithEnabled: Boolean
-        get() {
-            return preferences.getString(Constant.ENDS_WITH, "")!!.length > 1
-        }
-    var endsWith: String?
-        get() {
-            return preferences.getString(Constant.ENDS_WITH, "")
-        }
-        set(endsWith) {
-            val editor: Editor = preferences.edit()
-            editor.putString(Constant.ENDS_WITH, endsWith)
-            editor.apply()
-        }
+        get() = preferences.getString(Constant.STARTS_WITH, "")!!.length > 1
 
+    var startsWith: String?
+        get() = preferences.getString(Constant.STARTS_WITH, "")
+        set(startsWith) = preferences.edit().putString(Constant.STARTS_WITH, startsWith).apply()
+
+    val isEndsWithEnabled: Boolean
+        get() = preferences.getString(Constant.ENDS_WITH, "")!!.length > 1
+
+    var endsWith: String?
+        get() = preferences.getString(Constant.ENDS_WITH, "")
+        set(endsWith) = preferences.edit().putString(Constant.ENDS_WITH, endsWith).apply()
+
+    var id: String?
+        get() = preferences.getString(Constant.ID, "")
+        set(_) = preferences.edit().putString(Constant.ID, UUID.randomUUID().toString()).apply()
+
+    var firstRun: Boolean
+        get() = preferences.getBoolean(Constant.FIRST_RUN, true)
+        set(value) = preferences.edit().putBoolean(Constant.FIRST_RUN, value).apply()
 }

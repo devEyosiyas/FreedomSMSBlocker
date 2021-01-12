@@ -7,28 +7,24 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.View.OnCreateContextMenuListener
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import dev.eyosiyas.smsblocker.R
+import dev.eyosiyas.smsblocker.databinding.ItemMessageReceivedBinding
+import dev.eyosiyas.smsblocker.databinding.ItemMessageSentBinding
 import dev.eyosiyas.smsblocker.model.Message
 import dev.eyosiyas.smsblocker.util.Core
 
 class MessageListAdapter constructor(private val messages: List<Message?>, private val context: Context) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-        val view: View
-        if (viewType == VIEW_TYPE_MESSAGE_SENT) {
-            view = LayoutInflater.from(parent.context).inflate(R.layout.item_message_sent, parent, false)
-            return SentVH(view)
-        } else {
-            view = LayoutInflater.from(parent.context).inflate(R.layout.item_message_received, parent, false)
-            return ReceivedVH(view)
-        }
+        return if (viewType == VIEW_TYPE_MESSAGE_SENT)
+            SentVH(LayoutInflater.from(parent.context).inflate(R.layout.item_message_sent, parent, false))
+        else
+            ReceivedVH(LayoutInflater.from(parent.context).inflate(R.layout.item_message_received, parent, false))
     }
 
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-        val message: Message? = messages.get(position)
+        val message: Message? = messages[position]
         when (holder.itemViewType) {
             VIEW_TYPE_MESSAGE_SENT -> (holder as SentVH).bind(message)
             VIEW_TYPE_MESSAGE_RECEIVED -> (holder as ReceivedVH).bind(message)
@@ -41,15 +37,15 @@ class MessageListAdapter constructor(private val messages: List<Message?>, priva
 
     override fun getItemViewType(position: Int): Int {
         val message: Message? = messages[position]
-        if (message!!.type.equals("received", ignoreCase = true)) return VIEW_TYPE_MESSAGE_RECEIVED else return VIEW_TYPE_MESSAGE_SENT
+        return if (message!!.type.equals("received", ignoreCase = true)) VIEW_TYPE_MESSAGE_RECEIVED else VIEW_TYPE_MESSAGE_SENT
     }
 
     inner class SentVH constructor(itemView: View) : RecyclerView.ViewHolder(itemView), OnCreateContextMenuListener {
-        private val message: TextView = itemView.findViewById(R.id.txtSentMessage)
-        private val time: TextView = itemView.findViewById(R.id.txtMessageSentTime)
+        private val binder: ItemMessageSentBinding = ItemMessageSentBinding.bind(itemView)
+
         fun bind(sentMessage: Message?) {
-            message.text = sentMessage!!.body
-            time.text = Core.readableTime(sentMessage.timestamp)
+            binder.txtSentMessage.text = sentMessage!!.body
+            binder.txtMessageSentTime.text = Core.readableTime(sentMessage.timestamp)
             itemView.setOnCreateContextMenuListener(this)
         }
 
@@ -60,14 +56,12 @@ class MessageListAdapter constructor(private val messages: List<Message?>, priva
     }
 
     inner class ReceivedVH constructor(itemView: View) : RecyclerView.ViewHolder(itemView), OnCreateContextMenuListener {
-        private val profile: ImageView = itemView.findViewById(R.id.SenderProfile)
-        private val message: TextView = itemView.findViewById(R.id.txtSenderMessage)
-        private val time: TextView = itemView.findViewById(R.id.txtSenderTimestamp)
+        private val binder: ItemMessageReceivedBinding = ItemMessageReceivedBinding.bind(itemView)
 
         // TODO: 9/10/2020 Acquire profile picture
         fun bind(receivedMessage: Message?) {
-            message.text = receivedMessage!!.body
-            time.text = Core.readableTime(receivedMessage.timestamp)
+            binder.txtSenderMessage.text = receivedMessage!!.body
+            binder.txtSenderTimestamp.text = Core.readableTime(receivedMessage.timestamp)
             itemView.setOnCreateContextMenuListener(this)
         }
 

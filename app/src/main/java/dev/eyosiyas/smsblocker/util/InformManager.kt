@@ -16,15 +16,9 @@ import androidx.core.app.NotificationCompat
 import dev.eyosiyas.smsblocker.R
 import dev.eyosiyas.smsblocker.view.MainActivity
 
+
 class InformManager constructor(base: Context) : ContextWrapper(base) {
-    lateinit var manager: NotificationManager
-//        get() {
-//            if (field == null) {
-//                field = getSystemService(NOTIFICATION_SERVICE) as NotificationManager?
-//            }
-//            return field
-//        }
-//        private set
+    val manager: NotificationManager = getSystemService(NOTIFICATION_SERVICE) as NotificationManager
 
     @TargetApi(Build.VERSION_CODES.O)
     private fun createChannel() {
@@ -43,7 +37,15 @@ class InformManager constructor(base: Context) : ContextWrapper(base) {
     }
 
     fun showNotification(title: String?, message: String?): NotificationCompat.Builder {
-        return NotificationCompat.Builder(applicationContext, CHANNEL_ID).setContentTitle(title).setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION)).setAutoCancel(true).setContentText(message).setSmallIcon(R.mipmap.ic_launcher).setContentIntent(PendingIntent.getActivity(this, 0, Intent(this, MainActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP), 0))
+        return NotificationCompat.Builder(applicationContext, CHANNEL_ID)
+                .setContentTitle(title)
+                .setContentText(message)
+                .setPriority(NotificationCompat.PRIORITY_HIGH)
+                .setCategory(NotificationCompat.CATEGORY_MESSAGE)
+                .setSound(RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION))
+                .setAutoCancel(true)
+                .setSmallIcon(R.mipmap.ic_launcher)
+                .setContentIntent(PendingIntent.getActivity(this, 0, Intent(this, MainActivity::class.java).setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP), 0))
     }
 
     companion object {

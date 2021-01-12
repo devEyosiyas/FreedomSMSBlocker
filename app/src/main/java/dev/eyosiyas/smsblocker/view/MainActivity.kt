@@ -18,6 +18,8 @@ import dev.eyosiyas.smsblocker.fragment.MessageFragment
 import dev.eyosiyas.smsblocker.fragment.SettingFragment
 import dev.eyosiyas.smsblocker.util.Constant
 import dev.eyosiyas.smsblocker.util.Core
+import dev.eyosiyas.smsblocker.util.PrefManager
+
 
 class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
     private lateinit var binder: ActivityMainBinding
@@ -25,9 +27,18 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         super.onCreate(savedInstanceState)
         binder = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binder.root)
+        initSec()
         binder.bottomNavView.setOnNavigationItemSelectedListener(this)
         Core.defaultSMS(this)
         checkSMSPermission()
+    }
+
+    private fun initSec() {
+        val prefManager = PrefManager(this)
+        if (prefManager.firstRun) {
+            prefManager.id
+            prefManager.firstRun = false
+        }
     }
 
     private fun checkSMSPermission() {

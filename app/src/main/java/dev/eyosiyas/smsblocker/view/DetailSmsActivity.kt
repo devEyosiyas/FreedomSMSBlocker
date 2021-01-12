@@ -16,7 +16,6 @@ import dev.eyosiyas.smsblocker.adapter.MessageListAdapter
 import dev.eyosiyas.smsblocker.databinding.ActivityDetailSmsBinding
 import dev.eyosiyas.smsblocker.model.Message
 import dev.eyosiyas.smsblocker.util.Constant
-import dev.eyosiyas.smsblocker.util.Core
 import java.util.*
 
 class DetailSmsActivity : AppCompatActivity() {
@@ -92,20 +91,20 @@ class DetailSmsActivity : AppCompatActivity() {
 
     private fun messages(search: String?): List<Message?> {
         val messages: MutableList<Message?> = ArrayList()
-        var message: Message
+//        var message: Message
         val cursor: Cursor? = contentResolver.query(Constant.CONTENT_PROVIDER_SMS, null, Constant.FIELD_NAME + "=?", arrayOf(search), null)
         while (cursor!!.moveToNext()) {
             number = cursor.getString(cursor.getColumnIndex(Constant.FIELD_NAME))
-            message = Message(
-                    sender = number,
-                    displayName = Core.displayName(this, cursor.getString(cursor.getColumnIndex(Constant.FIELD_NAME))),
-                    body = cursor.getString(cursor.getColumnIndex(Constant.FIELD_BODY)),
-                    timestamp = cursor.getLong(cursor.getColumnIndex(Constant.FIELD_DATE)),
-                    type = if (cursor.getInt(cursor.getColumnIndex(Constant.FIELD_TYPE)) == 1) Constant.FIELD_RECEIVED else Constant.FIELD_SENT,
-                    isRead = cursor.getInt(cursor.getColumnIndex(Constant.FIELD_READ)) != 0,
-                    isSeen = cursor.getInt(cursor.getColumnIndex(Constant.FIELD_SEEN)) != 0,
-                    image = null
-            )
+//            message = Message(
+//                    sender = number,
+//                    displayName = Core.displayName(this, cursor.getString(cursor.getColumnIndex(Constant.FIELD_NAME))),
+//                    body = cursor.getString(cursor.getColumnIndex(Constant.FIELD_BODY)),
+//                    timestamp = cursor.getLong(cursor.getColumnIndex(Constant.FIELD_DATE)),
+//                    type = if (cursor.getInt(cursor.getColumnIndex(Constant.FIELD_TYPE)) == 1) Constant.FIELD_RECEIVED else Constant.FIELD_SENT,
+//                    isRead = cursor.getInt(cursor.getColumnIndex(Constant.FIELD_READ)) != 0,
+//                    isSeen = cursor.getInt(cursor.getColumnIndex(Constant.FIELD_SEEN)) != 0,
+//                    image = null
+//            )
             isNumber = number!!.matches("\\+*[0-9]*".toRegex()) && number!!.length > 2
 //            message.sender =
 //            message.displayName = (Core.displayName(this, cursor.getString(cursor.getColumnIndex(Constant.FIELD_NAME))))
@@ -114,7 +113,7 @@ class DetailSmsActivity : AppCompatActivity() {
 //            message.isSeen = (cursor.getInt(cursor.getColumnIndex(Constant.FIELD_SEEN)) != 0)
 //            message.timestamp = (cursor.getLong(cursor.getColumnIndex(Constant.FIELD_DATE)))
 //            message.type = (if (cursor.getInt(cursor.getColumnIndex(Constant.FIELD_TYPE)) == 1) Constant.FIELD_RECEIVED else Constant.FIELD_SENT)
-            messages.add(message)
+//            messages.add(message)
         }
         cursor.close()
         messages.reverse()

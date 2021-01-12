@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
         android:hint="@string/keyword"
+        android:digits=""
         android:importantForAutofill="no"
         android:inputType="text"
         android:lines="1"

@@ -14,11 +14,14 @@
     <string name="starts_with">Starts with</string>
     <string name="ends_with">Ends with</string>
     <string name="nuclear_option">Nuclear Option</string>
-    <string name="change_rule">Change Rule</string>
     <string name="keyword">Keyword</string>
     <string name="delete">Delete</string>
     <string name="copy_text">Copy text</string>
     <string name="forward">Forward</string>
     <string name="freedom_sms_blocker">Freedom SMS Blocker</string>
     <string name="permission_missing">Permission missing.</string>
+    <string name="blacklist">Blacklist</string>
+    <string name="apply_rule">Apply Rule</string>
+    <string name="additional_blocking">Additional blocking</string>
+    <string name="no_blocking_rule_is_selected">No blocking rule is selected.</string>
 </resources>

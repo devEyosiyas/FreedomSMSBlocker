@@ -41,19 +41,15 @@ object Core {
         context.startActivityForResult(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).setData(Uri.fromParts("package", context.applicationInfo.packageName, null)), Constant.REQUEST_SETTING)
     }
 
-    fun displayName(context: Context?, number: String?): String? {
-        var number: String? = number
-        if (ContextCompat.checkSelfPermission((context)!!, Constant.READ_CONTACTS) == PackageManager.PERMISSION_DENIED) return number
-        val uri: Uri = Uri.withAppendedPath(ContactsContract.PhoneLookup.CONTENT_FILTER_URI, Uri.encode(number))
+    fun displayName(context: Context, number: String?): String? {
+        var tmpNumber: String? = number
+        if (ContextCompat.checkSelfPermission((context), Constant.READ_CONTACTS) == PackageManager.PERMISSION_DENIED) return tmpNumber
+        val uri: Uri = Uri.withAppendedPath(ContactsContract.PhoneLookup.CONTENT_FILTER_URI, Uri.encode(tmpNumber))
         val cursor: Cursor? = context.contentResolver.query(uri, arrayOf(ContactsContract.PhoneLookup.DISPLAY_NAME), null, null, null)
-        if (cursor != null) {
-            try {
-                if (cursor.moveToFirst()) number = cursor.getString(cursor.getColumnIndex(ContactsContract.PhoneLookup.DISPLAY_NAME))
-            } finally {
-                cursor.close()
-            }
+        cursor?.use { _ ->
+            if (cursor.moveToFirst()) tmpNumber = cursor.getString(cursor.getColumnIndex(ContactsContract.PhoneLookup.DISPLAY_NAME))
         }
-        return number
+        return tmpNumber
     }
 
     fun checkContactsPermission(context: Context?): Boolean {
@@ -62,9 +58,7 @@ object Core {
 
     fun contactPhone(context: Context, data: Intent?): String {
         var number: String? = null
-//        assert(data != null)
         val uri: Uri? = data!!.data
-//        assert(uri != null)
         val cursor: Cursor? = context.contentResolver.query((uri)!!, null, null, null, null)
         if (cursor != null) {
             if (cursor.moveToFirst()) {
@@ -87,5 +81,9 @@ object Core {
                 defaultDialog.show()
             }
         }
+    }
+
+    fun limit(input: CharSequence): String {
+        return if (input.toString().matches("[a-zA-Z]".toRegex())) input.toString() else ""
     }
 }
