@@ -5,15 +5,20 @@
         android:icon="@drawable/ic_sms"
         android:title="@string/menu_sms" />
     <item
-        android:id="@+id/navMenuBlock"
+        android:id="@+id/navMenuBlacklist"
         android:icon="@drawable/ic_block"
-        android:title="@string/menu_block" />
+        android:title="@string/blacklist" />
     <item
-        android:id="@+id/navMenuSetting"
-        android:icon="@drawable/ic_setting"
-        android:title="@string/menu_setting" />
+        android:id="@+id/navMenuBlockedMessages"
+        android:icon="@drawable/ic_blocked_message"
+        android:title="@string/blocked_messages" />
     <item
-        android:id="@+id/navMenuAbout"
-        android:icon="@drawable/ic_about"
-        android:title="@string/menu_about" />
+        android:id="@+id/navMenuCrowdSource"
+        android:icon="@drawable/ic_crowdsource"
+        android:title="@string/crowdsource" />
+    <item
+        android:id="@+id/navMenuWhitelist"
+        android:icon="@drawable/ic_whitelist"
+        android:title="@string/whitelist" />
+
 </menu>

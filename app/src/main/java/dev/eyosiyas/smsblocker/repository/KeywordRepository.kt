@@ -25,4 +25,10 @@ class KeywordRepository(private val keywordDao: KeywordDao) {
     fun exists(input: String): Boolean {
         return keywordDao.exists(input)
     }
+
+    fun keywordsCount(): Int {
+        return keywordDao.keywordsCount()
+    }
+
+
 }

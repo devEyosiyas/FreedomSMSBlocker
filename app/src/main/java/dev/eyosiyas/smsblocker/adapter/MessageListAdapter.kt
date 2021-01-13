@@ -72,16 +72,16 @@ class MessageListAdapter constructor(private val messages: List<Message?>, priva
     }
 
     private fun getContextMenu(menu: ContextMenu, v: View) {
-        menu.setHeaderTitle("Message options")
-        menu.add(0, v.id, 0, "Delete").setOnMenuItemClickListener {
+        menu.setHeaderTitle(context.getString(R.string.message_options))
+        menu.add(0, v.id, 0, R.string.delete).setOnMenuItemClickListener {
             Toast.makeText(context, "Delete coming soon!", Toast.LENGTH_SHORT).show()
             false
         }
-        menu.add(0, v.id, 0, "Copy text").setOnMenuItemClickListener {
+        menu.add(0, v.id, 0, R.string.copy_text).setOnMenuItemClickListener {
             Toast.makeText(context, "Copy text coming soon!", Toast.LENGTH_SHORT).show()
             false
         }
-        menu.add(0, v.id, 0, "Forward").setOnMenuItemClickListener {
+        menu.add(0, v.id, 0, R.string.forward).setOnMenuItemClickListener {
             Toast.makeText(context, "Forward text coming soon!", Toast.LENGTH_SHORT).show()
             false
         }

@@ -19,6 +19,7 @@
         android:textStyle="bold" />
 
     <TextView
+        android:id="@+id/blockingRule"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="top|center"
@@ -28,34 +29,34 @@
         android:textStyle="bold" />
 
     <RadioGroup
+        android:id="@+id/radioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="16dp">
 
         <RadioButton
+            android:id="@+id/radioStartsWith"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:tag="SW"
             android:text="@string/starts_with"
             android:textColor="@android:color/white"
             app:buttonTint="@android:color/white" />
 
         <RadioButton
+            android:id="@+id/radioEndsWith"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:tag="EW"
             android:text="@string/ends_with"
             android:textColor="@android:color/white"
             app:buttonTint="@android:color/white" />
 
         <RadioButton
+            android:id="@+id/radioNuclearOption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/blacklist"
-            android:textColor="@android:color/white"
-            app:buttonTint="@android:color/white" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:tag="NO"
             android:text="@string/nuclear_option"
             android:textColor="@android:color/white"
             app:buttonTint="@android:color/white" />
@@ -66,9 +67,9 @@
         android:layout_height="wrap_content"
         android:layout_gravity="top|center"
         android:layout_marginTop="8dp"
-        android:text="@string/additional_blocking"
+        android:text="@string/always_active"
+        android:textAlignment="center"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
         android:textStyle="bold" />
 
     <Button
@@ -87,7 +88,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:layout_marginStart="4dp"
-        android:layout_marginLeft="4dp"
         android:text="@string/nuclear_option"
         android:textColor="@android:color/white"
         android:visibility="gone" />

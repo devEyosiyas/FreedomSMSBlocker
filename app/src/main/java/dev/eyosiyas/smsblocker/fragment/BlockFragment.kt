@@ -1,6 +1,9 @@
 package dev.eyosiyas.smsblocker.fragment
 
+import android.content.res.Configuration
+import android.os.Build
 import android.os.Bundle
+import android.os.LocaleList
 import android.text.Editable
 import android.text.TextWatcher
 import android.view.LayoutInflater
@@ -17,14 +20,32 @@ import dev.eyosiyas.smsblocker.databinding.BlacklistManagmentBinding
 import dev.eyosiyas.smsblocker.databinding.FragmentBlockBinding
 import dev.eyosiyas.smsblocker.event.BlacklistSelected
 import dev.eyosiyas.smsblocker.model.Blacklist
+import dev.eyosiyas.smsblocker.util.PrefManager
 import dev.eyosiyas.smsblocker.viewmodel.BlacklistViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
+import java.util.*
 
 class BlockFragment : Fragment(), BlacklistSelected {
     private lateinit var viewModel: BlacklistViewModel
     private lateinit var binder: FragmentBlockBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val locale = Locale(PrefManager(requireContext()).locale)
+        val configuration: Configuration = resources.configuration
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            val localeList = LocaleList(locale)
+            LocaleList.setDefault(localeList)
+            configuration.setLocales(localeList)
+        } else
+            configuration.locale = locale
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1)
+            requireContext().createConfigurationContext(configuration)
+        else
+            resources.updateConfiguration(configuration, resources.displayMetrics)
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binder = FragmentBlockBinding.bind(inflater.inflate(R.layout.fragment_block, container, false))
@@ -35,7 +56,6 @@ class BlockFragment : Fragment(), BlacklistSelected {
         viewModel.blacklists.observe(viewLifecycleOwner, { blacklist ->
             adapter.populate(blacklist)
         })
-//        loadBlacklist()
         binder.fabSendMessage.setOnClickListener { insertUI() }
         return binder.root
     }
@@ -50,14 +70,14 @@ class BlockFragment : Fragment(), BlacklistSelected {
 
     private fun deleteUI(blacklist: Blacklist) {
         AlertDialog.Builder(requireContext())
-                .setTitle("Remove from Blacklist.")
+                .setTitle(getString(R.string.remove_blacklist_title))
                 .setCancelable(false)
-                .setMessage("Do you want to remove ${blacklist.number} from the Blacklist?")
-                .setPositiveButton("Yes") { _, _ ->
+                .setMessage(String.format(Locale.ENGLISH, getString(R.string.remove_blacklist_message), blacklist.number))
+                .setPositiveButton(getString(R.string.button_yes)) { _, _ ->
                     viewModel.deleteBlacklist(blacklist)
-                    Toast.makeText(requireContext(), "${blacklist.number} removed successfully.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), String.format(Locale.ENGLISH, getString(R.string.removed_successfully), blacklist.number), Toast.LENGTH_SHORT).show()
                 }
-                .setNegativeButton("No") { dialog, _ -> dialog.dismiss() }.show()
+                .setNegativeButton(getString(R.string.button_no)) { dialog, _ -> dialog.dismiss() }.show()
     }
 
     private fun insertUI() {
@@ -74,10 +94,10 @@ class BlockFragment : Fragment(), BlacklistSelected {
         blacklistBinder.btnInsertUpdate.setOnClickListener {
             GlobalScope.launch(Dispatchers.Main) {
                 if (viewModel.exists(blacklistBinder.inputBlacklistNumber.text.toString()))
-                    Toast.makeText(requireContext(), "${blacklistBinder.inputBlacklistNumber.text} already blocked.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), String.format(Locale.ENGLISH, getString(R.string.already_blocked), blacklistBinder.inputBlacklistNumber.text), Toast.LENGTH_SHORT).show()
                 else {
                     viewModel.addBlacklist(Blacklist(0, blacklistBinder.inputBlacklistNumber.text.toString(), System.currentTimeMillis()))
-                    Toast.makeText(requireContext(), "${blacklistBinder.inputBlacklistNumber.text} saved to the database.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), String.format(Locale.ENGLISH, getString(R.string.saved_to_db), blacklistBinder.inputBlacklistNumber.text), Toast.LENGTH_SHORT).show()
                     insertDialog.dismiss()
                 }
             }
@@ -109,10 +129,10 @@ class BlockFragment : Fragment(), BlacklistSelected {
         binder.btnInsertUpdate.setOnClickListener {
             GlobalScope.launch(Dispatchers.Main) {
                 if (viewModel.exists(binder.inputBlacklistNumber.text.toString()))
-                    Toast.makeText(requireContext(), "${binder.inputBlacklistNumber.text} already blocked.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), String.format(Locale.ENGLISH, getString(R.string.already_blocked), binder.inputBlacklistNumber.text), Toast.LENGTH_SHORT).show()
                 else {
                     viewModel.updateBlacklist(Blacklist(blacklist.id, binder.inputBlacklistNumber.text.toString(), System.currentTimeMillis()))
-                    Toast.makeText(requireContext(), "Blacklist record updated.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(), getString(R.string.blacklist_record_updated), Toast.LENGTH_SHORT).show()
                     updateDialog.dismiss()
                 }
             }

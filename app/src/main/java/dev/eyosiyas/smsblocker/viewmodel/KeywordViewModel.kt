@@ -42,4 +42,10 @@ class KeywordViewModel(app: Application) : AndroidViewModel(app) {
         withContext(viewModelScope.coroutineContext + Dispatchers.IO) { response = repository.exists(keyword) }
         return response
     }
+
+    suspend fun keywordsCount(): Int {
+        var count: Int
+        withContext(viewModelScope.coroutineContext + Dispatchers.IO) { count = repository.keywordsCount() }
+        return count
+    }
 }

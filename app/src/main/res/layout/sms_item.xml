@@ -29,7 +29,6 @@
             android:layout_marginTop="10dp"
             android:layout_marginBottom="5dp"
             android:layout_toEndOf="@id/UserProfile"
-            android:layout_toRightOf="@id/UserProfile"
             android:gravity="center_horizontal"
             android:textAlignment="center"
             android:textSize="18sp"
@@ -41,7 +40,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@+id/txtSenderName"
             android:layout_toEndOf="@id/UserProfile"
-            android:layout_toRightOf="@id/UserProfile"
             android:ellipsize="end"
             android:lines="1"
             android:textSize="18sp" />
@@ -52,11 +50,8 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/txtMessageBody"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_marginTop="5dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginRight="15dp" />
+            android:layout_marginEnd="15dp" />
     </RelativeLayout>
-
 
 </androidx.cardview.widget.CardView>

@@ -9,10 +9,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
         android:layout_marginTop="12dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:background="@drawable/rounded_rectangle_outbox"
         android:maxWidth="240dp"
         android:padding="8dp"
@@ -24,12 +22,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/txtSentMessage"
         android:layout_alignEnd="@id/txtSentMessage"
-        android:layout_alignRight="@id/txtSentMessage"
         android:layout_marginStart="18dp"
-        android:layout_marginLeft="16dp"
         android:layout_marginTop="4dp"
         android:layout_marginEnd="16dp"
-        android:layout_marginRight="4dp"
         android:textSize="12sp" />
 
 </RelativeLayout>

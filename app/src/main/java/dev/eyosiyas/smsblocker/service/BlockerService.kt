@@ -1,15 +1,18 @@
 package dev.eyosiyas.smsblocker.service
 
-import android.content.BroadcastReceiver
-import android.content.Context
-import android.content.Intent
+import android.content.*
 import android.os.Bundle
 import android.telephony.SmsMessage
 import androidx.core.app.NotificationCompat
+import dev.eyosiyas.smsblocker.database.Storage
+import dev.eyosiyas.smsblocker.model.Blocked
 import dev.eyosiyas.smsblocker.util.Constant
 import dev.eyosiyas.smsblocker.util.Core
 import dev.eyosiyas.smsblocker.util.InformManager
 import dev.eyosiyas.smsblocker.util.PrefManager
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 import java.util.regex.Matcher
 import java.util.regex.Pattern
 
@@ -22,11 +25,11 @@ class BlockerService : BroadcastReceiver() {
         val bundle: Bundle? = intent.extras
         val messages: Array<SmsMessage?>
         if (bundle != null) {
-            val msgObjects: Array<Any>? = bundle.get(Constant.SMS_BUNDLE) as Array<Any>?
+            val msgObjects: Array<*>? = bundle.get(Constant.SMS_BUNDLE) as Array<*>?
             messages = arrayOfNulls(msgObjects!!.size)
             for (i in messages.indices) {
                 messages[i] = SmsMessage.createFromPdu(msgObjects[i] as ByteArray?)
-                val append = body.append(messages[i]!!.messageBody)
+                body.append(messages[i]!!.messageBody)
                 number = messages[i]!!.originatingAddress
                 timestamp = messages[i]!!.timestampMillis
             }
@@ -35,9 +38,16 @@ class BlockerService : BroadcastReceiver() {
     }
 
     private fun createMessage(context: Context, address: String?, body: String, timestamp: Long) {
+        val db = Storage.database(context)
+        val blacklistDAO = db.blacklistDao()
+        val blockedDAO = db.blockedDao()
+        val keywordDAO = db.keywordDao()
         val manager = PrefManager(context)
         var isClean = true
-//        for (blacklist: Blacklist? in databaseManager.blacklist) {
+
+        // TODO: 1/13/2021 check which blocking method is active and apply it accordingly
+//        for (blacklist: Blacklist? in blacklistDAO.blacklists()) {
+////        for (blacklist: Blacklist? in databaseManager.blacklist) {
 //            if (address.equals(blacklist!!.number, ignoreCase = true)) {
 //                isClean = false
 //                break
@@ -58,9 +68,11 @@ class BlockerService : BroadcastReceiver() {
             val matcher: Matcher = endsWithPattern.matcher(address)
             isClean = !matcher.find()
         }
-//        if (isClean && databaseManager.keywordsCount > 0) {
-//            for (keyword: Keyword in databaseManager.keywords) {
-//                if (body.contains(keyword.keyword + "")) {
+//        if (isClean && keywordDAO.keywordsCount() > 0) {
+////        if (isClean && databaseManager.keywordsCount > 0) {
+//            for (keyword: Keyword in keywordDAO.keywords()) {
+////            for (keyword: Keyword in databaseManager.keywords) {
+//                if (body.contains(keyword.keyword)) {
 //                    isClean = false
 //                    break
 //                } else {
@@ -68,16 +80,18 @@ class BlockerService : BroadcastReceiver() {
 //                }
 //            }
 //        }
-//        if (isClean) {
-//            val contentValues = ContentValues()
-//            contentValues.put(Constant.FIELD_NAME, address)
-//            contentValues.put(Constant.FIELD_BODY, body)
-//            contentValues.put(Constant.FIELD_DATE, timestamp)
-//            val contentResolver: ContentResolver = context.contentResolver
-//            contentResolver.insert(Constant.CONTENT_PROVIDER_INBOX, contentValues)
-//            notifyUser(context, address, body)
-//        } else
-//            databaseManager.insertBlockedMessage(Message(sender = address, body = body))
+        if (isClean) {
+            val contentValues = ContentValues()
+            contentValues.put(Constant.FIELD_NAME, address)
+            contentValues.put(Constant.FIELD_BODY, body)
+            contentValues.put(Constant.FIELD_DATE, timestamp)
+            val contentResolver: ContentResolver = context.contentResolver
+            contentResolver.insert(Constant.CONTENT_PROVIDER_INBOX, contentValues)
+            notifyUser(context, address, body)
+        } else
+            GlobalScope.launch(Dispatchers.Main) {
+                blockedDAO.addBlocked(Blocked(0, address ?: "Uknown Sender", body, timestamp))
+            }
     }
 
     private fun notifyUser(context: Context, number: String?, message: String) {

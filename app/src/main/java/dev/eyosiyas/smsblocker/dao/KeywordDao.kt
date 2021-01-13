@@ -24,4 +24,12 @@ interface KeywordDao {
     @Query("SELECT * FROM Keyword WHERE keyword = :input")
     fun exists(input: String): Boolean
 
+    @Query("SELECT count(*) FROM Keyword")
+//    val cursor: Cursor = readable.rawQuery("SELECT count(*) FROM Keyword", null)
+//    cursor.moveToFirst()
+//    val count: Int = cursor.getInt(0)
+//    cursor.close()
+//    return count
+    fun keywordsCount(): Int
+
 }

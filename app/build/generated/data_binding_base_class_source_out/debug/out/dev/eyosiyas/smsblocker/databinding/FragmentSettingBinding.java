@@ -6,6 +6,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SwitchCompat;
@@ -20,6 +23,9 @@ public final class FragmentSettingBinding implements ViewBinding {
   private final LinearLayout rootView;
 
   @NonNull
+  public final TextView blockingRule;
+
+  @NonNull
   public final Button btnApply;
 
   @NonNull
@@ -28,12 +34,31 @@ public final class FragmentSettingBinding implements ViewBinding {
   @NonNull
   public final SwitchCompat nuclearOption;
 
-  private FragmentSettingBinding(@NonNull LinearLayout rootView, @NonNull Button btnApply,
-      @NonNull Button btnKeyword, @NonNull SwitchCompat nuclearOption) {
+  @NonNull
+  public final RadioButton radioEndsWith;
+
+  @NonNull
+  public final RadioGroup radioGroup;
+
+  @NonNull
+  public final RadioButton radioNuclearOption;
+
+  @NonNull
+  public final RadioButton radioStartsWith;
+
+  private FragmentSettingBinding(@NonNull LinearLayout rootView, @NonNull TextView blockingRule,
+      @NonNull Button btnApply, @NonNull Button btnKeyword, @NonNull SwitchCompat nuclearOption,
+      @NonNull RadioButton radioEndsWith, @NonNull RadioGroup radioGroup,
+      @NonNull RadioButton radioNuclearOption, @NonNull RadioButton radioStartsWith) {
     this.rootView = rootView;
+    this.blockingRule = blockingRule;
     this.btnApply = btnApply;
     this.btnKeyword = btnKeyword;
     this.nuclearOption = nuclearOption;
+    this.radioEndsWith = radioEndsWith;
+    this.radioGroup = radioGroup;
+    this.radioNuclearOption = radioNuclearOption;
+    this.radioStartsWith = radioStartsWith;
   }
 
   @Override
@@ -63,6 +88,12 @@ public final class FragmentSettingBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.blockingRule;
+      TextView blockingRule = rootView.findViewById(id);
+      if (blockingRule == null) {
+        break missingId;
+      }
+
       id = R.id.btnApply;
       Button btnApply = rootView.findViewById(id);
       if (btnApply == null) {
@@ -81,8 +112,32 @@ public final class FragmentSettingBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentSettingBinding((LinearLayout) rootView, btnApply, btnKeyword,
-          nuclearOption);
+      id = R.id.radioEndsWith;
+      RadioButton radioEndsWith = rootView.findViewById(id);
+      if (radioEndsWith == null) {
+        break missingId;
+      }
+
+      id = R.id.radioGroup;
+      RadioGroup radioGroup = rootView.findViewById(id);
+      if (radioGroup == null) {
+        break missingId;
+      }
+
+      id = R.id.radioNuclearOption;
+      RadioButton radioNuclearOption = rootView.findViewById(id);
+      if (radioNuclearOption == null) {
+        break missingId;
+      }
+
+      id = R.id.radioStartsWith;
+      RadioButton radioStartsWith = rootView.findViewById(id);
+      if (radioStartsWith == null) {
+        break missingId;
+      }
+
+      return new FragmentSettingBinding((LinearLayout) rootView, blockingRule, btnApply, btnKeyword,
+          nuclearOption, radioEndsWith, radioGroup, radioNuclearOption, radioStartsWith);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -1,4 +1,14 @@
 <resources>
+    <string-array name="language">
+        <item>አማርኛ</item>
+        <item>English</item>
+    </string-array>
+
+    <string-array name="languageCode">
+        <item>am</item>
+        <item>en</item>
+    </string-array>
+
     <string name="app_name">Freedom SMS Blocker</string>
     <string name="insert">Insert</string>
     <string name="number">Number</string>
@@ -18,10 +28,52 @@
     <string name="delete">Delete</string>
     <string name="copy_text">Copy text</string>
     <string name="forward">Forward</string>
-    <string name="freedom_sms_blocker">Freedom SMS Blocker</string>
     <string name="permission_missing">Permission missing.</string>
     <string name="blacklist">Blacklist</string>
     <string name="apply_rule">Apply Rule</string>
-    <string name="additional_blocking">Additional blocking</string>
     <string name="no_blocking_rule_is_selected">No blocking rule is selected.</string>
+    <string name="remove_blacklist_title">Remove from Blacklist.</string>
+    <string name="button_yes">Yes</string>
+    <string name="button_no">No</string>
+    <string name="button_back">Back</string>
+    <string name="remove_blacklist_message">Do you want to remove %s from the Blacklist?</string>
+    <string name="removed_successfully">%s removed successfully.</string>
+    <string name="blacklist_record_updated">Blacklist record updated!</string>
+    <string name="already_blocked">%s already blocked.</string>
+    <string name="saved_to_db">%s saved to the database.</string>
+    <string name="keyword_already_exists">%s already exists.</string>
+    <string name="keyword_length_message">Please use a keyword of length three to fifteen.</string>
+    <string name="remove_keyword_title">Remove %s</string>
+    <string name="remove_keyword_message">Are you sure you want to remove %s?</string>
+    <string name="update_successful">Update was successful!</string>
+    <string name="nuclear_option_message">Nuclear option enabled! Now blocking EVERY three &amp; four digit numbers.</string>
+    <string name="message_sent_successfully">Message sent successfully.</string>
+    <string name="message_delivered">Message delivered to recipient.</string>
+    <string name="message_not_received">Message not received by the recipient.</string>
+    <string name="no_service">No Service.</string>
+    <string name="generic_failure">Generic Failure.</string>
+    <string name="radio_off">Radio off</string>
+    <string name="null_pdu">Null PDU</string>
+    <string name="about_content">Created and maintained by Eyosiyas, open-sourced, feel free to look around.\nhttps://github.com/devEyosiyas/FreedomSMSBlocker</string>
+    <string name="contacts_permission_title">Contacts permission required.</string>
+    <string name="contacts_permission_message">To display the sender name, the app needs this permission. Do you want to grant them?</string>
+    <string name="permission_required">You need to grant the permission!</string>
+    <string name="sms_permission_denied_title">SMS Permission denied</string>
+    <string name="sms_permission_denied_message">In order to use the app, allow access to SMS. Do you want to try again?</string>
+    <string name="button_cancel">Cancel</string>
+    <string name="permission_from_settings">Allow Permission form settings</string>
+    <string name="default_sms_app_message">For a better use of the app, you need to make this app a default for SMS.</string>
+    <string name="default_sms_app_title">Default SMS app</string>
+    <string name="language">Language</string>
+    <string name="choose_language">Choose language</string>
+    <string name="select">Select</string>
+    <string name="message_options">Message options</string>
+    <string name="blocked_messages">Blocked Messages</string>
+    <string name="message_deleted">Message deleted successfully!</string>
+    <string name="message_delete_body">Are you sure you want to delete this message?</string>
+    <string name="message_delete_title">Delete blocked message</string>
+    <string name="crowdsource">Crowdsource</string>
+    <string name="active_blocking_rule">Active blocking rule: %s</string>
+    <string name="always_active">Always active blocking methods are Blacklist and Keyword-based.</string>
+    <string name="whitelist">Whitelist</string>
 </resources>

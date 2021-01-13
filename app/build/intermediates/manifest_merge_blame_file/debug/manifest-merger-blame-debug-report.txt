@@ -5,7 +5,7 @@
 5    android:versionName="1.0" >
 6
 7    <uses-sdk
-8        android:minSdkVersion="16"
+8        android:minSdkVersion="17"
 8-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml
 9        android:targetSdkVersion="30" />
 9-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml

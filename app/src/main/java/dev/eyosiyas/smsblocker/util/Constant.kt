@@ -8,9 +8,14 @@ import android.text.InputFilter
 object Constant {
     const val ID: String = "ID"
     const val FIRST_RUN: String = "FirstRun"
+    const val LANGUAGE: String = "Language"
+    const val BLOCKING_RULE: String = "Blocking Rule"
     const val DATE_PATTERN: String = "MMM dd yyyy"
     const val TIME_PATTERN: String = "hh:mm:ss a"
     const val DATE_TIME_PATTERN: String = "MMM dd yyyy hh:mm:ss a"
+    const val STARTS_WITH_TAG: String = "SW"
+    const val ENDS_WITH_TAG: String = "EW"
+    const val NUCLEAR_OPTION_TAG: String = "NO"
     const val PERMISSION_REQUEST_READ_SMS: Int = 2010
     const val PERMISSION_REQUEST_READ_CONTACTS: Int = 2011
     const val REQUEST_SETTING: Int = 2013

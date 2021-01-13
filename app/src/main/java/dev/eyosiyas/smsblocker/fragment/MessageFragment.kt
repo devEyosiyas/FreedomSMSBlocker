@@ -2,7 +2,10 @@ package dev.eyosiyas.smsblocker.fragment
 
 import android.content.Intent
 import android.content.pm.PackageManager
+import android.content.res.Configuration
+import android.os.Build
 import android.os.Bundle
+import android.os.LocaleList
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -15,11 +18,28 @@ import dev.eyosiyas.smsblocker.adapter.MessageAdapter
 import dev.eyosiyas.smsblocker.databinding.FragmentMessageBinding
 import dev.eyosiyas.smsblocker.model.Message
 import dev.eyosiyas.smsblocker.util.Constant
+import dev.eyosiyas.smsblocker.util.PrefManager
 import dev.eyosiyas.smsblocker.view.SendMessageActivity
 import java.util.*
 
 class MessageFragment : Fragment() {
     private lateinit var binder: FragmentMessageBinding
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        val locale = Locale(PrefManager(requireContext()).locale)
+        val configuration: Configuration = resources.configuration
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            val localeList = LocaleList(locale)
+            LocaleList.setDefault(localeList)
+            configuration.setLocales(localeList)
+        } else
+            configuration.locale = locale
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1)
+            requireContext().createConfigurationContext(configuration)
+        else
+            resources.updateConfiguration(configuration, resources.displayMetrics)
+    }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binder = FragmentMessageBinding.bind(inflater.inflate(R.layout.fragment_message, container, false))

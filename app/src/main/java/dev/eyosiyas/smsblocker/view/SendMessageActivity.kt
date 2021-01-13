@@ -3,7 +3,10 @@ package dev.eyosiyas.smsblocker.view
 import android.app.PendingIntent
 import android.content.*
 import android.content.pm.PackageManager
+import android.content.res.Configuration
+import android.os.Build
 import android.os.Bundle
+import android.os.LocaleList
 import android.provider.ContactsContract
 import android.telephony.SmsManager
 import android.text.Editable
@@ -16,6 +19,8 @@ import dev.eyosiyas.smsblocker.R
 import dev.eyosiyas.smsblocker.databinding.ActivitySendMessageBinding
 import dev.eyosiyas.smsblocker.util.Constant
 import dev.eyosiyas.smsblocker.util.Core
+import dev.eyosiyas.smsblocker.util.PrefManager
+import java.util.*
 
 class SendMessageActivity : AppCompatActivity() {
     private lateinit var binder: ActivitySendMessageBinding
@@ -23,21 +28,21 @@ class SendMessageActivity : AppCompatActivity() {
         override fun onReceive(context: Context, intent: Intent) {
             when (resultCode) {
                 RESULT_OK -> {
-                    Toast.makeText(context, "Message sent successfully.", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(context, getString(R.string.message_sent_successfully), Toast.LENGTH_SHORT).show()
                     resetUI()
                 }
-                SmsManager.RESULT_ERROR_GENERIC_FAILURE -> Toast.makeText(context, "RESULT_ERROR_GENERIC_FAILURE", Toast.LENGTH_SHORT).show()
-                SmsManager.RESULT_ERROR_NO_SERVICE -> Toast.makeText(context, "ERROR_NO_SERVICE", Toast.LENGTH_SHORT).show()
-                SmsManager.RESULT_ERROR_NULL_PDU -> Toast.makeText(context, "ERROR_NULL_PDU", Toast.LENGTH_SHORT).show()
-                SmsManager.RESULT_ERROR_RADIO_OFF -> Toast.makeText(context, "ERROR_RADIO_OFF", Toast.LENGTH_SHORT).show()
+                SmsManager.RESULT_ERROR_GENERIC_FAILURE -> Toast.makeText(context, getString(R.string.generic_failure), Toast.LENGTH_SHORT).show()
+                SmsManager.RESULT_ERROR_NO_SERVICE -> Toast.makeText(context, getString(R.string.no_service), Toast.LENGTH_SHORT).show()
+                SmsManager.RESULT_ERROR_NULL_PDU -> Toast.makeText(context, getString(R.string.null_pdu), Toast.LENGTH_SHORT).show()
+                SmsManager.RESULT_ERROR_RADIO_OFF -> Toast.makeText(context, getString(R.string.radio_off), Toast.LENGTH_SHORT).show()
             }
         }
     }
     private val deliveredBroadcastReceiver: BroadcastReceiver = object : BroadcastReceiver() {
         override fun onReceive(context: Context, intent: Intent) {
             when (resultCode) {
-                RESULT_OK -> Toast.makeText(context, "Message delivered to recipient.", Toast.LENGTH_SHORT).show()
-                RESULT_CANCELED -> Toast.makeText(context, "Message not received by recipient.", Toast.LENGTH_SHORT).show()
+                RESULT_OK -> Toast.makeText(context, getString(R.string.message_delivered), Toast.LENGTH_SHORT).show()
+                RESULT_CANCELED -> Toast.makeText(context, getString(R.string.message_not_received), Toast.LENGTH_SHORT).show()
             }
         }
     }
@@ -56,6 +61,18 @@ class SendMessageActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        val locale = Locale(PrefManager(this).locale)
+        val configuration: Configuration = resources.configuration
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            val localeList = LocaleList(locale)
+            LocaleList.setDefault(localeList)
+            configuration.setLocales(localeList)
+        } else
+            configuration.locale = locale
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1)
+            createConfigurationContext(configuration)
+        else
+            resources.updateConfiguration(configuration, resources.displayMetrics)
         binder = ActivitySendMessageBinding.inflate(layoutInflater)
         setContentView(binder.root)
         binder.receiverEditText.addTextChangedListener(object : TextWatcher {
