@@ -32,12 +32,15 @@
         android:id="@+id/radioGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="16dp">
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:weightSum="3">
 
         <RadioButton
             android:id="@+id/radioStartsWith"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:tag="SW"
             android:text="@string/starts_with"
             android:textColor="@android:color/white"
@@ -47,6 +50,7 @@
             android:id="@+id/radioEndsWith"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:tag="EW"
             android:text="@string/ends_with"
             android:textColor="@android:color/white"
@@ -56,11 +60,26 @@
             android:id="@+id/radioNuclearOption"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:tag="NO"
             android:text="@string/nuclear_option"
             android:textColor="@android:color/white"
             app:buttonTint="@android:color/white" />
     </RadioGroup>
+
+    <EditText
+        android:id="@+id/specialRule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:digits="1234567890"
+        android:hint="@string/input_number_here"
+        android:importantForAutofill="no"
+        android:inputType="number"
+        android:maxLength="3"
+        android:textColor="@android:color/white"
+        android:textColorHint="@android:color/darker_gray"
+        android:visibility="gone" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -81,16 +100,6 @@
         android:background="@color/colorPrimaryDark"
         android:text="@string/keyword"
         android:textColor="@android:color/white" />
-
-    <androidx.appcompat.widget.SwitchCompat
-        android:id="@+id/nuclearOption"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginStart="4dp"
-        android:text="@string/nuclear_option"
-        android:textColor="@android:color/white"
-        android:visibility="gone" />
 
     <Button
         android:id="@+id/btnApply"

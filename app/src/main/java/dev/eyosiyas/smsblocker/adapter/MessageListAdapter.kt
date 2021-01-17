@@ -45,7 +45,7 @@ class MessageListAdapter constructor(private val messages: List<Message?>, priva
 
         fun bind(sentMessage: Message?) {
             binder.txtSentMessage.text = sentMessage!!.body
-            binder.txtMessageSentTime.text = Core.readableTime(sentMessage.timestamp)
+            binder.txtMessageSentTime.text = Core.readableTime(sentMessage.timestamp, itemView.context)
             itemView.setOnCreateContextMenuListener(this)
         }
 
@@ -61,7 +61,7 @@ class MessageListAdapter constructor(private val messages: List<Message?>, priva
         // TODO: 9/10/2020 Acquire profile picture
         fun bind(receivedMessage: Message?) {
             binder.txtSenderMessage.text = receivedMessage!!.body
-            binder.txtSenderTimestamp.text = Core.readableTime(receivedMessage.timestamp)
+            binder.txtSenderTimestamp.text = Core.readableTime(receivedMessage.timestamp, itemView.context)
             itemView.setOnCreateContextMenuListener(this)
         }
 

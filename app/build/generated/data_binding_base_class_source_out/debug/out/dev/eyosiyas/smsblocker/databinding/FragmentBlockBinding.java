@@ -23,13 +23,13 @@ public final class FragmentBlockBinding implements ViewBinding {
   public final RecyclerView blacklistRecycler;
 
   @NonNull
-  public final FloatingActionButton fabSendMessage;
+  public final FloatingActionButton fabAddBlacklist;
 
   private FragmentBlockBinding(@NonNull FrameLayout rootView,
-      @NonNull RecyclerView blacklistRecycler, @NonNull FloatingActionButton fabSendMessage) {
+      @NonNull RecyclerView blacklistRecycler, @NonNull FloatingActionButton fabAddBlacklist) {
     this.rootView = rootView;
     this.blacklistRecycler = blacklistRecycler;
-    this.fabSendMessage = fabSendMessage;
+    this.fabAddBlacklist = fabAddBlacklist;
   }
 
   @Override
@@ -65,13 +65,13 @@ public final class FragmentBlockBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.fabSendMessage;
-      FloatingActionButton fabSendMessage = rootView.findViewById(id);
-      if (fabSendMessage == null) {
+      id = R.id.fabAddBlacklist;
+      FloatingActionButton fabAddBlacklist = rootView.findViewById(id);
+      if (fabAddBlacklist == null) {
         break missingId;
       }
 
-      return new FragmentBlockBinding((FrameLayout) rootView, blacklistRecycler, fabSendMessage);
+      return new FragmentBlockBinding((FrameLayout) rootView, blacklistRecycler, fabAddBlacklist);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -4,17 +4,28 @@
     <item
         android:id="@+id/mainLanguage"
         android:icon="@drawable/ic_language"
-        android:title="@string/language"
+        android:title="@string/menu_language"
         app:showAsAction="always" />
 
     <item
-        android:id="@+id/mainAbout"
-        android:icon="@drawable/ic_about"
-        android:title="@string/menu_about"
+        android:id="@+id/mainShare"
+        android:icon="@drawable/ic_share"
+        android:title="@string/menu_share"
         app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mainTelegram"
+        android:icon="@drawable/ic_telegram"
+        android:title="@string/menu_telegram"
+        app:showAsAction="ifRoom" />
+
     <item
         android:id="@+id/mainSetting"
         android:icon="@drawable/ic_setting"
         android:title="@string/menu_setting"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/mainAbout"
+        android:icon="@drawable/ic_about"
+        android:title="@string/menu_about"
         app:showAsAction="ifRoom" />
 </menu>

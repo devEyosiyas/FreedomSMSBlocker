@@ -13,6 +13,11 @@ object Constant {
     const val DATE_PATTERN: String = "MMM dd yyyy"
     const val TIME_PATTERN: String = "hh:mm:ss a"
     const val DATE_TIME_PATTERN: String = "MMM dd yyyy hh:mm:ss a"
+    const val PATH_SHORT_CODE: String = "short-code"
+    const val FIELD_NUMBER: String = "spam"
+    const val FIELD_TIMESTAMP: String = "timestamp"
+    const val SOURCE_LOCAL: String = "user"
+    const val SOURCE_REMOTE: String = "crowdsourced"
     const val STARTS_WITH_TAG: String = "SW"
     const val ENDS_WITH_TAG: String = "EW"
     const val NUCLEAR_OPTION_TAG: String = "NO"
@@ -41,4 +46,5 @@ object Constant {
     const val STARTS_WITH: String = "startsWith"
     const val ENDS_WITH: String = "endsWith"
     val INPUT_LIMIT = InputFilter.LengthFilter(15)
+    val INPUT_LIMIT_WHITELIST = InputFilter.LengthFilter(4)
 }

@@ -17,5 +17,4 @@ interface BlockedDao {
 
     @Query("SELECT * FROM Blocked")
     fun blockedMessages(): LiveData<List<Blocked>>
-
 }

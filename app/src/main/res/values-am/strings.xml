@@ -55,7 +55,7 @@
     <string name="number">Number</string>
     <string name="insert">አስገባ</string>
     <string name="keyword">ቁልፍ ቃል</string>
-    <string name="language">ቋንቋ</string>
+    <string name="menu_language">ቋንቋ</string>
     <string name="choose_language">ቋንቋ ይምረጡ</string>
     <string name="select">ይምረጡ</string>
     <string name="message_options">የመልዕክት አማራጮች</string>
@@ -64,7 +64,29 @@
     <string name="message_delete_body">እርግጠኛ ነዎት ይህን መልእክት መሰረዝ ይፈልጋሉ?</string>
     <string name="message_delete_title">የታገደ መልእክት ሰርዝ</string>
     <string name="crowdsource">የብዙ ሰዎች ምንጭ</string>
-    <string name="active_blocking_rule">ንቁ የማገጃ ደንብ: %s</string>
+    <string name="active_blocking_rule">ተጨማሪ የማገጃ ደንብ: %s</string>
     <string name="always_active">ሁልጊዜ ንቁ የማገጃ ዘዴዎች በጥቁር መዝገብ እና በቁልፍ ቃል ላይ የተመሰረቱ ናቸው፡፡</string>
     <string name="whitelist">ነጭ ዝርዝር</string>
+    <string name="menu_share">ያጋሩ</string>
+    <string name="menu_telegram">ቴሌግራም</string>
+    <string name="share_title">ነፃነት ኤስኤምኤስ አግድን ያጋሩ</string>
+    <string name="share_extra">የኤስኤምኤስ አጭበርባሪዎች ራስ ምታት ሆኖቦዎታል? መፍትሄ አለኝ።\nhttps://t.me/spamFreeLife</string>
+    <string name="error_fetching_data">ከአገልጋይ ውሂብ በማምጣት ላይ ስህተት ተከስቷል።</string>
+    <string name="insert_crowdsourced_title">የብዙ ሰዎች ምንጭ</string>
+    <string name="insert_crowdsourced_message">የብዙ ሰዎች ምንጭ የሆነውን %s ማስገባት ይፈልጋሉ?</string>
+    <string name="share_crowdsource_title">ለህዝባዊ አገልግሎት ያጋሩ</string>
+    <string name="share_crowdsource_message">%sን ለህዝባዊ ማሰባሰብ ፕሮግራም ማበርከት ይፈልጋሉ?</string>
+    <string name="crowdsource_contributed">ለህዝባዊ ማሰባሰብ ፕሮግራም በተሳካ ሁኔታ አስተዋፅዖ አድርገዋል።\nላበረከቱት አስተዋጽኦ እናመሰግናለን፡፡</string>
+    <string name="error">Error occurred %s</string>
+    <string name="crowdsource_already_contributed">ይቅርታ አንድ ሰው ቀድሞውኑ አስተዋፅዖ አድርጓል።\nበሚቀጥለው ጊዜ የተሻለ ዕድል እንዲሆንልዎ እንመኛለን፡፡</string>
+    <string name="input_number_here">ቁጥር እዚህ ያስገቡ</string>
+    <string name="no_number_inserted">ቁጥር አላስገቡም ፣ እንደገና ይሞክሩ።</string>
+    <string name="special_blocking_length">እባክዎን የሁለት ወይም የሶስት አሃዝ ርዝመት ይጠቀሙ፡፡</string>
+    <string name="already_whitelisted">%s አስቀድሞ በተፈቀደ ዝርዝር ውስጥ ገብቷል።</string>
+    <string name="whitelist_record_updated">የነጭ መዝገቡ ዘምኗል!</string>
+    <string name="remove_whitelist_title">"ከነጭ መዝገብ ውስጥ አስወግድ።"</string>
+    <string name="remove_whitelist_message">%sን ከነጭ ዝርዝር ውስጥ ማስወገድ ይፈልጋሉ?</string>
+    <string name="crowdsource_access_granted">የብዙ ሰዎች ምንጭ መዳረሻ ተሰጠ!</string>
+    <string name="crowdsource_access_denied">ለሕዝብ ማሰባሰብ ውሂብ የበይነመረብ ግንኙነትን ከአንድ ጊዜ ማግበር ያንቁ።</string>
+
 </resources>

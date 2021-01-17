@@ -64,7 +64,7 @@
     <string name="permission_from_settings">Allow Permission form settings</string>
     <string name="default_sms_app_message">For a better use of the app, you need to make this app a default for SMS.</string>
     <string name="default_sms_app_title">Default SMS app</string>
-    <string name="language">Language</string>
+    <string name="menu_language">Language</string>
     <string name="choose_language">Choose language</string>
     <string name="select">Select</string>
     <string name="message_options">Message options</string>
@@ -73,7 +73,29 @@
     <string name="message_delete_body">Are you sure you want to delete this message?</string>
     <string name="message_delete_title">Delete blocked message</string>
     <string name="crowdsource">Crowdsource</string>
-    <string name="active_blocking_rule">Active blocking rule: %s</string>
+    <string name="active_blocking_rule">Additional blocking rule: %s</string>
     <string name="always_active">Always active blocking methods are Blacklist and Keyword-based.</string>
     <string name="whitelist">Whitelist</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_telegram">Telegram</string>
+    <string name="share_title">Share Freedom SMS Blocker</string>
+    <string name="share_extra">SMS spammers caused you a headache? I have a solution.\nhttps://t.me/spamFreeLife</string>
+    <string name="error_fetching_data">Error occurred while fetching data from Server.</string>
+    <string name="insert_crowdsourced_title">Crowdsourced</string>
+    <string name="insert_crowdsourced_message">Do you want to add %s from crowdsource?</string>
+    <string name="share_crowdsource_title">Share to crowdsource</string>
+    <string name="share_crowdsource_message">Contribute %s to crowdsource program?</string>
+    <string name="crowdsource_contributed">Successfully contributed to crowdsource program.\nThank you for your contribution.</string>
+    <string name="error">Error occurred %s</string>
+    <string name="crowdsource_already_contributed">Sorry someone already contributed.\nBetter luck next time.</string>
+    <string name="input_number_here">Input number here</string>
+    <string name="no_number_inserted">No number inserted, Try again.</string>
+    <string name="special_blocking_length">Please use a length of two or three digit number.</string>
+    <string name="already_whitelisted">%s already whitelisted.</string>
+    <string name="whitelist_record_updated">Whitelist record updated!</string>
+    <string name="remove_whitelist_title">Remove from Whitelist.</string>
+    <string name="remove_whitelist_message">Do you want to remove %s from the Whitelist?</string>
+    <string name="crowdsource_access_granted">Access to Crowdsource granted!</string>
+    <string name="crowdsource_access_denied">Enable internet connectivity to one-time activation for crowdsourcing data.</string>
+
 </resources>

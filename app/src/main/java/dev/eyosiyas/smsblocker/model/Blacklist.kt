@@ -8,5 +8,7 @@ data class Blacklist(
         @PrimaryKey(autoGenerate = true)
         val id: Int,
         val number: String,
-        val timestamp: Long
+        val timestamp: Long,
+        val source: String,
+        val shared: Boolean
 )

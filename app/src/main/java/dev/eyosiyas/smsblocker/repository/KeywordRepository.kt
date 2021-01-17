@@ -26,9 +26,7 @@ class KeywordRepository(private val keywordDao: KeywordDao) {
         return keywordDao.exists(input)
     }
 
-    fun keywordsCount(): Int {
+    suspend fun keywordsCount(): Int {
         return keywordDao.keywordsCount()
     }
-
-
 }

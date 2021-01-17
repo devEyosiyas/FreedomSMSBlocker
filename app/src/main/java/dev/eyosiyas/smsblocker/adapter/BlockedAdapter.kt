@@ -19,8 +19,9 @@ class BlockedAdapter(private val blockedMessageSelected: BlockedMessageSelected)
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val blockedMessage = blockedMessages[position]
         holder.binding.blockedMessageNumber.text = blockedMessage.sender
-        holder.binding.blockedMessageTimestamp.text = Core.readableTime(blockedMessage.timestamp)
+        holder.binding.blockedMessageTimestamp.text = Core.readableTime(blockedMessage.timestamp, holder.itemView.context)
         holder.binding.deleteBlockedMessage.setOnClickListener { blockedMessageSelected.onDeleteSelected(blockedMessage) }
+        holder.binding.container.setOnClickListener { blockedMessageSelected.onSelected(blockedMessage) }
     }
 
 

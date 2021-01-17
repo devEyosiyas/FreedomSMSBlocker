@@ -26,4 +26,8 @@ class WhitelistRepository(private val whitelistDao: WhitelistDao) {
     fun exists(input: String): Boolean {
         return whitelistDao.exists(input)
     }
+
+    suspend fun whitelistCount(): Int {
+        return whitelistDao.whitelistCount()
+    }
 }

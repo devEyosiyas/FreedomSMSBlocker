@@ -42,4 +42,10 @@ class WhitelistViewModel(app: Application) : AndroidViewModel(app) {
         withContext(viewModelScope.coroutineContext + Dispatchers.IO) { response = repository.exists(keyword) }
         return response
     }
+
+    suspend fun whitelistCount(): Int {
+        var count: Int
+        withContext(viewModelScope.coroutineContext + Dispatchers.IO) { count = repository.whitelistCount() }
+        return count
+    }
 }

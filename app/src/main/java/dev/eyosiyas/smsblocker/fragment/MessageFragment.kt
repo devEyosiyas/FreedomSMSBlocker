@@ -3,6 +3,7 @@ package dev.eyosiyas.smsblocker.fragment
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.content.res.Configuration
+import android.database.Cursor
 import android.os.Build
 import android.os.Bundle
 import android.os.LocaleList
@@ -16,13 +17,16 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import dev.eyosiyas.smsblocker.R
 import dev.eyosiyas.smsblocker.adapter.MessageAdapter
 import dev.eyosiyas.smsblocker.databinding.FragmentMessageBinding
+import dev.eyosiyas.smsblocker.event.MessageSelected
 import dev.eyosiyas.smsblocker.model.Message
 import dev.eyosiyas.smsblocker.util.Constant
+import dev.eyosiyas.smsblocker.util.Core
 import dev.eyosiyas.smsblocker.util.PrefManager
+import dev.eyosiyas.smsblocker.view.DetailSmsActivity
 import dev.eyosiyas.smsblocker.view.SendMessageActivity
 import java.util.*
 
-class MessageFragment : Fragment() {
+class MessageFragment : Fragment(), MessageSelected {
     private lateinit var binder: FragmentMessageBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -46,36 +50,27 @@ class MessageFragment : Fragment() {
         binder.fabSendMessage.setOnClickListener {
             if (ContextCompat.checkSelfPermission((activity)!!, Constant.SEND_SMS) == PackageManager.PERMISSION_GRANTED) startActivity(Intent(context, SendMessageActivity::class.java)) else Toast.makeText(context, "You need permission", Toast.LENGTH_SHORT).show()
         }
-        binder.smsListRecycler.layoutManager = LinearLayoutManager(context)
-        init()
-        return view
+        binder.smsListRecycler.layoutManager = LinearLayoutManager(requireContext())
+        binder.smsListRecycler.adapter = MessageAdapter(this, messages())
+        return binder.root
     }
 
-    private val messages: List<Message>
-        get() {
-            val messages: MutableList<Message> = ArrayList()
-//            val list: MutableList<String> = ArrayList()
-//            val cursor: Cursor? = requireActivity().contentResolver.query(Constant.CONTENT_PROVIDER_SMS, null, null, null, null)
-//            while (cursor!!.moveToNext()) {
-//                if (!list.contains(cursor.getString(cursor.getColumnIndex(Constant.FIELD_NAME)))) {
-//                    list.add(cursor.getString(cursor.getColumnIndex(Constant.FIELD_NAME)))
-//                    messages.add(Message(
-//                            type = if (cursor.getInt(cursor.getColumnIndex(Constant.FIELD_TYPE)) == 1) Constant.FIELD_RECEIVED else Constant.FIELD_SENT,
-//                            isRead = cursor.getInt(cursor.getColumnIndex(Constant.FIELD_READ)) != 0,
-//                            isSeen = cursor.getInt(cursor.getColumnIndex(Constant.FIELD_SEEN)) != 0,
-//                            body = cursor.getString(cursor.getColumnIndex(Constant.FIELD_BODY)),
-//                            sender = cursor.getString(cursor.getColumnIndex(Constant.FIELD_NAME)),
-//                            displayName = Core.displayName(requireContext(), cursor.getString(cursor.getColumnIndex(Constant.FIELD_NAME))),
-//                            timestamp = cursor.getLong(cursor.getColumnIndex(Constant.FIELD_DATE))
-//                    ))
-//                }
-//            }
-//            cursor.close()
-//            list.clear()
-            return messages
+    private fun messages(): List<Message> {
+        val messages: MutableList<Message> = ArrayList()
+        val list: MutableList<String> = ArrayList()
+        val cursor: Cursor? = requireActivity().contentResolver.query(Constant.CONTENT_PROVIDER_SMS, null, null, null, null)
+        while (cursor!!.moveToNext()) {
+            if (!list.contains(cursor.getString(cursor.getColumnIndex(Constant.FIELD_NAME)))) {
+                list.add(cursor.getString(cursor.getColumnIndex(Constant.FIELD_NAME)))
+                messages.add(Message(0, cursor.getString(cursor.getColumnIndex(Constant.FIELD_NAME)), Core.displayName(requireContext(), cursor.getString(cursor.getColumnIndex(Constant.FIELD_NAME))), if (cursor.getInt(cursor.getColumnIndex(Constant.FIELD_TYPE)) == 1) Constant.FIELD_RECEIVED else Constant.FIELD_SENT, cursor.getString(cursor.getColumnIndex(Constant.FIELD_BODY)), cursor.getInt(cursor.getColumnIndex(Constant.FIELD_READ)) != 0, cursor.getInt(cursor.getColumnIndex(Constant.FIELD_SEEN)) != 0, cursor.getLong(cursor.getColumnIndex(Constant.FIELD_DATE))))
+            }
         }
+        cursor.close()
+        list.clear()
+        return messages
+    }
 
-    private fun init() {
-        binder.smsListRecycler.adapter = MessageAdapter(context, messages)
+    override fun onMessageSelected(message: Message, displayName: String) {
+        startActivity(Intent(context, DetailSmsActivity::class.java).putExtra("KEY", message.sender).putExtra("DISPLAY", displayName))
     }
 }

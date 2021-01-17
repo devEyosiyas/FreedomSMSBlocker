@@ -15,12 +15,12 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 import dev.eyosiyas.smsblocker.R
 import dev.eyosiyas.smsblocker.databinding.ActivityMainBinding
-import dev.eyosiyas.smsblocker.fragment.BlockFragment
-import dev.eyosiyas.smsblocker.fragment.BlockedMessagesFragment
-import dev.eyosiyas.smsblocker.fragment.MessageFragment
-import dev.eyosiyas.smsblocker.fragment.SettingFragment
+import dev.eyosiyas.smsblocker.fragment.*
 import dev.eyosiyas.smsblocker.util.Constant
 import dev.eyosiyas.smsblocker.util.Core
 import dev.eyosiyas.smsblocker.util.PrefManager
@@ -49,6 +49,17 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         binder = ActivityMainBinding.inflate(layoutInflater)
         setSupportActionBar(binder.toolbar)
         setContentView(binder.root)
+        val auth: FirebaseAuth = Firebase.auth
+        if (auth.currentUser == null) {
+            auth.signInAnonymously()
+                    .addOnCompleteListener(this) { task ->
+                        if (task.isSuccessful)
+                            Toast.makeText(this, getString(R.string.crowdsource_access_granted), Toast.LENGTH_SHORT).show()
+                        else
+                            Toast.makeText(baseContext, getString(R.string.crowdsource_access_denied), Toast.LENGTH_SHORT).show()
+                    }
+        }
+
         initSec()
         binder.bottomNavView.setOnNavigationItemSelectedListener(this)
         Core.defaultSMS(this)
@@ -95,8 +106,8 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
             R.id.navMenuSms -> fragment = MessageFragment()
             R.id.navMenuBlacklist -> fragment = BlockFragment()
             R.id.navMenuBlockedMessages -> fragment = BlockedMessagesFragment()
-            R.id.navMenuCrowdSource -> Toast.makeText(this, "Crowdsource coming soon!", Toast.LENGTH_SHORT).show()
-            R.id.navMenuWhitelist -> Toast.makeText(this, "Whitelist coming soon!", Toast.LENGTH_SHORT).show()
+            R.id.navMenuCrowdSource -> fragment = CrowdSourceFragment()
+            R.id.navMenuWhitelist -> fragment = WhitelistFragment()
         }
         if (fragment != null) supportFragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit()
         return true
@@ -114,8 +125,10 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             R.id.mainLanguage -> languageUI()
-            R.id.mainAbout -> Core.about(this)
+            R.id.mainShare -> Core.share(this)
+            R.id.mainTelegram -> Core.telegram(this)
             R.id.mainSetting -> supportFragmentManager.beginTransaction().replace(R.id.frameLayout, SettingFragment()).commit()
+            R.id.mainAbout -> Core.about(this)
         }
         return super.onOptionsItemSelected(item)
     }

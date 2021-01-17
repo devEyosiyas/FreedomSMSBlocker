@@ -1,5 +1,6 @@
 package dev.eyosiyas.smsblocker.fragment
 
+import android.content.Intent
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
@@ -18,6 +19,7 @@ import dev.eyosiyas.smsblocker.databinding.FragmentBlockedMessagesBinding
 import dev.eyosiyas.smsblocker.event.BlockedMessageSelected
 import dev.eyosiyas.smsblocker.model.Blocked
 import dev.eyosiyas.smsblocker.util.PrefManager
+import dev.eyosiyas.smsblocker.view.DetailSmsActivity
 import dev.eyosiyas.smsblocker.viewmodel.BlockedViewModel
 import java.util.*
 
@@ -52,6 +54,10 @@ class BlockedMessagesFragment : Fragment(), BlockedMessageSelected {
             adapter.populate(blockedMessages)
         })
         return binder.root
+    }
+
+    override fun onSelected(blockedMessage: Blocked) {
+        startActivity(Intent(requireContext(), DetailSmsActivity::class.java).putExtra("KEY", blockedMessage.sender).putExtra("DISPLAY", blockedMessage.sender))
     }
 
     override fun onDeleteSelected(blockedMessage: Blocked) {

@@ -20,12 +20,11 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 object Core {
-    private val HEX_CHARS = "0123456789ABCDEF".toCharArray()
-
-    fun readableTime(timestamp: Long): String {
-        val currentDate: String = SimpleDateFormat(Constant.DATE_PATTERN, Locale.ENGLISH).format(Calendar.getInstance().time)
-        val date: String = SimpleDateFormat(Constant.DATE_PATTERN, Locale.ENGLISH).format(Date(timestamp))
-        return if ((date == currentDate)) SimpleDateFormat(Constant.TIME_PATTERN, Locale.ENGLISH).format(Date(timestamp)) else SimpleDateFormat(Constant.DATE_TIME_PATTERN, Locale.ENGLISH).format(Date(timestamp))
+    fun readableTime(timestamp: Long, context: Context): String {
+        val locale = Locale(PrefManager(context).locale)
+        val currentDate: String = SimpleDateFormat(Constant.DATE_PATTERN, locale).format(Calendar.getInstance().time)
+        val date: String = SimpleDateFormat(Constant.DATE_PATTERN, locale).format(Date(timestamp))
+        return if ((date == currentDate)) SimpleDateFormat(Constant.TIME_PATTERN, locale).format(Date(timestamp)) else SimpleDateFormat(Constant.DATE_TIME_PATTERN, locale).format(Date(timestamp))
     }
 
     fun permissionDenied(activity: Activity, title: String?, message: String?, forced: Boolean) {
@@ -46,8 +45,8 @@ object Core {
         context.startActivityForResult(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS).setData(Uri.fromParts("package", context.applicationInfo.packageName, null)), Constant.REQUEST_SETTING)
     }
 
-    fun displayName(context: Context, number: String?): String? {
-        var tmpNumber: String? = number
+    fun displayName(context: Context, number: String): String {
+        var tmpNumber: String = number
         if (ContextCompat.checkSelfPermission((context), Constant.READ_CONTACTS) == PackageManager.PERMISSION_DENIED) return tmpNumber
         val uri: Uri = Uri.withAppendedPath(ContactsContract.PhoneLookup.CONTENT_FILTER_URI, Uri.encode(tmpNumber))
         val cursor: Cursor? = context.contentResolver.query(uri, arrayOf(ContactsContract.PhoneLookup.DISPLAY_NAME), null, null, null)
@@ -90,6 +89,21 @@ object Core {
 
     fun limit(input: CharSequence): String {
         return if (input.toString().matches("[a-zA-Z]".toRegex())) input.toString() else ""
+    }
+
+    fun telegram(context: Context) {
+        try {
+            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("tg:resolve?domain=spamFreeLife")))
+        } catch (e: Exception) {
+            context.startActivity(Intent(Intent.ACTION_VIEW, Uri.parse("https://t.me/spamFreeLife")))
+        }
+    }
+
+    fun share(context: Context) {
+        val intent = Intent(Intent.ACTION_SEND)
+        intent.type = "text/plain"
+        intent.putExtra(Intent.EXTRA_TEXT, context.getString(R.string.share_extra))
+        context.startActivity(Intent.createChooser(intent, context.getString(R.string.share_title)))
     }
 
     fun about(context: Context) {

@@ -182,6 +182,7 @@ attr buttonCompat
 attr buttonGravity
 attr buttonIconDimen
 attr buttonPanelSideLayout
+attr buttonSize
 attr buttonStyle
 attr buttonStyleSmall
 attr buttonTint
@@ -224,6 +225,7 @@ attr chipStrokeColor
 attr chipStrokeWidth
 attr chipStyle
 attr chipSurfaceColor
+attr circleCrop
 attr circleRadius
 attr civ_border_color
 attr civ_border_overlay
@@ -260,6 +262,7 @@ attr colorPrimary
 attr colorPrimaryDark
 attr colorPrimarySurface
 attr colorPrimaryVariant
+attr colorScheme
 attr colorSecondary
 attr colorSecondaryVariant
 attr colorSurface
@@ -486,6 +489,8 @@ attr iconStartPadding
 attr iconTint
 attr iconTintMode
 attr iconifiedByDefault
+attr imageAspectRatio
+attr imageAspectRatioAdjust
 attr imageButtonStyle
 attr indeterminateProgressStyle
 attr initialActivityCount
@@ -755,6 +760,7 @@ attr rippleColor
 attr round
 attr roundPercent
 attr saturation
+attr scopeUris
 attr scrimAnimationDuration
 attr scrimBackground
 attr scrimVisibleHeightTrigger
@@ -1036,6 +1042,17 @@ color checkbox_themeable_attribute_color
 color colorAccent
 color colorPrimary
 color colorPrimaryDark
+color common_google_signin_btn_text_dark
+color common_google_signin_btn_text_dark_default
+color common_google_signin_btn_text_dark_disabled
+color common_google_signin_btn_text_dark_focused
+color common_google_signin_btn_text_dark_pressed
+color common_google_signin_btn_text_light
+color common_google_signin_btn_text_light_default
+color common_google_signin_btn_text_light_disabled
+color common_google_signin_btn_text_light_focused
+color common_google_signin_btn_text_light_pressed
+color common_google_signin_btn_tint
 color design_bottom_navigation_shadow_color
 color design_box_stroke_color
 color design_dark_default_color_background
@@ -1643,12 +1660,33 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable common_full_open_on_phone
+drawable common_google_signin_btn_icon_dark
+drawable common_google_signin_btn_icon_dark_focused
+drawable common_google_signin_btn_icon_dark_normal
+drawable common_google_signin_btn_icon_dark_normal_background
+drawable common_google_signin_btn_icon_disabled
+drawable common_google_signin_btn_icon_light
+drawable common_google_signin_btn_icon_light_focused
+drawable common_google_signin_btn_icon_light_normal
+drawable common_google_signin_btn_icon_light_normal_background
+drawable common_google_signin_btn_text_dark
+drawable common_google_signin_btn_text_dark_focused
+drawable common_google_signin_btn_text_dark_normal
+drawable common_google_signin_btn_text_dark_normal_background
+drawable common_google_signin_btn_text_disabled
+drawable common_google_signin_btn_text_light
+drawable common_google_signin_btn_text_light_focused
+drawable common_google_signin_btn_text_light_normal
+drawable common_google_signin_btn_text_light_normal_background
 drawable design_bottom_navigation_item_background
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable googleg_disabled_color_18
+drawable googleg_standard_color_18
 drawable ic_about
 drawable ic_arrow_down_24dp
 drawable ic_back
@@ -1667,7 +1705,9 @@ drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
 drawable ic_send
 drawable ic_setting
+drawable ic_share
 drawable ic_sms
+drawable ic_telegram
 drawable ic_update
 drawable ic_user
 drawable ic_whitelist
@@ -1777,6 +1817,9 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id addCrowdSourcedBlacklist
+id adjust_height
+id adjust_width
 id alertTitle
 id aligned
 id all
@@ -1835,9 +1878,13 @@ id content
 id contentPanel
 id coordinator
 id cos
+id crowdSourceRecycler
+id crowdSourcedBlacklist
+id crowdSourcedTimestamp
 id custom
 id customPanel
 id cut
+id dark
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -1880,6 +1927,8 @@ id enterAlwaysCollapsed
 id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
+id fabAddBlacklist
+id fabAddWhitelist
 id fabSendMessage
 id fade
 id fill
@@ -1908,12 +1957,14 @@ id honorRequest
 id icon
 id icon_frame
 id icon_group
+id icon_only
 id ifRoom
 id ignore
 id ignoreRequest
 id image
 id imgDeleteNumber
 id imgEditNumber
+id imgShareNumber
 id info
 id inputBlacklistNumber
 id invisible
@@ -1926,6 +1977,7 @@ id labeled
 id largeLabel
 id layout
 id left
+id light
 id line1
 id line3
 id linear
@@ -1934,6 +1986,8 @@ id list_item
 id mainAbout
 id mainLanguage
 id mainSetting
+id mainShare
+id mainTelegram
 id masked
 id media_actions
 id menuCopy
@@ -1987,7 +2041,6 @@ id normal
 id notification_background
 id notification_main_column
 id notification_main_column_container
-id nuclearOption
 id off
 id on
 id outline
@@ -2062,6 +2115,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id specialRule
 id spinner
 id spline
 id split_action_bar
@@ -2145,6 +2199,8 @@ id useLogo
 id view_offset_helper
 id visible
 id visible_removing_fragment_view_tag
+id whitelistRecycler
+id wide
 id withText
 id withinBounds
 id wrap
@@ -2218,6 +2274,7 @@ layout activity_send_message
 layout blacklist_item
 layout blacklist_managment
 layout blocked_message
+layout crowd_source_item
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
@@ -2237,8 +2294,10 @@ layout design_text_input_start_icon
 layout expand_button
 layout fragment_block
 layout fragment_blocked_messages
+layout fragment_crowd_source
 layout fragment_message
 layout fragment_setting
+layout fragment_whitelist
 layout image_frame
 layout item_message_received
 layout item_message_sent
@@ -2359,6 +2418,7 @@ string abc_toolbar_collapse_description
 string about_content
 string active_blocking_rule
 string already_blocked
+string already_whitelisted
 string always_active
 string app_name
 string appbar_scrolling_view_behavior
@@ -2377,18 +2437,41 @@ string character_counter_pattern
 string chip_text
 string choose_language
 string clear_text_end_icon_content_description
+string common_google_play_services_enable_button
+string common_google_play_services_enable_text
+string common_google_play_services_enable_title
+string common_google_play_services_install_button
+string common_google_play_services_install_text
+string common_google_play_services_install_title
+string common_google_play_services_notification_channel_name
+string common_google_play_services_notification_ticker
 string common_google_play_services_unknown_issue
+string common_google_play_services_unsupported_text
+string common_google_play_services_update_button
+string common_google_play_services_update_text
+string common_google_play_services_update_title
+string common_google_play_services_updating_text
+string common_google_play_services_wear_update_text
+string common_open_on_phone
+string common_signin_button_text
+string common_signin_button_text_long
 string contacts_permission_message
 string contacts_permission_title
 string copy
 string copy_text
 string crowdsource
+string crowdsource_access_denied
+string crowdsource_access_granted
+string crowdsource_already_contributed
+string crowdsource_contributed
 string default_sms_app_message
 string default_sms_app_title
 string default_web_client_id
 string delete
 string ends_with
 string enter_message
+string error
+string error_fetching_data
 string error_icon_content_description
 string expand_button_title
 string exposed_dropdown_menu_content_description
@@ -2403,12 +2486,14 @@ string google_crash_reporting_api_key
 string google_storage_bucket
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
+string input_number_here
 string insert
+string insert_crowdsourced_message
+string insert_crowdsourced_title
 string item_view_role_description
 string keyword
 string keyword_already_exists
 string keyword_length_message
-string language
 string library_android_database_sqlcipher_author
 string library_android_database_sqlcipher_authorWebsite
 string library_android_database_sqlcipher_isOpenSource
@@ -2422,8 +2507,11 @@ string material_slider_range_end
 string material_slider_range_start
 string menu_about
 string menu_block
+string menu_language
 string menu_setting
+string menu_share
 string menu_sms
+string menu_telegram
 string message_delete_body
 string message_delete_title
 string message_deleted
@@ -2469,6 +2557,7 @@ string mtrl_picker_toggle_to_year_selection
 string nav_app_bar_navigate_up_description
 string nav_app_bar_open_drawer_description
 string no_blocking_rule_is_selected
+string no_number_inserted
 string no_service
 string not_set
 string nuclear_option
@@ -2491,14 +2580,21 @@ string remove_blacklist_message
 string remove_blacklist_title
 string remove_keyword_message
 string remove_keyword_title
+string remove_whitelist_message
+string remove_whitelist_title
 string removed_successfully
 string rules_for_blocking_sms
 string saved_to_db
 string search_menu_title
 string select
 string send
+string share_crowdsource_message
+string share_crowdsource_title
+string share_extra
+string share_title
 string sms_permission_denied_message
 string sms_permission_denied_title
+string special_blocking_length
 string starts_with
 string status_bar_notification_info_overflow
 string summary_collapsed_preference_list
@@ -2507,6 +2603,7 @@ string update_successful
 string v7_preference_off
 string v7_preference_on
 string whitelist
+string whitelist_record_updated
 style AlertDialog_AppCompat
 style AlertDialog_AppCompat_Light
 style AndroidThemeColorAccentYellow
@@ -3310,6 +3407,7 @@ styleable LinearLayoutCompat android_gravity android_orientation android_baselin
 styleable LinearLayoutCompat_Layout android_layout_gravity android_layout_width android_layout_height android_layout_weight
 styleable ListPopupWindow android_dropDownHorizontalOffset android_dropDownVerticalOffset
 styleable ListPreference android_entries android_entryValues entries entryValues useSimpleSummaryProvider
+styleable LoadingImageView circleCrop imageAspectRatio imageAspectRatioAdjust
 styleable MaterialAlertDialog backgroundInsetBottom backgroundInsetEnd backgroundInsetStart backgroundInsetTop
 styleable MaterialAlertDialogTheme materialAlertDialogBodyTextStyle materialAlertDialogTheme materialAlertDialogTitleIconStyle materialAlertDialogTitlePanelStyle materialAlertDialogTitleTextStyle
 styleable MaterialAutoCompleteTextView android_inputType
@@ -3362,6 +3460,7 @@ styleable SearchView android_focusable android_maxWidth android_inputType androi
 styleable SeekBarPreference android_layout android_max adjustable min seekBarIncrement showSeekBarValue updatesContinuously
 styleable ShapeAppearance cornerFamily cornerFamilyBottomLeft cornerFamilyBottomRight cornerFamilyTopLeft cornerFamilyTopRight cornerSize cornerSizeBottomLeft cornerSizeBottomRight cornerSizeTopLeft cornerSizeTopRight
 styleable ShapeableImageView shapeAppearance shapeAppearanceOverlay strokeColor strokeWidth
+styleable SignInButton buttonSize colorScheme scopeUris
 styleable Slider android_enabled android_value android_stepSize android_valueFrom android_valueTo haloColor haloRadius labelBehavior labelStyle thumbColor thumbElevation thumbRadius tickColor tickColorActive tickColorInactive trackColor trackColorActive trackColorInactive trackHeight
 styleable Snackbar snackbarButtonStyle snackbarStyle snackbarTextViewStyle
 styleable SnackbarLayout android_maxWidth actionTextColorAlpha animationMode backgroundOverlayColorAlpha backgroundTint backgroundTintMode elevation maxActionInlineWidth

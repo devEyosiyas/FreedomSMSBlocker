@@ -5,13 +5,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.SwitchCompat;
 import androidx.viewbinding.ViewBinding;
 import dev.eyosiyas.smsblocker.R;
 import java.lang.NullPointerException;
@@ -32,9 +32,6 @@ public final class FragmentSettingBinding implements ViewBinding {
   public final Button btnKeyword;
 
   @NonNull
-  public final SwitchCompat nuclearOption;
-
-  @NonNull
   public final RadioButton radioEndsWith;
 
   @NonNull
@@ -46,19 +43,22 @@ public final class FragmentSettingBinding implements ViewBinding {
   @NonNull
   public final RadioButton radioStartsWith;
 
+  @NonNull
+  public final EditText specialRule;
+
   private FragmentSettingBinding(@NonNull LinearLayout rootView, @NonNull TextView blockingRule,
-      @NonNull Button btnApply, @NonNull Button btnKeyword, @NonNull SwitchCompat nuclearOption,
-      @NonNull RadioButton radioEndsWith, @NonNull RadioGroup radioGroup,
-      @NonNull RadioButton radioNuclearOption, @NonNull RadioButton radioStartsWith) {
+      @NonNull Button btnApply, @NonNull Button btnKeyword, @NonNull RadioButton radioEndsWith,
+      @NonNull RadioGroup radioGroup, @NonNull RadioButton radioNuclearOption,
+      @NonNull RadioButton radioStartsWith, @NonNull EditText specialRule) {
     this.rootView = rootView;
     this.blockingRule = blockingRule;
     this.btnApply = btnApply;
     this.btnKeyword = btnKeyword;
-    this.nuclearOption = nuclearOption;
     this.radioEndsWith = radioEndsWith;
     this.radioGroup = radioGroup;
     this.radioNuclearOption = radioNuclearOption;
     this.radioStartsWith = radioStartsWith;
+    this.specialRule = specialRule;
   }
 
   @Override
@@ -106,12 +106,6 @@ public final class FragmentSettingBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.nuclearOption;
-      SwitchCompat nuclearOption = rootView.findViewById(id);
-      if (nuclearOption == null) {
-        break missingId;
-      }
-
       id = R.id.radioEndsWith;
       RadioButton radioEndsWith = rootView.findViewById(id);
       if (radioEndsWith == null) {
@@ -136,8 +130,14 @@ public final class FragmentSettingBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.specialRule;
+      EditText specialRule = rootView.findViewById(id);
+      if (specialRule == null) {
+        break missingId;
+      }
+
       return new FragmentSettingBinding((LinearLayout) rootView, blockingRule, btnApply, btnKeyword,
-          nuclearOption, radioEndsWith, radioGroup, radioNuclearOption, radioStartsWith);
+          radioEndsWith, radioGroup, radioNuclearOption, radioStartsWith, specialRule);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

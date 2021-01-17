@@ -42,4 +42,10 @@ class BlacklistViewModel(app: Application) : AndroidViewModel(app) {
         withContext(viewModelScope.coroutineContext + Dispatchers.IO) { response = repository.exists(blacklist) }
         return response
     }
+
+    suspend fun blacklistCount(): Int {
+        var count: Int
+        withContext(viewModelScope.coroutineContext + Dispatchers.IO) { count = repository.blacklistCount() }
+        return count
+    }
 }

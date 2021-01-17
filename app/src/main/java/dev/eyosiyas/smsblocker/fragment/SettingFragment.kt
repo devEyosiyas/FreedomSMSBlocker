@@ -13,7 +13,6 @@ import android.widget.RadioButton
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import dev.eyosiyas.smsblocker.R
@@ -64,8 +63,16 @@ class SettingFragment : Fragment(), KeywordSelected {
         }
 
         when (storedBlockingRule) {
-            Constant.STARTS_WITH_TAG -> binder.radioStartsWith.isChecked = true
-            Constant.ENDS_WITH_TAG -> binder.radioEndsWith.isChecked = true
+            Constant.STARTS_WITH_TAG -> {
+                binder.radioStartsWith.isChecked = true
+                binder.specialRule.visibility = View.VISIBLE
+                binder.specialRule.setText(manager.startsWith)
+            }
+            Constant.ENDS_WITH_TAG -> {
+                binder.radioEndsWith.isChecked = true
+                binder.specialRule.visibility = View.VISIBLE
+                binder.specialRule.setText(manager.endsWith)
+            }
             Constant.NUCLEAR_OPTION_TAG -> binder.radioNuclearOption.isChecked = true
         }
 
@@ -74,39 +81,40 @@ class SettingFragment : Fragment(), KeywordSelected {
         binder.radioGroup.setOnCheckedChangeListener { radioGroup, _ ->
             val rb = requireActivity().findViewById<RadioButton>(radioGroup.checkedRadioButtonId)
             tag = rb.tag.toString()
-            Toast.makeText(requireContext(), "${rb.text}", Toast.LENGTH_SHORT).show()
+
+            when (tag) {
+                Constant.STARTS_WITH_TAG -> {
+                    binder.specialRule.visibility = View.VISIBLE
+                    binder.specialRule.setText(manager.startsWith)
+                }
+                Constant.ENDS_WITH_TAG -> {
+                    binder.specialRule.visibility = View.VISIBLE
+                    binder.specialRule.setText(manager.endsWith)
+                }
+                else -> binder.specialRule.visibility = View.GONE
+            }
         }
 
-        binder.nuclearOption.isChecked = manager.nuclearOption
-//        binder.editStartsWith.setText(manager.startsWith)
-//        binder.editEndsWith.setText(manager.endsWith)
         binder.btnApply.setOnClickListener {
             if (tag != "") {
+                if (tag == Constant.STARTS_WITH_TAG || tag == Constant.ENDS_WITH_TAG) {
+                    when {
+                        binder.specialRule.text.toString().isEmpty() -> Toast.makeText(requireContext(), getString(R.string.no_number_inserted), Toast.LENGTH_SHORT).show()
+                        binder.specialRule.text.toString().length < 2 -> Toast.makeText(requireContext(), getString(R.string.special_blocking_length), Toast.LENGTH_SHORT).show()
+                        else -> {
+                            if (tag == Constant.STARTS_WITH_TAG) {
+                                manager.startsWith = binder.specialRule.text.toString()
+                                Toast.makeText(requireContext(), String.format(Locale.ENGLISH, getString(R.string.active_blocking_rule), getString(R.string.starts_with)), Toast.LENGTH_SHORT).show()
+                            } else if (tag == Constant.ENDS_WITH_TAG) {
+                                manager.endsWith = binder.specialRule.text.toString()
+                                Toast.makeText(requireContext(), String.format(Locale.ENGLISH, getString(R.string.active_blocking_rule), getString(R.string.ends_with)), Toast.LENGTH_SHORT).show()
+                            }
+                        }
+                    }
+                } else
+                    Toast.makeText(requireContext(), String.format(Locale.ENGLISH, getString(R.string.active_blocking_rule), getString(R.string.nuclear_option)), Toast.LENGTH_SHORT).show()
                 manager.blockingRule = tag
-                Toast.makeText(requireContext(), String.format(Locale.ENGLISH, getString(R.string.active_blocking_rule), activeRule), Toast.LENGTH_SHORT).show()
             }
-
-
-//            if (binder.editStartsWith.text.isNotEmpty()) {
-//                manager.startsWith = binder.editStartsWith.text.toString()
-//                Toast.makeText(requireContext(), String.format("Now blocking every number that starts with %s", binder.editStartsWith.text.toString()), Toast.LENGTH_LONG).show()
-//            } else {
-//                manager.startsWith = ""
-//                Toast.makeText(requireContext(), "Starts with blocking disabled ", Toast.LENGTH_LONG).show()
-//            }
-//            if (binder.editEndsWith.text.isNotEmpty()) {
-//                manager.endsWith = binder.editEndsWith.text.toString()
-//                Toast.makeText(requireContext(), String.format("Now blocking every number that ends with %s", binder.editEndsWith.text.toString()), Toast.LENGTH_LONG).show()
-//            } else {
-//                manager.endsWith = ""
-//                Toast.makeText(requireContext(), "Ends with blocking disabled ", Toast.LENGTH_LONG).show()
-//            }
-        }
-        binder.nuclearOption.setOnCheckedChangeListener { _, isChecked ->
-            if (isChecked) {
-                manager.nuclearOption = true
-                Toast.makeText(requireContext(), R.string.nuclear_option_message, Toast.LENGTH_LONG).show()
-            } else manager.nuclearOption = false
         }
         binder.btnKeyword.setOnClickListener { insertKeywordUI() }
         return binder.root
@@ -121,7 +129,6 @@ class SettingFragment : Fragment(), KeywordSelected {
         }, Constant.INPUT_LIMIT)
         keywordBinder.btnInsertUpdateKeyword.setOnClickListener {
             if (keywordBinder.editKeyword.text.toString().trim().length > 2) {
-//                if (databaseManager.keywordExist(keywordBinder.editKeyword.text.toString()))
                 GlobalScope.launch(Dispatchers.Main) {
                     if (viewModel.exists(keywordBinder.editKeyword.text.toString()))
                         Toast.makeText(requireContext(), String.format(Locale.ENGLISH, getString(R.string.keyword_already_exists), keywordBinder.editKeyword.text), Toast.LENGTH_SHORT).show()
@@ -137,7 +144,7 @@ class SettingFragment : Fragment(), KeywordSelected {
         val adapter = KeywordAdapter(this)
         keywordBinder.keywordRecyclerView.adapter = adapter
         keywordBinder.keywordRecyclerView.layoutManager = LinearLayoutManager(requireContext())
-        viewModel.keywords.observe(viewLifecycleOwner, Observer { keyword ->
+        viewModel.keywords.observe(viewLifecycleOwner, { keyword ->
             adapter.data(keyword)
         })
         dialog.setView(keywordBinder.root)

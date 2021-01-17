@@ -23,4 +23,10 @@ interface WhitelistDao {
 
     @Query("SELECT * FROM whitelist")
     fun whitelists(): LiveData<List<Whitelist>>
+
+    @Query("SELECT * FROM whitelist")
+    fun pureWhitelists(): List<Whitelist>
+
+    @Query("SELECT count(*) FROM Whitelist")
+    suspend fun whitelistCount(): Int
 }

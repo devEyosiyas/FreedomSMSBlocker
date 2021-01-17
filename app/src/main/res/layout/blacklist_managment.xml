@@ -18,7 +18,7 @@
             android:digits="0123456789"
             android:hint="@string/number"
             android:inputType="number"
-            android:maxLength="12" />
+            android:maxLength="10" />
 
         <Button
             android:id="@+id/btnSelectNumber"

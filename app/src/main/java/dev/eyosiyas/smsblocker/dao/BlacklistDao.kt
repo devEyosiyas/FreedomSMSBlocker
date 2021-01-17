@@ -12,6 +12,9 @@ interface BlacklistDao {
     @Query("SELECT * FROM Blacklist")
     fun blacklists(): LiveData<List<Blacklist>>
 
+    @Query("SELECT * FROM Blacklist")
+    fun pureBlacklists(): List<Blacklist>
+
     @Update(onConflict = OnConflictStrategy.IGNORE)
     suspend fun updateBlacklist(blacklist: Blacklist)
 
@@ -23,4 +26,7 @@ interface BlacklistDao {
 
     @Query("SELECT * FROM Blacklist WHERE number = :number")
     fun exists(number: String): Boolean
+
+    @Query("SELECT count(*) FROM Blacklist")
+    suspend fun blacklistCount(): Int
 }

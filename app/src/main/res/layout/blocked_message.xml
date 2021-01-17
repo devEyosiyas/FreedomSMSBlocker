@@ -9,6 +9,7 @@
     app:cardCornerRadius="10dp">
 
     <RelativeLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -38,7 +39,8 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="8dp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_delete" />
+            android:src="@drawable/ic_delete"
+            app:tint="@color/colorPrimaryDark" />
     </RelativeLayout>
 
 

@@ -25,4 +25,8 @@ class BlacklistRepository(private val blacklistDao: BlacklistDao) {
     fun exists(input: String): Boolean {
         return blacklistDao.exists(input)
     }
+
+    suspend fun blacklistCount(): Int {
+        return blacklistDao.blacklistCount()
+    }
 }

@@ -19,9 +19,14 @@ class BlacklistAdapter(private val selectedBlacklist: BlacklistSelected) : Recyc
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val blacklist = blacklists[position]
         holder.binding.txtBlacklistNumber.text = blacklist.number
-        holder.binding.txtBlacklistTimestamp.text = Core.readableTime(blacklist.timestamp)
+        holder.binding.txtBlacklistTimestamp.text = Core.readableTime(blacklist.timestamp, holder.itemView.context)
         holder.binding.imgDeleteNumber.setOnClickListener { selectedBlacklist.onDeleteSelected(blacklist) }
         holder.binding.imgEditNumber.setOnClickListener { selectedBlacklist.onUpdateSelected(blacklist) }
+        if (!blacklist.shared && blacklist.number.length < 5)
+            holder.binding.imgShareNumber.visibility = View.VISIBLE
+        else
+            holder.binding.imgShareNumber.visibility = View.INVISIBLE
+        holder.binding.imgShareNumber.setOnClickListener { selectedBlacklist.onShareSelected(blacklist) }
     }
 
 

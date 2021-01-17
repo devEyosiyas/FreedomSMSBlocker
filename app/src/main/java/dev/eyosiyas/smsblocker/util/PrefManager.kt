@@ -5,20 +5,9 @@ import java.util.*
 
 class PrefManager constructor(context: Context) {
     private val preferences = context.getSharedPreferences("Fire", Context.MODE_PRIVATE)
-
-    var nuclearOption: Boolean
-        get() = preferences.getBoolean(Constant.NUCLEAR, false)
-        set(value) = preferences.edit().putBoolean(Constant.NUCLEAR, value).apply()
-
-    val isStartsWithEnabled: Boolean
-        get() = preferences.getString(Constant.STARTS_WITH, "")!!.length > 1
-
     var startsWith: String?
         get() = preferences.getString(Constant.STARTS_WITH, "")
         set(startsWith) = preferences.edit().putString(Constant.STARTS_WITH, startsWith).apply()
-
-    val isEndsWithEnabled: Boolean
-        get() = preferences.getString(Constant.ENDS_WITH, "")!!.length > 1
 
     var endsWith: String?
         get() = preferences.getString(Constant.ENDS_WITH, "")

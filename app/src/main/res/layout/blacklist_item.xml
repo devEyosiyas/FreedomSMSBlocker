@@ -17,9 +17,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:lines="1"
             android:layout_marginStart="10dp"
-            android:layout_marginLeft="10dp"
+            android:lines="1"
             android:textSize="18sp"
             android:textStyle="bold" />
 
@@ -28,21 +27,31 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="15dp"
-            android:layout_marginRight="15dp"
             android:layout_marginBottom="2dp" />
+
+        <ImageView
+            android:id="@+id/imgShareNumber"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_toStartOf="@id/imgEditNumber"
+            android:contentDescription="@string/app_name"
+            android:src="@drawable/ic_share"
+            android:visibility="invisible"
+            app:tint="@color/colorPrimaryDark" />
 
         <ImageView
             android:id="@+id/imgDeleteNumber"
             android:layout_width="32dp"
             android:layout_height="32dp"
             android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_marginTop="8dp"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_delete" />
+            android:src="@drawable/ic_delete"
+            app:tint="@color/colorPrimaryDark" />
 
         <ImageView
             android:id="@+id/imgEditNumber"
@@ -50,11 +59,11 @@
             android:layout_height="32dp"
             android:layout_marginTop="8dp"
             android:layout_marginEnd="8dp"
-            android:layout_marginRight="8dp"
             android:layout_toStartOf="@id/imgDeleteNumber"
-            android:layout_toLeftOf="@id/imgDeleteNumber"
             android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_update" />
+            android:src="@drawable/ic_update"
+            app:tint="@color/colorPrimaryDark" />
+
     </RelativeLayout>
 
 

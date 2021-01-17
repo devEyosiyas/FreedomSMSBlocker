@@ -14,12 +14,15 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
 import dev.eyosiyas.smsblocker.R
 import dev.eyosiyas.smsblocker.adapter.BlacklistAdapter
 import dev.eyosiyas.smsblocker.databinding.BlacklistManagmentBinding
 import dev.eyosiyas.smsblocker.databinding.FragmentBlockBinding
 import dev.eyosiyas.smsblocker.event.BlacklistSelected
 import dev.eyosiyas.smsblocker.model.Blacklist
+import dev.eyosiyas.smsblocker.util.Constant
 import dev.eyosiyas.smsblocker.util.PrefManager
 import dev.eyosiyas.smsblocker.viewmodel.BlacklistViewModel
 import kotlinx.coroutines.Dispatchers
@@ -56,7 +59,7 @@ class BlockFragment : Fragment(), BlacklistSelected {
         viewModel.blacklists.observe(viewLifecycleOwner, { blacklist ->
             adapter.populate(blacklist)
         })
-        binder.fabSendMessage.setOnClickListener { insertUI() }
+        binder.fabAddBlacklist.setOnClickListener { insertUI() }
         return binder.root
     }
 
@@ -66,6 +69,10 @@ class BlockFragment : Fragment(), BlacklistSelected {
 
     override fun onDeleteSelected(blacklist: Blacklist) {
         deleteUI(blacklist)
+    }
+
+    override fun onShareSelected(blacklist: Blacklist) {
+        shareUI(blacklist)
     }
 
     private fun deleteUI(blacklist: Blacklist) {
@@ -96,7 +103,7 @@ class BlockFragment : Fragment(), BlacklistSelected {
                 if (viewModel.exists(blacklistBinder.inputBlacklistNumber.text.toString()))
                     Toast.makeText(requireContext(), String.format(Locale.ENGLISH, getString(R.string.already_blocked), blacklistBinder.inputBlacklistNumber.text), Toast.LENGTH_SHORT).show()
                 else {
-                    viewModel.addBlacklist(Blacklist(0, blacklistBinder.inputBlacklistNumber.text.toString(), System.currentTimeMillis()))
+                    viewModel.addBlacklist(Blacklist(0, blacklistBinder.inputBlacklistNumber.text.toString(), System.currentTimeMillis(), Constant.SOURCE_LOCAL, false))
                     Toast.makeText(requireContext(), String.format(Locale.ENGLISH, getString(R.string.saved_to_db), blacklistBinder.inputBlacklistNumber.text), Toast.LENGTH_SHORT).show()
                     insertDialog.dismiss()
                 }
@@ -131,7 +138,7 @@ class BlockFragment : Fragment(), BlacklistSelected {
                 if (viewModel.exists(binder.inputBlacklistNumber.text.toString()))
                     Toast.makeText(requireContext(), String.format(Locale.ENGLISH, getString(R.string.already_blocked), binder.inputBlacklistNumber.text), Toast.LENGTH_SHORT).show()
                 else {
-                    viewModel.updateBlacklist(Blacklist(blacklist.id, binder.inputBlacklistNumber.text.toString(), System.currentTimeMillis()))
+                    viewModel.updateBlacklist(Blacklist(blacklist.id, binder.inputBlacklistNumber.text.toString(), System.currentTimeMillis(), Constant.SOURCE_LOCAL, blacklist.shared))
                     Toast.makeText(requireContext(), getString(R.string.blacklist_record_updated), Toast.LENGTH_SHORT).show()
                     updateDialog.dismiss()
                 }
@@ -147,5 +154,36 @@ class BlockFragment : Fragment(), BlacklistSelected {
             override fun afterTextChanged(s: Editable) {}
         })
         updateDialog.show()
+    }
+
+    private fun shareUI(blacklist: Blacklist) {
+        val remoteDB = Firebase.firestore
+        remoteDB.collection(Constant.PATH_SHORT_CODE).document(blacklist.number)
+                .get()
+                .addOnSuccessListener { document ->
+                    if (document != null) {
+                        viewModel.updateBlacklist(Blacklist(blacklist.id, blacklist.number, blacklist.timestamp, Constant.SOURCE_LOCAL, true))
+                        Toast.makeText(requireContext(), getString(R.string.crowdsource_already_contributed), Toast.LENGTH_SHORT).show()
+                    } else {
+                        AlertDialog.Builder(requireContext())
+                                .setTitle(getString(R.string.share_crowdsource_title))
+                                .setCancelable(false)
+                                .setMessage(String.format(Locale.ENGLISH, getString(R.string.share_crowdsource_message), blacklist.number))
+                                .setPositiveButton(getString(R.string.button_yes)) { _, _ ->
+                                    remoteDB.collection(Constant.PATH_SHORT_CODE).document(blacklist.number).set(hashMapOf(Constant.FIELD_NUMBER to blacklist.number, Constant.FIELD_TIMESTAMP to System.currentTimeMillis() / 1000))
+                                            .addOnSuccessListener {
+                                                viewModel.updateBlacklist(Blacklist(blacklist.id, blacklist.number, blacklist.timestamp, Constant.SOURCE_LOCAL, true))
+                                                Toast.makeText(requireContext(), getString(R.string.crowdsource_contributed), Toast.LENGTH_SHORT).show()
+                                            }
+                                            .addOnFailureListener { e ->
+                                                Toast.makeText(requireContext(), String.format(Locale.ENGLISH, getString(R.string.error), e), Toast.LENGTH_SHORT).show()
+                                            }
+                                }
+                                .setNegativeButton(getString(R.string.button_no)) { dialog, _ -> dialog.dismiss() }.show()
+                    }
+                }
+                .addOnFailureListener { exception ->
+                    Toast.makeText(requireContext(), String.format(Locale.ENGLISH, getString(R.string.error), exception), Toast.LENGTH_SHORT).show()
+                }
     }
 }

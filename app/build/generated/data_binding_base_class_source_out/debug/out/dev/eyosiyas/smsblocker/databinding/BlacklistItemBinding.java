@@ -26,17 +26,21 @@ public final class BlacklistItemBinding implements ViewBinding {
   public final ImageView imgEditNumber;
 
   @NonNull
+  public final ImageView imgShareNumber;
+
+  @NonNull
   public final TextView txtBlacklistNumber;
 
   @NonNull
   public final TextView txtBlacklistTimestamp;
 
   private BlacklistItemBinding(@NonNull CardView rootView, @NonNull ImageView imgDeleteNumber,
-      @NonNull ImageView imgEditNumber, @NonNull TextView txtBlacklistNumber,
-      @NonNull TextView txtBlacklistTimestamp) {
+      @NonNull ImageView imgEditNumber, @NonNull ImageView imgShareNumber,
+      @NonNull TextView txtBlacklistNumber, @NonNull TextView txtBlacklistTimestamp) {
     this.rootView = rootView;
     this.imgDeleteNumber = imgDeleteNumber;
     this.imgEditNumber = imgEditNumber;
+    this.imgShareNumber = imgShareNumber;
     this.txtBlacklistNumber = txtBlacklistNumber;
     this.txtBlacklistTimestamp = txtBlacklistTimestamp;
   }
@@ -80,6 +84,12 @@ public final class BlacklistItemBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.imgShareNumber;
+      ImageView imgShareNumber = rootView.findViewById(id);
+      if (imgShareNumber == null) {
+        break missingId;
+      }
+
       id = R.id.txtBlacklistNumber;
       TextView txtBlacklistNumber = rootView.findViewById(id);
       if (txtBlacklistNumber == null) {
@@ -93,7 +103,7 @@ public final class BlacklistItemBinding implements ViewBinding {
       }
 
       return new BlacklistItemBinding((CardView) rootView, imgDeleteNumber, imgEditNumber,
-          txtBlacklistNumber, txtBlacklistTimestamp);
+          imgShareNumber, txtBlacklistNumber, txtBlacklistTimestamp);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
