@@ -66,7 +66,7 @@ object Core {
         val cursor: Cursor? = context.contentResolver.query((uri)!!, null, null, null, null)
         if (cursor != null) {
             if (cursor.moveToFirst()) {
-                number = cursor.getString(cursor.getColumnIndex(Constant.NUMBER))
+                number = formattedNumber(cursor.getString(cursor.getColumnIndex(Constant.NUMBER)))
             }
             cursor.close()
         }
@@ -114,5 +114,10 @@ object Core {
         textView.textSize = 15f
         textView.setLinkTextColor(ContextCompat.getColor(context, R.color.colorAccent))
         AlertDialog.Builder(context).setCancelable(false).setView(textView).setTitle(context.getString(R.string.menu_about)).setIcon(R.mipmap.ic_launcher).setNegativeButton(context.getString(R.string.button_back)) { dialog: DialogInterface, _: Int -> dialog.dismiss() }.show()
+    }
+
+    private fun formattedNumber(number: String): String {
+        val altered = number.replace(" ", "").replace("-", "")
+        return if (altered.startsWith("+")) altered else String.format(Locale.US, "+251%s", altered.replaceFirst("0", ""))
     }
 }

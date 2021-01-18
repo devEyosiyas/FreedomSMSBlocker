@@ -28,401 +28,447 @@
 16    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
 16-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:10:5-81
 16-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:10:22-78
-17    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-17-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:24:5-79
-17-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:24:22-76
-18    <uses-permission android:name="android.permission.WAKE_LOCK" />
-18-->[com.google.android.gms:play-services-measurement-api:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\ba0080ed5fe99e3f9c2dcdd1164e842a\jetified-play-services-measurement-api-18.0.0\AndroidManifest.xml:24:5-68
-18-->[com.google.android.gms:play-services-measurement-api:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\ba0080ed5fe99e3f9c2dcdd1164e842a\jetified-play-services-measurement-api-18.0.0\AndroidManifest.xml:24:22-65
-19    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
-19-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c5f5ca40c77de64963ff61b0f898e78e\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:26:5-110
-19-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c5f5ca40c77de64963ff61b0f898e78e\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:26:22-107
-20
-21    <application
-21-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:12:5-85:19
-22        android:name="androidx.multidex.MultiDexApplication"
-23        android:allowBackup="false"
-23-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:13:9-36
-24        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-24-->[androidx.core:core:1.3.2] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\181dd878bb5f1cb3efae1d1faf1c3717\core-1.3.2\AndroidManifest.xml:24:18-86
-25        android:debuggable="true"
-26        android:icon="@mipmap/ic_launcher"
-26-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:14:9-43
-27        android:label="@string/app_name"
-27-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:15:9-41
-28        android:roundIcon="@mipmap/ic_launcher_round"
-28-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:16:9-54
-29        android:supportsRtl="true"
-29-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:17:9-35
-30        android:theme="@style/AppTheme" >
-30-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:18:9-40
-31        <activity android:name="dev.eyosiyas.smsblocker.view.DetailSmsActivity" />
-31-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:19:9-60
-31-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:19:19-57
-32        <activity android:name="dev.eyosiyas.smsblocker.view.SendMessageActivity" >
-32-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:20:9-33:20
-32-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:20:19-59
-33            <intent-filter>
-33-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:21:13-32:29
-34                <action android:name="android.intent.action.SEND" />
-34-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:22:17-69
-34-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:22:25-66
-35                <action android:name="android.intent.action.SENDTO" />
-35-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:23:17-71
-35-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:23:25-68
-36
-37                <category android:name="android.intent.category.DEFAULT" />
-37-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:25:17-76
-37-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:25:27-73
-38                <category android:name="android.intent.category.BROWSABLE" />
-38-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:26:17-78
-38-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:26:27-75
-39
-40                <data android:scheme="sms" />
-40-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
-40-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
-41                <data android:scheme="smsto" />
-41-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
-41-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
-42                <data android:scheme="mms" />
-42-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
-42-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
-43                <data android:scheme="mmsto" />
-43-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
-43-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
-44            </intent-filter>
-45        </activity>
-46        <activity android:name="dev.eyosiyas.smsblocker.view.MainActivity" >
-46-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:34:9-40:20
-46-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:34:19-52
-47            <intent-filter>
-47-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:35:13-39:29
-48                <action android:name="android.intent.action.MAIN" />
-48-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:36:17-69
-48-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:36:25-66
-49
-50                <category android:name="android.intent.category.LAUNCHER" />
-50-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:38:17-77
-50-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:38:27-74
-51            </intent-filter>
-52        </activity>
+17
+18    <!-- Although the *SdkVersion is captured in gradle build files, this is required for non gradle builds -->
+19    <!-- <uses-sdk android:minSdkVersion="14"/> -->
+20    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+20-->[com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\6734dc75cfc3149b97006521f7d60c48\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:25:5-79
+20-->[com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\6734dc75cfc3149b97006521f7d60c48\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:25:22-76
+21    <uses-permission android:name="android.permission.WAKE_LOCK" />
+21-->[com.google.android.gms:play-services-measurement-api:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\5c10ca7e2d10898ee1594bdc78b8eeea\jetified-play-services-measurement-api-18.0.0\AndroidManifest.xml:24:5-68
+21-->[com.google.android.gms:play-services-measurement-api:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\5c10ca7e2d10898ee1594bdc78b8eeea\jetified-play-services-measurement-api-18.0.0\AndroidManifest.xml:24:22-65
+22    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+22-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\21cf566f1fd897755d623baeb4e559e5\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:26:5-110
+22-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\21cf566f1fd897755d623baeb4e559e5\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:26:22-107
+23
+24    <application
+24-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:12:5-85:19
+25        android:name="androidx.multidex.MultiDexApplication"
+26        android:allowBackup="false"
+26-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:13:9-36
+27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+27-->[androidx.core:core:1.3.2] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\96219194ed229f7a3df379ee3f16ed7e\core-1.3.2\AndroidManifest.xml:24:18-86
+28        android:debuggable="true"
+29        android:icon="@mipmap/ic_launcher"
+29-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:14:9-43
+30        android:label="@string/app_name"
+30-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:15:9-41
+31        android:roundIcon="@mipmap/ic_launcher_round"
+31-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:16:9-54
+32        android:supportsRtl="true"
+32-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:17:9-35
+33        android:testOnly="true"
+34        android:theme="@style/AppTheme" >
+34-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:18:9-40
+35        <activity android:name="dev.eyosiyas.smsblocker.view.DetailSmsActivity" />
+35-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:19:9-60
+35-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:19:19-57
+36        <activity android:name="dev.eyosiyas.smsblocker.view.SendMessageActivity" >
+36-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:20:9-33:20
+36-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:20:19-59
+37            <intent-filter>
+37-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:21:13-32:29
+38                <action android:name="android.intent.action.SEND" />
+38-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:22:17-69
+38-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:22:25-66
+39                <action android:name="android.intent.action.SENDTO" />
+39-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:23:17-71
+39-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:23:25-68
+40
+41                <category android:name="android.intent.category.DEFAULT" />
+41-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:25:17-76
+41-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:25:27-73
+42                <category android:name="android.intent.category.BROWSABLE" />
+42-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:26:17-78
+42-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:26:27-75
+43
+44                <data android:scheme="sms" />
+44-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
+44-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
+45                <data android:scheme="smsto" />
+45-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
+45-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
+46                <data android:scheme="mms" />
+46-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
+46-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
+47                <data android:scheme="mmsto" />
+47-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
+47-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
+48            </intent-filter>
+49        </activity>
+50        <activity android:name="dev.eyosiyas.smsblocker.view.MainActivity" >
+50-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:34:9-40:20
+50-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:34:19-52
+51            <intent-filter>
+51-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:35:13-39:29
+52                <action android:name="android.intent.action.MAIN" />
+52-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:36:17-69
+52-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:36:25-66
 53
-54        <receiver
-54-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:42:9-50:20
-55            android:name="dev.eyosiyas.smsblocker.service.Boot"
-55-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:43:13-41
-56            android:enabled="true"
-56-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:44:13-35
-57            android:exported="false" >
-57-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:45:13-37
-58            <intent-filter>
-58-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:46:13-49:29
-59                <action android:name="android.intent.action.BOOT_COMPLETED" />
-59-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:47:17-79
-59-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:47:25-76
-60                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
-60-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:48:17-82
-60-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:48:25-79
-61            </intent-filter>
-62        </receiver>
-63        <receiver
-63-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:52:9-59:20
-64            android:name="dev.eyosiyas.smsblocker.service.BlockerService"
-64-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:53:13-51
-65            android:permission="android.permission.BROADCAST_SMS" >
-65-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:54:13-66
-66            <intent-filter android:priority="100" >
-66-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:55:13-58:29
-66-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:55:28-50
-67                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
-67-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:56:17-82
-67-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:56:25-79
-68                <action android:name="android.provider.Telephony.SMS_DELIVER" />
-68-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:57:17-81
-68-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:57:25-78
-69            </intent-filter>
-70        </receiver>
-71        <receiver
-71-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:61:9-68:20
-72            android:name="dev.eyosiyas.smsblocker.service.MmsService"
-72-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:62:13-47
-73            android:permission="android.permission.BROADCAST_WAP_PUSH" >
-73-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:63:13-71
-74            <intent-filter>
-74-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:64:13-67:29
-75                <action android:name="android.provider.Telephony.WAP_PUSH_DELIVER" />
-75-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:65:17-86
-75-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:65:25-83
-76
-77                <data android:mimeType="application/vnd.wap.mms-message" />
-77-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
-77-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:66:23-73
-78            </intent-filter>
-79        </receiver>
+54                <category android:name="android.intent.category.LAUNCHER" />
+54-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:38:17-77
+54-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:38:27-74
+55            </intent-filter>
+56        </activity>
+57
+58        <receiver
+58-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:42:9-50:20
+59            android:name="dev.eyosiyas.smsblocker.service.Boot"
+59-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:43:13-41
+60            android:enabled="true"
+60-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:44:13-35
+61            android:exported="false" >
+61-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:45:13-37
+62            <intent-filter>
+62-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:46:13-49:29
+63                <action android:name="android.intent.action.BOOT_COMPLETED" />
+63-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:47:17-79
+63-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:47:25-76
+64                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+64-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:48:17-82
+64-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:48:25-79
+65            </intent-filter>
+66        </receiver>
+67        <receiver
+67-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:52:9-59:20
+68            android:name="dev.eyosiyas.smsblocker.service.BlockerService"
+68-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:53:13-51
+69            android:permission="android.permission.BROADCAST_SMS" >
+69-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:54:13-66
+70            <intent-filter android:priority="100" >
+70-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:55:13-58:29
+70-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:55:28-50
+71                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+71-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:56:17-82
+71-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:56:25-79
+72                <action android:name="android.provider.Telephony.SMS_DELIVER" />
+72-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:57:17-81
+72-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:57:25-78
+73            </intent-filter>
+74        </receiver>
+75        <receiver
+75-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:61:9-68:20
+76            android:name="dev.eyosiyas.smsblocker.service.MmsService"
+76-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:62:13-47
+77            android:permission="android.permission.BROADCAST_WAP_PUSH" >
+77-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:63:13-71
+78            <intent-filter>
+78-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:64:13-67:29
+79                <action android:name="android.provider.Telephony.WAP_PUSH_DELIVER" />
+79-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:65:17-86
+79-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:65:25-83
 80
-81        <service
-81-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:70:9-83:19
-82            android:name="dev.eyosiyas.smsblocker.service.MessagingService"
-82-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:71:13-53
-83            android:exported="true"
-83-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:72:13-36
-84            android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE" >
-84-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:73:13-77
-85            <intent-filter>
-85-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:74:13-82:29
-86                <action android:name="android.intent.action.RESPOND_VIA_MESSAGE" />
-86-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:75:17-84
-86-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:75:25-81
-87
-88                <category android:name="android.intent.category.DEFAULT" />
-88-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:25:17-76
-88-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:25:27-73
-89
-90                <data android:scheme="sms" />
-90-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
-90-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
-91                <data android:scheme="smsto" />
-91-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
-91-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
-92                <data android:scheme="mms" />
-92-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
-92-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
-93                <data android:scheme="mmsto" />
-93-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
-93-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
-94            </intent-filter>
-95        </service>
-96        <service
-96-->[com.google.firebase:firebase-analytics-ktx:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\e9b96435e5a34ee6ac8c26f51bc9d580\jetified-firebase-analytics-ktx-18.0.0\AndroidManifest.xml:8:9-14:19
-97            android:name="com.google.firebase.components.ComponentDiscoveryService"
-97-->[com.google.firebase:firebase-analytics-ktx:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\e9b96435e5a34ee6ac8c26f51bc9d580\jetified-firebase-analytics-ktx-18.0.0\AndroidManifest.xml:9:13-84
-98            android:directBootAware="true"
-98-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\bfecccda1c163619e188045a92e3275a\jetified-firebase-common-19.5.0\AndroidManifest.xml:35:13-43
-99            android:exported="false" >
-99-->[com.google.firebase:firebase-analytics-ktx:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\e9b96435e5a34ee6ac8c26f51bc9d580\jetified-firebase-analytics-ktx-18.0.0\AndroidManifest.xml:10:13-37
-100            <meta-data
-100-->[com.google.firebase:firebase-analytics-ktx:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\e9b96435e5a34ee6ac8c26f51bc9d580\jetified-firebase-analytics-ktx-18.0.0\AndroidManifest.xml:11:13-13:85
-101                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar"
-101-->[com.google.firebase:firebase-analytics-ktx:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\e9b96435e5a34ee6ac8c26f51bc9d580\jetified-firebase-analytics-ktx-18.0.0\AndroidManifest.xml:12:17-126
-102                android:value="com.google.firebase.components.ComponentRegistrar" />
-102-->[com.google.firebase:firebase-analytics-ktx:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\e9b96435e5a34ee6ac8c26f51bc9d580\jetified-firebase-analytics-ktx-18.0.0\AndroidManifest.xml:13:17-82
-103            <meta-data
-103-->[com.google.firebase:firebase-firestore-ktx:22.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\265c8a26bd7730c9210cb682b3148c54\jetified-firebase-firestore-ktx-22.0.1\AndroidManifest.xml:15:13-17:85
-104                android:name="com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreKtxRegistrar"
-104-->[com.google.firebase:firebase-firestore-ktx:22.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\265c8a26bd7730c9210cb682b3148c54\jetified-firebase-firestore-ktx-22.0.1\AndroidManifest.xml:16:17-126
-105                android:value="com.google.firebase.components.ComponentRegistrar" />
-105-->[com.google.firebase:firebase-firestore-ktx:22.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\265c8a26bd7730c9210cb682b3148c54\jetified-firebase-firestore-ktx-22.0.1\AndroidManifest.xml:17:17-82
-106            <meta-data
-106-->[com.google.firebase:firebase-auth-ktx:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\b3fee43a2ba06ae02963d5eb11ede384\jetified-firebase-auth-ktx-20.0.1\AndroidManifest.xml:11:13-13:85
-107                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthKtxRegistrar"
-107-->[com.google.firebase:firebase-auth-ktx:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\b3fee43a2ba06ae02963d5eb11ede384\jetified-firebase-auth-ktx-20.0.1\AndroidManifest.xml:12:17-116
-108                android:value="com.google.firebase.components.ComponentRegistrar" />
-108-->[com.google.firebase:firebase-auth-ktx:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\b3fee43a2ba06ae02963d5eb11ede384\jetified-firebase-auth-ktx-20.0.1\AndroidManifest.xml:13:17-82
-109            <meta-data
-109-->[com.google.firebase:firebase-common-ktx:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\8e62e46524efd2815d499d3726b72751\jetified-firebase-common-ktx-19.5.0\AndroidManifest.xml:15:13-17:85
-110                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
-110-->[com.google.firebase:firebase-common-ktx:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\8e62e46524efd2815d499d3726b72751\jetified-firebase-common-ktx-19.5.0\AndroidManifest.xml:16:17-113
-111                android:value="com.google.firebase.components.ComponentRegistrar" />
-111-->[com.google.firebase:firebase-common-ktx:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\8e62e46524efd2815d499d3726b72751\jetified-firebase-common-ktx-19.5.0\AndroidManifest.xml:17:17-82
-112            <meta-data
-112-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:77:13-79:85
-113                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-113-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:78:17-109
-114                android:value="com.google.firebase.components.ComponentRegistrar" />
-114-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:79:17-82
-115            <meta-data
-115-->[com.google.firebase:firebase-firestore:22.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\1d69376ddb7c9e86994ee4c2ac7ed96b\jetified-firebase-firestore-22.0.1\AndroidManifest.xml:20:13-22:85
-116                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
-116-->[com.google.firebase:firebase-firestore:22.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\1d69376ddb7c9e86994ee4c2ac7ed96b\jetified-firebase-firestore-22.0.1\AndroidManifest.xml:21:17-111
-117                android:value="com.google.firebase.components.ComponentRegistrar" />
-117-->[com.google.firebase:firebase-firestore:22.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\1d69376ddb7c9e86994ee4c2ac7ed96b\jetified-firebase-firestore-22.0.1\AndroidManifest.xml:22:17-82
-118            <meta-data
-118-->[com.google.android.gms:play-services-measurement-api:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\ba0080ed5fe99e3f9c2dcdd1164e842a\jetified-play-services-measurement-api-18.0.0\AndroidManifest.xml:30:13-32:85
-119                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
-119-->[com.google.android.gms:play-services-measurement-api:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\ba0080ed5fe99e3f9c2dcdd1164e842a\jetified-play-services-measurement-api-18.0.0\AndroidManifest.xml:31:17-139
-120                android:value="com.google.firebase.components.ComponentRegistrar" />
-120-->[com.google.android.gms:play-services-measurement-api:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\ba0080ed5fe99e3f9c2dcdd1164e842a\jetified-play-services-measurement-api-18.0.0\AndroidManifest.xml:32:17-82
-121            <meta-data
-121-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\9a1891878e720256d9c7b442c79be057\jetified-firebase-installations-16.3.5\AndroidManifest.xml:18:13-20:85
-122                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
-122-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\9a1891878e720256d9c7b442c79be057\jetified-firebase-installations-16.3.5\AndroidManifest.xml:19:17-127
-123                android:value="com.google.firebase.components.ComponentRegistrar" />
-123-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\9a1891878e720256d9c7b442c79be057\jetified-firebase-installations-16.3.5\AndroidManifest.xml:20:17-82
-124            <!--
-125                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
-126                clients to use it as well, by defining this registrar in their own core/common library.
-127            -->
+81                <data android:mimeType="application/vnd.wap.mms-message" />
+81-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
+81-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:66:23-73
+82            </intent-filter>
+83        </receiver>
+84
+85        <service
+85-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:70:9-83:19
+86            android:name="dev.eyosiyas.smsblocker.service.MessagingService"
+86-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:71:13-53
+87            android:exported="true"
+87-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:72:13-36
+88            android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE" >
+88-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:73:13-77
+89            <intent-filter>
+89-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:74:13-82:29
+90                <action android:name="android.intent.action.RESPOND_VIA_MESSAGE" />
+90-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:75:17-84
+90-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:75:25-81
+91
+92                <category android:name="android.intent.category.DEFAULT" />
+92-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:25:17-76
+92-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:25:27-73
+93
+94                <data android:scheme="sms" />
+94-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
+94-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
+95                <data android:scheme="smsto" />
+95-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
+95-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
+96                <data android:scheme="mms" />
+96-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
+96-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
+97                <data android:scheme="mmsto" />
+97-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
+97-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
+98            </intent-filter>
+99        </service>
+100        <service
+100-->[com.google.firebase:firebase-crashlytics-ktx:17.3.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\bf34fee8a26a45a64ac9e63b68809d22\jetified-firebase-crashlytics-ktx-17.3.0\AndroidManifest.xml:24:9-30:19
+101            android:name="com.google.firebase.components.ComponentDiscoveryService"
+101-->[com.google.firebase:firebase-crashlytics-ktx:17.3.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\bf34fee8a26a45a64ac9e63b68809d22\jetified-firebase-crashlytics-ktx-17.3.0\AndroidManifest.xml:25:13-84
+102            android:directBootAware="true"
+102-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7f09b6df76da379c3caab748e332c442\jetified-firebase-common-19.5.0\AndroidManifest.xml:35:13-43
+103            android:exported="false" >
+103-->[com.google.firebase:firebase-crashlytics-ktx:17.3.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\bf34fee8a26a45a64ac9e63b68809d22\jetified-firebase-crashlytics-ktx-17.3.0\AndroidManifest.xml:26:13-37
+104            <meta-data
+104-->[com.google.firebase:firebase-crashlytics-ktx:17.3.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\bf34fee8a26a45a64ac9e63b68809d22\jetified-firebase-crashlytics-ktx-17.3.0\AndroidManifest.xml:27:13-29:85
+105                android:name="com.google.firebase.components:com.google.firebase.crashlytics.ktx.FirebaseCrashlyticsKtxRegistrar"
+105-->[com.google.firebase:firebase-crashlytics-ktx:17.3.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\bf34fee8a26a45a64ac9e63b68809d22\jetified-firebase-crashlytics-ktx-17.3.0\AndroidManifest.xml:28:17-130
+106                android:value="com.google.firebase.components.ComponentRegistrar" />
+106-->[com.google.firebase:firebase-crashlytics-ktx:17.3.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\bf34fee8a26a45a64ac9e63b68809d22\jetified-firebase-crashlytics-ktx-17.3.0\AndroidManifest.xml:29:17-82
+107            <meta-data
+107-->[com.google.firebase:firebase-analytics-ktx:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c0828d215e954f986f60d210b3c0db53\jetified-firebase-analytics-ktx-18.0.0\AndroidManifest.xml:11:13-13:85
+108                android:name="com.google.firebase.components:com.google.firebase.analytics.ktx.FirebaseAnalyticsKtxRegistrar"
+108-->[com.google.firebase:firebase-analytics-ktx:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c0828d215e954f986f60d210b3c0db53\jetified-firebase-analytics-ktx-18.0.0\AndroidManifest.xml:12:17-126
+109                android:value="com.google.firebase.components.ComponentRegistrar" />
+109-->[com.google.firebase:firebase-analytics-ktx:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c0828d215e954f986f60d210b3c0db53\jetified-firebase-analytics-ktx-18.0.0\AndroidManifest.xml:13:17-82
+110            <meta-data
+110-->[com.google.firebase:firebase-firestore-ktx:22.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\a30f656b343dc49fecf724b943c84e59\jetified-firebase-firestore-ktx-22.0.1\AndroidManifest.xml:15:13-17:85
+111                android:name="com.google.firebase.components:com.google.firebase.firestore.ktx.FirebaseFirestoreKtxRegistrar"
+111-->[com.google.firebase:firebase-firestore-ktx:22.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\a30f656b343dc49fecf724b943c84e59\jetified-firebase-firestore-ktx-22.0.1\AndroidManifest.xml:16:17-126
+112                android:value="com.google.firebase.components.ComponentRegistrar" />
+112-->[com.google.firebase:firebase-firestore-ktx:22.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\a30f656b343dc49fecf724b943c84e59\jetified-firebase-firestore-ktx-22.0.1\AndroidManifest.xml:17:17-82
+113            <meta-data
+113-->[com.google.firebase:firebase-auth-ktx:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\d6e945a3faa3259f2fbd77d6f0211183\jetified-firebase-auth-ktx-20.0.1\AndroidManifest.xml:11:13-13:85
+114                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthKtxRegistrar"
+114-->[com.google.firebase:firebase-auth-ktx:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\d6e945a3faa3259f2fbd77d6f0211183\jetified-firebase-auth-ktx-20.0.1\AndroidManifest.xml:12:17-116
+115                android:value="com.google.firebase.components.ComponentRegistrar" />
+115-->[com.google.firebase:firebase-auth-ktx:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\d6e945a3faa3259f2fbd77d6f0211183\jetified-firebase-auth-ktx-20.0.1\AndroidManifest.xml:13:17-82
+116            <meta-data
+116-->[com.google.firebase:firebase-common-ktx:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\481862189540686e57b6f23cfd57f4f1\jetified-firebase-common-ktx-19.5.0\AndroidManifest.xml:15:13-17:85
+117                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonKtxRegistrar"
+117-->[com.google.firebase:firebase-common-ktx:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\481862189540686e57b6f23cfd57f4f1\jetified-firebase-common-ktx-19.5.0\AndroidManifest.xml:16:17-113
+118                android:value="com.google.firebase.components.ComponentRegistrar" />
+118-->[com.google.firebase:firebase-common-ktx:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\481862189540686e57b6f23cfd57f4f1\jetified-firebase-common-ktx-19.5.0\AndroidManifest.xml:17:17-82
+119            <meta-data
+119-->[com.google.firebase:firebase-crashlytics:17.3.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\47c81eef8e64d5edb3a2da46a7bc2395\jetified-firebase-crashlytics-17.3.0\AndroidManifest.xml:18:13-20:85
+120                android:name="com.google.firebase.components:com.google.firebase.crashlytics.CrashlyticsRegistrar"
+120-->[com.google.firebase:firebase-crashlytics:17.3.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\47c81eef8e64d5edb3a2da46a7bc2395\jetified-firebase-crashlytics-17.3.0\AndroidManifest.xml:19:17-115
+121                android:value="com.google.firebase.components.ComponentRegistrar" />
+121-->[com.google.firebase:firebase-crashlytics:17.3.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\47c81eef8e64d5edb3a2da46a7bc2395\jetified-firebase-crashlytics-17.3.0\AndroidManifest.xml:20:17-82
+122            <meta-data
+122-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:77:13-79:85
+123                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+123-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:78:17-109
+124                android:value="com.google.firebase.components.ComponentRegistrar" />
+124-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:79:17-82
+125            <meta-data
+125-->[com.google.firebase:firebase-firestore:22.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\b35e713a5b37ae8bf749cbdbf21aa8d5\jetified-firebase-firestore-22.0.1\AndroidManifest.xml:20:13-22:85
+126                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+126-->[com.google.firebase:firebase-firestore:22.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\b35e713a5b37ae8bf749cbdbf21aa8d5\jetified-firebase-firestore-22.0.1\AndroidManifest.xml:21:17-111
+127                android:value="com.google.firebase.components.ComponentRegistrar" />
+127-->[com.google.firebase:firebase-firestore:22.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\b35e713a5b37ae8bf749cbdbf21aa8d5\jetified-firebase-firestore-22.0.1\AndroidManifest.xml:22:17-82
 128            <meta-data
-128-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\bfecccda1c163619e188045a92e3275a\jetified-firebase-common-19.5.0\AndroidManifest.xml:43:13-45:85
-129                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
-129-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\bfecccda1c163619e188045a92e3275a\jetified-firebase-common-19.5.0\AndroidManifest.xml:44:17-121
+128-->[com.google.android.gms:play-services-measurement-api:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\5c10ca7e2d10898ee1594bdc78b8eeea\jetified-play-services-measurement-api-18.0.0\AndroidManifest.xml:30:13-32:85
+129                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+129-->[com.google.android.gms:play-services-measurement-api:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\5c10ca7e2d10898ee1594bdc78b8eeea\jetified-play-services-measurement-api-18.0.0\AndroidManifest.xml:31:17-139
 130                android:value="com.google.firebase.components.ComponentRegistrar" />
-130-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\bfecccda1c163619e188045a92e3275a\jetified-firebase-common-19.5.0\AndroidManifest.xml:45:17-82
-131        </service>
-132        <service
-132-->[androidx.room:room-runtime:2.2.6] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7b9d27c618cbb7973abc941901972136\room-runtime-2.2.6\AndroidManifest.xml:25:9-28:40
-133            android:name="androidx.room.MultiInstanceInvalidationService"
-133-->[androidx.room:room-runtime:2.2.6] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7b9d27c618cbb7973abc941901972136\room-runtime-2.2.6\AndroidManifest.xml:26:13-74
-134            android:directBootAware="true"
-134-->[androidx.room:room-runtime:2.2.6] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7b9d27c618cbb7973abc941901972136\room-runtime-2.2.6\AndroidManifest.xml:27:13-43
-135            android:exported="false" />
-135-->[androidx.room:room-runtime:2.2.6] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7b9d27c618cbb7973abc941901972136\room-runtime-2.2.6\AndroidManifest.xml:28:13-37
-136
-137        <activity
-137-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:27:9-44:20
-138            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-138-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:28:13-80
-139            android:excludeFromRecents="true"
-139-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:29:13-46
-140            android:exported="true"
-140-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:30:13-36
-141            android:launchMode="singleTask"
-141-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:31:13-44
-142            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-142-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:32:13-72
-143            <intent-filter>
-143-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:33:13-43:29
-144                <action android:name="android.intent.action.VIEW" />
-144-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:34:17-69
-144-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:34:25-66
-145
-146                <category android:name="android.intent.category.DEFAULT" />
-146-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:25:17-76
-146-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:25:27-73
-147                <category android:name="android.intent.category.BROWSABLE" />
-147-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:26:17-78
-147-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:26:27-75
-148
-149                <data
-149-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
-150                    android:host="firebase.auth"
-151                    android:path="/"
-152                    android:scheme="genericidp" />
-152-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
-153            </intent-filter>
-154        </activity>
-155        <activity
-155-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:45:9-62:20
-156            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-156-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:46:13-79
-157            android:excludeFromRecents="true"
-157-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:47:13-46
-158            android:exported="true"
-158-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:48:13-36
-159            android:launchMode="singleTask"
-159-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:49:13-44
-160            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-160-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:50:13-72
-161            <intent-filter>
-161-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:51:13-61:29
-162                <action android:name="android.intent.action.VIEW" />
-162-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:34:17-69
-162-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:34:25-66
-163
-164                <category android:name="android.intent.category.DEFAULT" />
-164-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:25:17-76
-164-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:25:27-73
-165                <category android:name="android.intent.category.BROWSABLE" />
-165-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:26:17-78
-165-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:26:27-75
-166
-167                <data
-167-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
-168                    android:host="firebase.auth"
-169                    android:path="/"
-170                    android:scheme="recaptcha" />
-170-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
-171            </intent-filter>
-172        </activity>
-173
-174        <service
-174-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:64:9-73:19
-175            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
-175-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:65:13-101
-176            android:enabled="true"
-176-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:66:13-35
-177            android:exported="false" >
-177-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:67:13-37
+130-->[com.google.android.gms:play-services-measurement-api:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\5c10ca7e2d10898ee1594bdc78b8eeea\jetified-play-services-measurement-api-18.0.0\AndroidManifest.xml:32:17-82
+131            <meta-data
+131-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\e0dd222c3320e5bebb2da543541fa476\jetified-firebase-installations-16.3.5\AndroidManifest.xml:18:13-20:85
+132                android:name="com.google.firebase.components:com.google.firebase.installations.FirebaseInstallationsRegistrar"
+132-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\e0dd222c3320e5bebb2da543541fa476\jetified-firebase-installations-16.3.5\AndroidManifest.xml:19:17-127
+133                android:value="com.google.firebase.components.ComponentRegistrar" />
+133-->[com.google.firebase:firebase-installations:16.3.5] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\e0dd222c3320e5bebb2da543541fa476\jetified-firebase-installations-16.3.5\AndroidManifest.xml:20:17-82
+134            <!--
+135                This registrar is not defined in the dynamic-module-support sdk itself to allow non-firebase
+136                clients to use it as well, by defining this registrar in their own core/common library.
+137            -->
+138            <meta-data
+138-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7f09b6df76da379c3caab748e332c442\jetified-firebase-common-19.5.0\AndroidManifest.xml:43:13-45:85
+139                android:name="com.google.firebase.components:com.google.firebase.dynamicloading.DynamicLoadingRegistrar"
+139-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7f09b6df76da379c3caab748e332c442\jetified-firebase-common-19.5.0\AndroidManifest.xml:44:17-121
+140                android:value="com.google.firebase.components.ComponentRegistrar" />
+140-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7f09b6df76da379c3caab748e332c442\jetified-firebase-common-19.5.0\AndroidManifest.xml:45:17-82
+141        </service>
+142        <service
+142-->[androidx.room:room-runtime:2.2.6] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02e914cbc30acd57fb77cf2c22d1073c\room-runtime-2.2.6\AndroidManifest.xml:25:9-28:40
+143            android:name="androidx.room.MultiInstanceInvalidationService"
+143-->[androidx.room:room-runtime:2.2.6] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02e914cbc30acd57fb77cf2c22d1073c\room-runtime-2.2.6\AndroidManifest.xml:26:13-74
+144            android:directBootAware="true"
+144-->[androidx.room:room-runtime:2.2.6] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02e914cbc30acd57fb77cf2c22d1073c\room-runtime-2.2.6\AndroidManifest.xml:27:13-43
+145            android:exported="false" />
+145-->[androidx.room:room-runtime:2.2.6] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02e914cbc30acd57fb77cf2c22d1073c\room-runtime-2.2.6\AndroidManifest.xml:28:13-37
+146        <service
+146-->[com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\6734dc75cfc3149b97006521f7d60c48\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:29:9-35:19
+147            android:name="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery"
+147-->[com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\6734dc75cfc3149b97006521f7d60c48\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:30:13-103
+148            android:exported="false" >
+148-->[com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\6734dc75cfc3149b97006521f7d60c48\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:31:13-37
+149            <meta-data
+149-->[com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\6734dc75cfc3149b97006521f7d60c48\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:32:13-34:39
+150                android:name="backend:com.google.android.datatransport.cct.CctBackendFactory"
+150-->[com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\6734dc75cfc3149b97006521f7d60c48\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:33:17-94
+151                android:value="cct" />
+151-->[com.google.android.datatransport:transport-backend-cct:2.3.2] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\6734dc75cfc3149b97006521f7d60c48\jetified-transport-backend-cct-2.3.2\AndroidManifest.xml:34:17-36
+152        </service>
+153
+154        <activity
+154-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:27:9-44:20
+155            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+155-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:28:13-80
+156            android:excludeFromRecents="true"
+156-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:29:13-46
+157            android:exported="true"
+157-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:30:13-36
+158            android:launchMode="singleTask"
+158-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:31:13-44
+159            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+159-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:32:13-72
+160            <intent-filter>
+160-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:33:13-43:29
+161                <action android:name="android.intent.action.VIEW" />
+161-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:34:17-69
+161-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:34:25-66
+162
+163                <category android:name="android.intent.category.DEFAULT" />
+163-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:25:17-76
+163-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:25:27-73
+164                <category android:name="android.intent.category.BROWSABLE" />
+164-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:26:17-78
+164-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:26:27-75
+165
+166                <data
+166-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
+167                    android:host="firebase.auth"
+168                    android:path="/"
+169                    android:scheme="genericidp" />
+169-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
+170            </intent-filter>
+171        </activity>
+172        <activity
+172-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:45:9-62:20
+173            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+173-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:46:13-79
+174            android:excludeFromRecents="true"
+174-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:47:13-46
+175            android:exported="true"
+175-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:48:13-36
+176            android:launchMode="singleTask"
+176-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:49:13-44
+177            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+177-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:50:13-72
 178            <intent-filter>
-178-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:68:13-72:29
-179                <action android:name="com.google.firebase.auth.api.gms.service.START" />
-179-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:69:17-89
-179-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02951321065031a6ddfb74ba0d10b465\jetified-firebase-auth-20.0.1\AndroidManifest.xml:69:25-86
+178-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:51:13-61:29
+179                <action android:name="android.intent.action.VIEW" />
+179-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:34:17-69
+179-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:34:25-66
 180
 181                <category android:name="android.intent.category.DEFAULT" />
 181-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:25:17-76
 181-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:25:27-73
-182            </intent-filter>
-183        </service>
-184
-185        <provider
-185-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\bfecccda1c163619e188045a92e3275a\jetified-firebase-common-19.5.0\AndroidManifest.xml:26:9-31:39
-186            android:name="com.google.firebase.provider.FirebaseInitProvider"
-186-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\bfecccda1c163619e188045a92e3275a\jetified-firebase-common-19.5.0\AndroidManifest.xml:27:13-77
-187            android:authorities="dev.eyosiyas.smsblocker.firebaseinitprovider"
-187-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\bfecccda1c163619e188045a92e3275a\jetified-firebase-common-19.5.0\AndroidManifest.xml:28:13-72
-188            android:directBootAware="true"
-188-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\bfecccda1c163619e188045a92e3275a\jetified-firebase-common-19.5.0\AndroidManifest.xml:29:13-43
-189            android:exported="false"
-189-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\bfecccda1c163619e188045a92e3275a\jetified-firebase-common-19.5.0\AndroidManifest.xml:30:13-37
-190            android:initOrder="100" />
-190-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\bfecccda1c163619e188045a92e3275a\jetified-firebase-common-19.5.0\AndroidManifest.xml:31:13-36
-191
-192        <receiver
-192-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c5f5ca40c77de64963ff61b0f898e78e\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:29:9-33:20
-193            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
-193-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c5f5ca40c77de64963ff61b0f898e78e\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:30:13-85
-194            android:enabled="true"
-194-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c5f5ca40c77de64963ff61b0f898e78e\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:31:13-35
-195            android:exported="false" >
-195-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c5f5ca40c77de64963ff61b0f898e78e\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:32:13-37
-196        </receiver>
+182                <category android:name="android.intent.category.BROWSABLE" />
+182-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:26:17-78
+182-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:26:27-75
+183
+184                <data
+184-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:17-46
+185                    android:host="firebase.auth"
+186                    android:path="/"
+187                    android:scheme="recaptcha" />
+187-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:28:23-43
+188            </intent-filter>
+189        </activity>
+190
+191        <service
+191-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:64:9-73:19
+192            android:name="com.google.firebase.auth.api.fallback.service.FirebaseAuthFallbackService"
+192-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:65:13-101
+193            android:enabled="true"
+193-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:66:13-35
+194            android:exported="false" >
+194-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:67:13-37
+195            <intent-filter>
+195-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:68:13-72:29
+196                <action android:name="com.google.firebase.auth.api.gms.service.START" />
+196-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:69:17-89
+196-->[com.google.firebase:firebase-auth:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\3d4a99257c55279239063d91a8e0b93b\jetified-firebase-auth-20.0.1\AndroidManifest.xml:69:25-86
 197
-198        <service
-198-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c5f5ca40c77de64963ff61b0f898e78e\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:35:9-38:40
-199            android:name="com.google.android.gms.measurement.AppMeasurementService"
-199-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c5f5ca40c77de64963ff61b0f898e78e\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:36:13-84
-200            android:enabled="true"
-200-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c5f5ca40c77de64963ff61b0f898e78e\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:37:13-35
-201            android:exported="false" />
-201-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c5f5ca40c77de64963ff61b0f898e78e\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:38:13-37
-202        <service
-202-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c5f5ca40c77de64963ff61b0f898e78e\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:39:9-43:72
-203            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
-203-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c5f5ca40c77de64963ff61b0f898e78e\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:40:13-87
-204            android:enabled="true"
-204-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c5f5ca40c77de64963ff61b0f898e78e\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:41:13-35
-205            android:exported="false"
-205-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c5f5ca40c77de64963ff61b0f898e78e\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:42:13-37
-206            android:permission="android.permission.BIND_JOB_SERVICE" />
-206-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c5f5ca40c77de64963ff61b0f898e78e\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:43:13-69
-207
-208        <activity
-208-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7d1d6cc6cea7b040234a46590c6a8e48\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
-209            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-209-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7d1d6cc6cea7b040234a46590c6a8e48\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
-210            android:exported="false"
-210-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7d1d6cc6cea7b040234a46590c6a8e48\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
-211            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-211-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7d1d6cc6cea7b040234a46590c6a8e48\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
-212
-213        <meta-data
-213-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7d7ef96f3f99a6e8b6ab44734d9fe0d5\jetified-play-services-basement-17.1.0\AndroidManifest.xml:23:9-25:69
-214            android:name="com.google.android.gms.version"
-214-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7d7ef96f3f99a6e8b6ab44734d9fe0d5\jetified-play-services-basement-17.1.0\AndroidManifest.xml:24:13-58
-215            android:value="@integer/google_play_services_version" />
-215-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7d7ef96f3f99a6e8b6ab44734d9fe0d5\jetified-play-services-basement-17.1.0\AndroidManifest.xml:25:13-66
-216
-217        <provider
-217-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\40281b01116d74cbd52a6f50effd1a8e\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
-218            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
-218-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\40281b01116d74cbd52a6f50effd1a8e\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
-219            android:authorities="dev.eyosiyas.smsblocker.lifecycle-process"
-219-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\40281b01116d74cbd52a6f50effd1a8e\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
-220            android:exported="false"
-220-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\40281b01116d74cbd52a6f50effd1a8e\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
-221            android:multiprocess="true" />
-221-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\40281b01116d74cbd52a6f50effd1a8e\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
-222    </application>
-223
-224</manifest>
+198                <category android:name="android.intent.category.DEFAULT" />
+198-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:25:17-76
+198-->C:\Users\Dev Eyosiyas\Documents\GitHub\FreedomSMSBlocker\app\src\main\AndroidManifest.xml:25:27-73
+199            </intent-filter>
+200        </service>
+201
+202        <provider
+202-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7f09b6df76da379c3caab748e332c442\jetified-firebase-common-19.5.0\AndroidManifest.xml:26:9-31:39
+203            android:name="com.google.firebase.provider.FirebaseInitProvider"
+203-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7f09b6df76da379c3caab748e332c442\jetified-firebase-common-19.5.0\AndroidManifest.xml:27:13-77
+204            android:authorities="dev.eyosiyas.smsblocker.firebaseinitprovider"
+204-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7f09b6df76da379c3caab748e332c442\jetified-firebase-common-19.5.0\AndroidManifest.xml:28:13-72
+205            android:directBootAware="true"
+205-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7f09b6df76da379c3caab748e332c442\jetified-firebase-common-19.5.0\AndroidManifest.xml:29:13-43
+206            android:exported="false"
+206-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7f09b6df76da379c3caab748e332c442\jetified-firebase-common-19.5.0\AndroidManifest.xml:30:13-37
+207            android:initOrder="100" />
+207-->[com.google.firebase:firebase-common:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\7f09b6df76da379c3caab748e332c442\jetified-firebase-common-19.5.0\AndroidManifest.xml:31:13-36
+208
+209        <receiver
+209-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\21cf566f1fd897755d623baeb4e559e5\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:29:9-33:20
+210            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+210-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\21cf566f1fd897755d623baeb4e559e5\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:30:13-85
+211            android:enabled="true"
+211-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\21cf566f1fd897755d623baeb4e559e5\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:31:13-35
+212            android:exported="false" >
+212-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\21cf566f1fd897755d623baeb4e559e5\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:32:13-37
+213        </receiver>
+214
+215        <service
+215-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\21cf566f1fd897755d623baeb4e559e5\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:35:9-38:40
+216            android:name="com.google.android.gms.measurement.AppMeasurementService"
+216-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\21cf566f1fd897755d623baeb4e559e5\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:36:13-84
+217            android:enabled="true"
+217-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\21cf566f1fd897755d623baeb4e559e5\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:37:13-35
+218            android:exported="false" />
+218-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\21cf566f1fd897755d623baeb4e559e5\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:38:13-37
+219        <service
+219-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\21cf566f1fd897755d623baeb4e559e5\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:39:9-43:72
+220            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+220-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\21cf566f1fd897755d623baeb4e559e5\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:40:13-87
+221            android:enabled="true"
+221-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\21cf566f1fd897755d623baeb4e559e5\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:41:13-35
+222            android:exported="false"
+222-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\21cf566f1fd897755d623baeb4e559e5\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:42:13-37
+223            android:permission="android.permission.BIND_JOB_SERVICE" />
+223-->[com.google.android.gms:play-services-measurement:18.0.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\21cf566f1fd897755d623baeb4e559e5\jetified-play-services-measurement-18.0.0\AndroidManifest.xml:43:13-69
+224
+225        <activity
+225-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\a5b7460cf2647c5606d100ba386ec9ee\jetified-play-services-base-17.1.0\AndroidManifest.xml:23:9-26:75
+226            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+226-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\a5b7460cf2647c5606d100ba386ec9ee\jetified-play-services-base-17.1.0\AndroidManifest.xml:24:13-79
+227            android:exported="false"
+227-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\a5b7460cf2647c5606d100ba386ec9ee\jetified-play-services-base-17.1.0\AndroidManifest.xml:25:13-37
+228            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+228-->[com.google.android.gms:play-services-base:17.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\a5b7460cf2647c5606d100ba386ec9ee\jetified-play-services-base-17.1.0\AndroidManifest.xml:26:13-72
+229
+230        <meta-data
+230-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c62da06eae1c4566bb0828910f092e39\jetified-play-services-basement-17.1.0\AndroidManifest.xml:23:9-25:69
+231            android:name="com.google.android.gms.version"
+231-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c62da06eae1c4566bb0828910f092e39\jetified-play-services-basement-17.1.0\AndroidManifest.xml:24:13-58
+232            android:value="@integer/google_play_services_version" />
+232-->[com.google.android.gms:play-services-basement:17.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\c62da06eae1c4566bb0828910f092e39\jetified-play-services-basement-17.1.0\AndroidManifest.xml:25:13-66
+233
+234        <provider
+234-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\f5140d66b82253cd8d434a6eff3bc83d\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:25:9-29:43
+235            android:name="androidx.lifecycle.ProcessLifecycleOwnerInitializer"
+235-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\f5140d66b82253cd8d434a6eff3bc83d\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:26:13-79
+236            android:authorities="dev.eyosiyas.smsblocker.lifecycle-process"
+236-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\f5140d66b82253cd8d434a6eff3bc83d\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:27:13-69
+237            android:exported="false"
+237-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\f5140d66b82253cd8d434a6eff3bc83d\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:28:13-37
+238            android:multiprocess="true" />
+238-->[androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\f5140d66b82253cd8d434a6eff3bc83d\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:29:13-40
+239
+240        <service
+240-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\0fa0ba79f2056e8961aa5af1c5edebdf\jetified-transport-runtime-2.2.5\AndroidManifest.xml:26:9-30:19
+241            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService"
+241-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\0fa0ba79f2056e8961aa5af1c5edebdf\jetified-transport-runtime-2.2.5\AndroidManifest.xml:27:13-117
+242            android:exported="false"
+242-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\0fa0ba79f2056e8961aa5af1c5edebdf\jetified-transport-runtime-2.2.5\AndroidManifest.xml:28:13-37
+243            android:permission="android.permission.BIND_JOB_SERVICE" >
+243-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\0fa0ba79f2056e8961aa5af1c5edebdf\jetified-transport-runtime-2.2.5\AndroidManifest.xml:29:13-69
+244        </service>
+245
+246        <receiver
+246-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\0fa0ba79f2056e8961aa5af1c5edebdf\jetified-transport-runtime-2.2.5\AndroidManifest.xml:32:9-34:40
+247            android:name="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver"
+247-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\0fa0ba79f2056e8961aa5af1c5edebdf\jetified-transport-runtime-2.2.5\AndroidManifest.xml:33:13-132
+248            android:exported="false" />
+248-->[com.google.android.datatransport:transport-runtime:2.2.5] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\0fa0ba79f2056e8961aa5af1c5edebdf\jetified-transport-runtime-2.2.5\AndroidManifest.xml:34:13-37
+249    </application>
+250
+251</manifest>

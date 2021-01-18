@@ -59,7 +59,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                             Toast.makeText(baseContext, getString(R.string.crowdsource_access_denied), Toast.LENGTH_SHORT).show()
                     }
         }
-
         initSec()
         binder.bottomNavView.setOnNavigationItemSelectedListener(this)
         Core.defaultSMS(this)

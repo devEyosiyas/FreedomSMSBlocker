@@ -2437,6 +2437,7 @@ string character_counter_pattern
 string chip_text
 string choose_language
 string clear_text_end_icon_content_description
+string com_crashlytics_android_build_id
 string common_google_play_services_enable_button
 string common_google_play_services_enable_text
 string common_google_play_services_enable_title
