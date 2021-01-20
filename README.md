@@ -25,7 +25,7 @@ More features will be added soon.
 
 ## Screenshots
 
-<img src="screenshot/0.png" width="150" /> | <img src="screenshot/2.png" width="150" /> | <img src="screenshot/3.png" width="150" /> | <img src="screenshot/4.png" width="150" /> | <img src="screenshot/5.png" width="150" />
+<img src="screenshot/0.jpg" width="150" /> | <img src="screenshot/2.png" width="150" /> | <img src="screenshot/3.jpg" width="150" /> | <img src="screenshot/4.jpg" width="150" /> | <img src="screenshot/5.jpg" width="150" />
 -------------|----------------|-----------|---------------|------------------
 Conversation | Core Messaging | Localized | Crowdsourced  | Advanced Blocking
 
