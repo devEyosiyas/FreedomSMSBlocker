@@ -1,5 +1,5 @@
 # Freedom SMS Blocker
-[![API](https://img.shields.io/badge/API-16%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=16)
+[![API](https://img.shields.io/badge/API-17%2B-blue.svg?style=flat)](https://android-arsenal.com/api?level=17)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://opensource.org/licenses/Apache-2.0)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/devEyosiyas/FreedomSMSBlocker/blob/master/LICENSE)
 
@@ -11,30 +11,36 @@ As its name suggests, it blocks messages based on User defined rules.
 These days Using a SMS spam blocker app is essential.
 
 ###### Key Features
+* Localization support
 * Blacklist
+* Whitelist
 * Numbers starting with ^81XX
 * Numbers ending with XX24^
 * Block certain words
-* Block all three and four digit numbers(**Nuclear Option**).
+* Block all three and four digit numbers(**Nuclear Option**)
+* Crowdsource
+* Access to blocked messages
 
 More features will be added soon.
 
 ## Screenshots
 
-<img src="screenshot/1.png" width="150" /> | <img src="screenshot/2.png" width="150" /> | <img src="screenshot/3.png" width="150" /> | <img src="screenshot/4.png" width="150" /> | <img src="screenshot/5.png" width="150" />
--------------|----------------|-----------|-------------------|-------
-Conversation | Core Messaging | Blacklist | Advanced Blocking | About
+<img src="screenshot/0.png" width="150" /> | <img src="screenshot/2.png" width="150" /> | <img src="screenshot/3.png" width="150" /> | <img src="screenshot/4.png" width="150" /> | <img src="screenshot/5.png" width="150" />
+-------------|----------------|-----------|---------------|------------------
+Conversation | Core Messaging | Localized | Crowdsourced  | Advanced Blocking
 
 
 
 ### Simple and fast Spam blocker.
-Test the [app](https://raw.githubusercontent.com/devEyosiyas/FreedomSMSBlocker/master/Freedom%20SMS%20Blocker.apk) and tell us what you think.
+Join our Telegram [Channel](https://t.me/spamFreeLife) for the latest news and app releases.
+
+## If this repo helps you in anyway, show your love :heart: by putting a :star: on this project :v:
 
 ## License
 ```
 MIT License
 
-Copyright (c) 2020 Eyosiyas Bereketab
+Copyright (c) 2021 Eyosiyas Bereketab
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
