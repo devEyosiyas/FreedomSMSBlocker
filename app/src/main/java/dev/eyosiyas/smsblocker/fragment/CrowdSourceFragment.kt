@@ -12,6 +12,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.google.firebase.firestore.FirebaseFirestoreSettings
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 import dev.eyosiyas.smsblocker.R
@@ -57,7 +58,13 @@ class CrowdSourceFragment : Fragment(), CrowdSourceSelected {
         viewModel = ViewModelProvider(this).get(BlacklistViewModel::class.java)
         binder.crowdSourceRecycler.adapter = adapter
         binder.progressCircular.visibility = View.VISIBLE
-        Firebase.firestore.collection(Constant.PATH_SHORT_CODE)
+        val settings = FirebaseFirestoreSettings.Builder()
+                .setCacheSizeBytes(FirebaseFirestoreSettings.CACHE_SIZE_UNLIMITED)
+                .setPersistenceEnabled(true)
+                .build()
+        val db = Firebase.firestore
+        db.firestoreSettings = settings
+        db.collection(Constant.PATH_SHORT_CODE)
                 .get()
                 .addOnSuccessListener { result ->
                     runBlocking {

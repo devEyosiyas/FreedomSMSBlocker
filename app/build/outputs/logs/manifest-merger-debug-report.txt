@@ -31,8 +31,6 @@ MERGED from [com.google.firebase:firebase-analytics-ktx:18.0.0] C:\Users\Dev Eyo
 MERGED from [com.google.firebase:firebase-firestore-ktx:22.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\a30f656b343dc49fecf724b943c84e59\jetified-firebase-firestore-ktx-22.0.1\AndroidManifest.xml:2:1-21:12
 MERGED from [com.google.firebase:firebase-auth-ktx:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\d6e945a3faa3259f2fbd77d6f0211183\jetified-firebase-auth-ktx-20.0.1\AndroidManifest.xml:2:1-17:12
 MERGED from [com.google.firebase:firebase-common-ktx:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\481862189540686e57b6f23cfd57f4f1\jetified-firebase-common-ktx-19.5.0\AndroidManifest.xml:2:1-21:12
-MERGED from [net.zetetic:android-database-sqlcipher:4.4.2] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\a7e4b2936430ff218c2b671427dcf726\jetified-android-database-sqlcipher-4.4.2\AndroidManifest.xml:2:1-11:12
-MERGED from [androidx.sqlite:sqlite-ktx:2.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\04b4830f87598122c3add26ff5346784\jetified-sqlite-ktx-2.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.room:room-runtime:2.2.6] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02e914cbc30acd57fb77cf2c22d1073c\room-runtime-2.2.6\AndroidManifest.xml:17:1-31:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\44a809dde96b81b61107868e244f3475\lifecycle-extensions-2.2.0\AndroidManifest.xml:17:1-27:12
 MERGED from [com.google.firebase:firebase-crashlytics:17.3.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\47c81eef8e64d5edb3a2da46a7bc2395\jetified-firebase-crashlytics-17.3.0\AndroidManifest.xml:2:1-24:12
@@ -85,7 +83,7 @@ MERGED from [androidx.activity:activity:1.1.0] C:\Users\Dev Eyosiyas\.gradle\cac
 MERGED from [androidx.navigation:navigation-common:2.3.2] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\caa78e18f1e1deeefc176dc86cd294fc\navigation-common-2.3.2\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core:1.3.2] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\96219194ed229f7a3df379ee3f16ed7e\core-1.3.2\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\21182fb0dba56d4ea101554cf45b9137\sqlite-framework-2.0.1\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\d8754e2946e26d5368257959585f78db\sqlite-2.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\2a039620ab5e6c37053a57098a2cd441\sqlite-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\f5140d66b82253cd8d434a6eff3bc83d\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:17:1-32:12
 MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\41f7637b101496046fb22e4baef66f9f\jetified-lifecycle-service-2.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\dcc7b9673a5bc4fb0227b9224b16c018\lifecycle-runtime-2.2.0\AndroidManifest.xml:17:1-24:12
@@ -415,10 +413,6 @@ MERGED from [com.google.firebase:firebase-auth-ktx:20.0.1] C:\Users\Dev Eyosiyas
 MERGED from [com.google.firebase:firebase-auth-ktx:20.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\d6e945a3faa3259f2fbd77d6f0211183\jetified-firebase-auth-ktx-20.0.1\AndroidManifest.xml:5:5-44
 MERGED from [com.google.firebase:firebase-common-ktx:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\481862189540686e57b6f23cfd57f4f1\jetified-firebase-common-ktx-19.5.0\AndroidManifest.xml:6:5-8:41
 MERGED from [com.google.firebase:firebase-common-ktx:19.5.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\481862189540686e57b6f23cfd57f4f1\jetified-firebase-common-ktx-19.5.0\AndroidManifest.xml:6:5-8:41
-MERGED from [net.zetetic:android-database-sqlcipher:4.4.2] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\a7e4b2936430ff218c2b671427dcf726\jetified-android-database-sqlcipher-4.4.2\AndroidManifest.xml:7:5-9:41
-MERGED from [net.zetetic:android-database-sqlcipher:4.4.2] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\a7e4b2936430ff218c2b671427dcf726\jetified-android-database-sqlcipher-4.4.2\AndroidManifest.xml:7:5-9:41
-MERGED from [androidx.sqlite:sqlite-ktx:2.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\04b4830f87598122c3add26ff5346784\jetified-sqlite-ktx-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.sqlite:sqlite-ktx:2.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\04b4830f87598122c3add26ff5346784\jetified-sqlite-ktx-2.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.2.6] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02e914cbc30acd57fb77cf2c22d1073c\room-runtime-2.2.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.room:room-runtime:2.2.6] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\02e914cbc30acd57fb77cf2c22d1073c\room-runtime-2.2.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\44a809dde96b81b61107868e244f3475\lifecycle-extensions-2.2.0\AndroidManifest.xml:20:5-22:41
@@ -523,8 +517,8 @@ MERGED from [androidx.core:core:1.3.2] C:\Users\Dev Eyosiyas\.gradle\caches\tran
 MERGED from [androidx.core:core:1.3.2] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\96219194ed229f7a3df379ee3f16ed7e\core-1.3.2\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\21182fb0dba56d4ea101554cf45b9137\sqlite-framework-2.0.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.sqlite:sqlite-framework:2.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\21182fb0dba56d4ea101554cf45b9137\sqlite-framework-2.0.1\AndroidManifest.xml:20:5-44
-MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\d8754e2946e26d5368257959585f78db\sqlite-2.1.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.sqlite:sqlite:2.1.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\d8754e2946e26d5368257959585f78db\sqlite-2.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\2a039620ab5e6c37053a57098a2cd441\sqlite-2.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.0.1] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\2a039620ab5e6c37053a57098a2cd441\sqlite-2.0.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\f5140d66b82253cd8d434a6eff3bc83d\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-process:2.2.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\f5140d66b82253cd8d434a6eff3bc83d\jetified-lifecycle-process-2.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.lifecycle:lifecycle-service:2.2.0] C:\Users\Dev Eyosiyas\.gradle\caches\transforms-2\files-2.1\41f7637b101496046fb22e4baef66f9f\jetified-lifecycle-service-2.2.0\AndroidManifest.xml:20:5-22:41

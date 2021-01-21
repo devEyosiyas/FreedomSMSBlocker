@@ -68,7 +68,6 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
     private fun initSec() {
         val prefManager = PrefManager(this)
         if (prefManager.firstRun) {
-            prefManager.id = ""
             prefManager.firstRun = false
         }
     }

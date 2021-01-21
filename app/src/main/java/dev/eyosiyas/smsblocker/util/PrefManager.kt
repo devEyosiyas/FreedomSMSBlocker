@@ -1,7 +1,6 @@
 package dev.eyosiyas.smsblocker.util
 
 import android.content.Context
-import java.util.*
 
 class PrefManager constructor(context: Context) {
     private val preferences = context.getSharedPreferences("Fire", Context.MODE_PRIVATE)
@@ -12,10 +11,6 @@ class PrefManager constructor(context: Context) {
     var endsWith: String?
         get() = preferences.getString(Constant.ENDS_WITH, "")
         set(endsWith) = preferences.edit().putString(Constant.ENDS_WITH, endsWith).apply()
-
-    var id: String
-        get() = preferences.getString(Constant.ID, "").toString()
-        set(_) = preferences.edit().putString(Constant.ID, UUID.randomUUID().toString()).apply()
 
     var firstRun: Boolean
         get() = preferences.getBoolean(Constant.FIRST_RUN, true)

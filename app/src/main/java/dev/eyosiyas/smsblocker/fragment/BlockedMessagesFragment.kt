@@ -1,6 +1,5 @@
 package dev.eyosiyas.smsblocker.fragment
 
-import android.content.Intent
 import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
@@ -8,6 +7,7 @@ import android.os.LocaleList
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
@@ -19,7 +19,6 @@ import dev.eyosiyas.smsblocker.databinding.FragmentBlockedMessagesBinding
 import dev.eyosiyas.smsblocker.event.BlockedMessageSelected
 import dev.eyosiyas.smsblocker.model.Blocked
 import dev.eyosiyas.smsblocker.util.PrefManager
-import dev.eyosiyas.smsblocker.view.DetailSmsActivity
 import dev.eyosiyas.smsblocker.viewmodel.BlockedViewModel
 import java.util.*
 
@@ -57,7 +56,7 @@ class BlockedMessagesFragment : Fragment(), BlockedMessageSelected {
     }
 
     override fun onSelected(blockedMessage: Blocked) {
-        startActivity(Intent(requireContext(), DetailSmsActivity::class.java).putExtra("KEY", blockedMessage.sender).putExtra("DISPLAY", blockedMessage.sender))
+        showBlockedMessage(blockedMessage)
     }
 
     override fun onDeleteSelected(blockedMessage: Blocked) {
@@ -74,6 +73,17 @@ class BlockedMessagesFragment : Fragment(), BlockedMessageSelected {
                     Toast.makeText(requireContext(), getString(R.string.message_deleted), Toast.LENGTH_SHORT).show()
                 }
                 .setNegativeButton(R.string.button_no) { dialog, _ -> dialog.dismiss() }
+                .show()
+    }
+
+    private fun showBlockedMessage(blockedMessage: Blocked) {
+        val message = TextView(requireContext())
+        message.text = blockedMessage.message
+        message.setPadding(50, 50, 50, 50)
+        AlertDialog.Builder(requireContext())
+                .setTitle("Blocked Message sent from " + blockedMessage.sender)
+                .setView(message)
+                .setPositiveButton(R.string.button_back) { dialog, _ -> dialog.dismiss() }
                 .show()
     }
 }
