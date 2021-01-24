@@ -97,6 +97,7 @@ class BlockFragment : Fragment(), BlacklistSelected {
     }
 
     private fun insertUI() {
+        blacklistBinder = BlacklistManagmentBinding.bind(View.inflate(requireContext(), R.layout.blacklist_managment, null))
         val insertDialog: AlertDialog = AlertDialog.Builder((requireContext())).create()
         blacklistBinder.btnSelectNumber.setOnClickListener { formattedContact() }
         insertDialog.setView(blacklistBinder.root)
@@ -123,6 +124,7 @@ class BlockFragment : Fragment(), BlacklistSelected {
     }
 
     private fun updateUI(blacklist: Blacklist) {
+        blacklistBinder = BlacklistManagmentBinding.bind(View.inflate(requireContext(), R.layout.blacklist_managment, null))
         val updateDialog = AlertDialog.Builder(requireContext()).create()
         blacklistBinder.btnInsertUpdate.setText(R.string.update)
         blacklistBinder.inputBlacklistNumber.setText(blacklist.number)
@@ -165,7 +167,7 @@ class BlockFragment : Fragment(), BlacklistSelected {
                                 .setCancelable(false)
                                 .setMessage(String.format(Locale.ENGLISH, getString(R.string.share_crowdsource_message), blacklist.number))
                                 .setPositiveButton(getString(R.string.button_yes)) { _, _ ->
-                                    remoteDB.collection(Constant.PATH_SHORT_CODE).document(blacklist.number).set(hashMapOf(Constant.FIELD_NUMBER to blacklist.number, Constant.FIELD_TIMESTAMP to System.currentTimeMillis() / 1000))
+                                    remoteDB.collection(Constant.PATH_SHORT_CODE).document(blacklist.number).set(hashMapOf(Constant.FIELD_NUMBER to blacklist.number, Constant.FIELD_TIMESTAMP to System.currentTimeMillis() / 1000, Constant.FIELD_USER_GENERATED to true))
                                             .addOnSuccessListener {
                                                 viewModel.updateBlacklist(Blacklist(blacklist.id, blacklist.number, blacklist.timestamp, Constant.SOURCE_LOCAL, true))
                                                 Toast.makeText(requireContext(), getString(R.string.crowdsource_contributed), Toast.LENGTH_SHORT).show()

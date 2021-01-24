@@ -81,7 +81,7 @@ class BlockedMessagesFragment : Fragment(), BlockedMessageSelected {
         message.text = blockedMessage.message
         message.setPadding(50, 50, 50, 50)
         AlertDialog.Builder(requireContext())
-                .setTitle("Blocked Message sent from " + blockedMessage.sender)
+                .setTitle(String.format(Locale.ENGLISH, getString(R.string.blocked_message_from), blockedMessage.sender))
                 .setView(message)
                 .setPositiveButton(R.string.button_back) { dialog, _ -> dialog.dismiss() }
                 .show()

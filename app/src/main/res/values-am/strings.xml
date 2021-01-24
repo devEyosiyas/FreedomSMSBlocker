@@ -88,5 +88,6 @@
     <string name="remove_whitelist_message">%sን ከነጭ ዝርዝር ውስጥ ማስወገድ ይፈልጋሉ?</string>
     <string name="crowdsource_access_granted">የብዙ ሰዎች ምንጭ መዳረሻ ተሰጠ!</string>
     <string name="crowdsource_access_denied">ለሕዝብ ማሰባሰብ ውሂብ የበይነመረብ ግንኙነትን ከአንድ ጊዜ ማግበር ያንቁ።</string>
+    <string name="blocked_message_from">የታገደ መልዕክት ከ%s</string>
 
 </resources>

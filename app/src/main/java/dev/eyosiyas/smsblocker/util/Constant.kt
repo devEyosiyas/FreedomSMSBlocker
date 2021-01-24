@@ -16,6 +16,7 @@ object Constant {
     const val PATH_SHORT_CODE: String = "short-code"
     const val FIELD_NUMBER: String = "spam"
     const val FIELD_TIMESTAMP: String = "timestamp"
+    const val FIELD_USER_GENERATED: String = "userGenerated"
     const val SOURCE_LOCAL: String = "user"
     const val SOURCE_REMOTE: String = "crowdsourced"
     const val STARTS_WITH_TAG: String = "SW"

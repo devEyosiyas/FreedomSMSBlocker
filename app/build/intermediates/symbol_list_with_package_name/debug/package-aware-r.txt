@@ -2425,6 +2425,7 @@ string appbar_scrolling_view_behavior
 string apply_rule
 string blacklist
 string blacklist_record_updated
+string blocked_message_from
 string blocked_messages
 string bottom_sheet_behavior
 string button_back
