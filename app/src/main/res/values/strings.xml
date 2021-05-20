@@ -2,11 +2,13 @@
     <string-array name="language">
         <item>አማርኛ</item>
         <item>English</item>
+        <item>中文</item>>
     </string-array>
 
     <string-array name="languageCode">
         <item>am</item>
         <item>en</item>
+        <item>zh</item>
     </string-array>
 
     <string name="app_name">Freedom SMS Blocker</string>
