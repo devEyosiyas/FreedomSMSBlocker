@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">የነፃነት ኤስኤምኤስ አግድ</string>
+    <string name="app_name">የኤስኤምኤስ ጥበቃ</string>
     <string name="default_sms_app_title">ነባሪ የኤስኤምኤስ መተግበሪያ</string>
     <string name="default_sms_app_message">መተግበሪያውን በተሻለ ሁኔታ ለመጠቀም ይህንን መተግበሪያ ለኤስኤምኤስ ነባሪ ማድረግ ያስፈልግዎታል፡፡</string>
     <string name="permission_from_settings">የፈቃድ ቅጽ ቅንብሮችን ፍቀድ</string>
@@ -47,7 +47,7 @@
     <string name="menu_about">ስለ</string>
     <string name="menu_setting">ቅንብር</string>
     <string name="menu_block">አግድ</string>
-    <string name="menu_sms">ኤስኤምኤስ</string>
+    <string name="menu_message">መልዕክቶች</string>
     <string name="enter_message">መልእክት ያስገቡ</string>
     <string name="recipient">ተቀባዩ</string>
     <string name="update">አዘምን</string>
@@ -89,5 +89,13 @@
     <string name="crowdsource_access_granted">የብዙ ሰዎች ምንጭ መዳረሻ ተሰጠ!</string>
     <string name="crowdsource_access_denied">ለሕዝብ ማሰባሰብ ውሂብ የበይነመረብ ግንኙነትን ከአንድ ጊዜ ማግበር ያንቁ።</string>
     <string name="blocked_message_from">የታገደ መልዕክት ከ%s</string>
+    <string name="menu_search">ፈልግ</string>
+    <string name="tab_inbox">የመልዕክት ሳጥን</string>
+    <string name="tab_spam">አይፈለጌ መልእክት</string>
+    <string name="time_now">አሁን</string>
+    <string name="time_sec">ከ%dሰ በፊት</string>
+    <string name="time_min">ከ%dደ በፊት</string>
+    <string name="time_hour">ከ%dሰዓ በፊት</string>
+    <string name="time_yesterday">ትላንት</string>
 
 </resources>

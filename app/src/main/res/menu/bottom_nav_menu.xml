@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navMenuSms"
+        android:id="@+id/viewPagerFragment"
         android:icon="@drawable/ic_sms"
-        android:title="@string/menu_sms" />
+        android:title="@string/menu_message" />
     <item
         android:id="@+id/navMenuBlacklist"
         android:icon="@drawable/ic_block"
@@ -13,7 +13,7 @@
         android:icon="@drawable/ic_blocked_message"
         android:title="@string/blocked_messages" />
     <item
-        android:id="@+id/navMenuCrowdSource"
+        android:id="@+id/crowdSourceFragment"
         android:icon="@drawable/ic_crowdsource"
         android:title="@string/crowdsource" />
     <item

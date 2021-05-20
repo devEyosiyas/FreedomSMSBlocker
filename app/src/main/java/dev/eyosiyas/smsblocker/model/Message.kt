@@ -2,7 +2,9 @@ package dev.eyosiyas.smsblocker.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
+import androidx.room.Ignore
 import androidx.room.PrimaryKey
+import dev.eyosiyas.smsblocker.util.Constant.DEFAULT_PROFILE
 
 @Entity
 data class Message(
@@ -19,4 +21,7 @@ data class Message(
         @ColumnInfo(name = "is_seen")
         val isSeen: Boolean,
         val timestamp: Long
-)
+) {
+    @Ignore
+    var picture: String = DEFAULT_PROFILE
+}

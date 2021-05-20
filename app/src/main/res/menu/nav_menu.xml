@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_call"
+        android:title="Call" />
+    <item
+        android:id="@+id/nav_message"
+        android:icon="@drawable/ic_sms"
+        android:title="Message" />
+    <item
+        android:id="@+id/nav_history"
+        android:title="History" />
+    <item
+        android:id="@+id/nav_view"
+        android:title="View contact" />
+    <item
+        android:id="@+id/nav_edit"
+        android:title="Edit contact" />
+    <item
+        android:id="@+id/nav_logout"
+        android:title="Log out" />
+</menu>

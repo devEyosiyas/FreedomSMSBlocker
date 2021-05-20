@@ -6,30 +6,34 @@ import android.content.res.Configuration
 import android.os.Build
 import android.os.Bundle
 import android.os.LocaleList
-import android.view.Menu
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
-import androidx.fragment.app.Fragment
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.core.view.GravityCompat
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.onNavDestinationSelected
+import androidx.navigation.ui.setupWithNavController
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 import dev.eyosiyas.smsblocker.R
 import dev.eyosiyas.smsblocker.databinding.ActivityMainBinding
-import dev.eyosiyas.smsblocker.fragment.*
 import dev.eyosiyas.smsblocker.util.Constant
 import dev.eyosiyas.smsblocker.util.Core
 import dev.eyosiyas.smsblocker.util.PrefManager
 import java.util.*
 
 
-class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemSelectedListener {
+class MainActivity : AppCompatActivity() {
     private lateinit var binder: ActivityMainBinding
     private lateinit var storage: PrefManager
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -49,6 +53,15 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         binder = ActivityMainBinding.inflate(layoutInflater)
         setSupportActionBar(binder.toolbar)
         setContentView(binder.root)
+        navController =
+                (supportFragmentManager.findFragmentById(R.id.fragmentHost) as NavHostFragment).navController
+        navController.addOnDestinationChangedListener { _, destination, _ ->
+            if (destination.id == R.id.viewPagerFragment || destination.id == R.id.crowdSourceFragment)
+                binder.bottomNavView.visibility = View.VISIBLE
+            else
+                binder.bottomNavView.visibility = View.GONE
+
+        }
         val auth: FirebaseAuth = Firebase.auth
         if (auth.currentUser == null) {
             auth.signInAnonymously()
@@ -59,10 +72,36 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                             Toast.makeText(baseContext, getString(R.string.crowdsource_access_denied), Toast.LENGTH_SHORT).show()
                     }
         }
-        initSec()
-        binder.bottomNavView.setOnNavigationItemSelectedListener(this)
-        Core.defaultSMS(this)
-        checkSMSPermission()
+//        initSec()
+//        Core.defaultSMS(this)
+//        checkSMSPermission()
+
+
+//        val appBarConfig = AppBarConfiguration(
+//                setOf(
+//                        R.id.viewPagerFragment,
+//                        R.id.crowdSourceFragment
+//                )
+//        )
+        val appBarConfig = AppBarConfiguration(navController.graph, binder.drawer)
+//        val appBarConfig = AppBarConfiguration(navController.graph, binder.drawer)
+        binder.navigationView.setupWithNavController(navController)
+        binder.toolbar.setupWithNavController(navController, appBarConfig)
+        binder.bottomNavView.setupWithNavController(navController)
+
+        binder.navigationView.setNavigationItemSelectedListener {
+            when (it.itemId) {
+                R.id.nav_call -> Toast.makeText(this, "Call selected", Toast.LENGTH_SHORT).show()
+                R.id.nav_message -> Toast.makeText(this, "Message selected", Toast.LENGTH_SHORT).show()
+                R.id.nav_history -> Toast.makeText(this, "History selected", Toast.LENGTH_SHORT).show()
+                R.id.nav_view -> Toast.makeText(this, "View selected", Toast.LENGTH_SHORT).show()
+                R.id.nav_logout -> Toast.makeText(this, "Logout selected", Toast.LENGTH_SHORT).show()
+            }
+            binder.drawer.closeDrawer(GravityCompat.START)
+            true
+        }
+
+
     }
 
     private fun initSec() {
@@ -98,37 +137,46 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
         }
     }
 
-    override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        var fragment: Fragment? = null
-        when (item.itemId) {
-            R.id.navMenuSms -> fragment = MessageFragment()
-            R.id.navMenuBlacklist -> fragment = BlockFragment()
-            R.id.navMenuBlockedMessages -> fragment = BlockedMessagesFragment()
-            R.id.navMenuCrowdSource -> fragment = CrowdSourceFragment()
-            R.id.navMenuWhitelist -> fragment = WhitelistFragment()
-        }
-        if (fragment != null) supportFragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit()
-        return true
-    }
+//    override fun onNavigationItemSelected(item: MenuItem): Boolean {
+//        var fragment: Fragment? = null
+//        when (item.itemId) {
+//            R.id.navMenuSms -> fragment = MessageFragment()
+//            R.id.navMenuBlacklist -> fragment = BlockFragment()
+//            R.id.navMenuBlockedMessages -> fragment = BlockedMessagesFragment()
+//            R.id.navMenuCrowdSource -> fragment = CrowdSourceFragment()
+//            R.id.navMenuWhitelist -> fragment = WhitelistFragment()
+//        }
+//        if (fragment != null) supportFragmentManager.beginTransaction().replace(R.id.frameLayout, fragment).commit()
+//        return true
+//    }
 
     private fun init() {
-        supportFragmentManager.beginTransaction().replace(R.id.frameLayout, MessageFragment()).commit()
+        navController.navigate(R.id.viewPagerFragment)
+//        supportFragmentManager.beginTransaction().replace(R.id.frameLayout, MessageFragment()).commit()
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.main_menu, menu)
-        return super.onCreateOptionsMenu(menu)
-    }
+//    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+//        menuInflater.inflate(R.menu.main_menu, menu)
+//        return super.onCreateOptionsMenu(menu)
+//    }
+//
+//    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+//        if (toggle.onOptionsItemSelected(item))
+//            return true
+
+
+    //        when (item.itemId) {
+//            R.id.mainLanguage -> languageUI()
+//            R.id.mainShare -> Core.share(this)
+//            R.id.mainTelegram -> Core.telegram(this)
+////            R.id.mainSetting -> supportFragmentManager.beginTransaction().replace(R.id.frameLayout, SettingFragment()).commit()
+//            R.id.mainAbout -> Core.about(this)
+//        }
+//        return super.onOptionsItemSelected(item)
+//    }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.mainLanguage -> languageUI()
-            R.id.mainShare -> Core.share(this)
-            R.id.mainTelegram -> Core.telegram(this)
-            R.id.mainSetting -> supportFragmentManager.beginTransaction().replace(R.id.frameLayout, SettingFragment()).commit()
-            R.id.mainAbout -> Core.about(this)
-        }
-        return super.onOptionsItemSelected(item)
+        return item.onNavDestinationSelected(navController) || super.onOptionsItemSelected(item)
     }
 
     private fun languageUI() {
@@ -150,5 +198,12 @@ class MainActivity : AppCompatActivity(), BottomNavigationView.OnNavigationItemS
                 }
                 .setNegativeButton(R.string.button_cancel) { dialogInterface, _ -> dialogInterface.dismiss() }
                 .show()
+    }
+
+    override fun onBackPressed() {
+        if (binder.drawer.isDrawerOpen(GravityCompat.START))
+            binder.drawer.closeDrawer(GravityCompat.START)
+        else
+            super.onBackPressed()
     }
 }

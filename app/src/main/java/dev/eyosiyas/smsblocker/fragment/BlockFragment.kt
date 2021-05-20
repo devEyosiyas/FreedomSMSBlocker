@@ -28,6 +28,7 @@ import dev.eyosiyas.smsblocker.databinding.FragmentBlockBinding
 import dev.eyosiyas.smsblocker.event.BlacklistSelected
 import dev.eyosiyas.smsblocker.model.Blacklist
 import dev.eyosiyas.smsblocker.util.Constant
+import dev.eyosiyas.smsblocker.util.Constant.EPOCH_MULTIPLIER
 import dev.eyosiyas.smsblocker.util.Core
 import dev.eyosiyas.smsblocker.util.PrefManager
 import dev.eyosiyas.smsblocker.viewmodel.BlacklistViewModel
@@ -167,7 +168,7 @@ class BlockFragment : Fragment(), BlacklistSelected {
                                 .setCancelable(false)
                                 .setMessage(String.format(Locale.ENGLISH, getString(R.string.share_crowdsource_message), blacklist.number))
                                 .setPositiveButton(getString(R.string.button_yes)) { _, _ ->
-                                    remoteDB.collection(Constant.PATH_SHORT_CODE).document(blacklist.number).set(hashMapOf(Constant.FIELD_NUMBER to blacklist.number, Constant.FIELD_TIMESTAMP to System.currentTimeMillis() / 1000, Constant.FIELD_USER_GENERATED to true))
+                                    remoteDB.collection(Constant.PATH_SHORT_CODE).document(blacklist.number).set(hashMapOf(Constant.FIELD_NUMBER to blacklist.number, Constant.FIELD_TIMESTAMP to System.currentTimeMillis() / EPOCH_MULTIPLIER, Constant.FIELD_USER_GENERATED to true))
                                             .addOnSuccessListener {
                                                 viewModel.updateBlacklist(Blacklist(blacklist.id, blacklist.number, blacklist.timestamp, Constant.SOURCE_LOCAL, true))
                                                 Toast.makeText(requireContext(), getString(R.string.crowdsource_contributed), Toast.LENGTH_SHORT).show()

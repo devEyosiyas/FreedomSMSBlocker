@@ -4,13 +4,15 @@ package dev.eyosiyas.smsblocker.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.RelativeLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.fragment.app.FragmentContainerView;
 import androidx.viewbinding.ViewBinding;
+import com.google.android.material.appbar.AppBarLayout;
+import com.google.android.material.appbar.MaterialToolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationView;
 import dev.eyosiyas.smsblocker.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -18,29 +20,42 @@ import java.lang.String;
 
 public final class ActivityMainBinding implements ViewBinding {
   @NonNull
-  private final RelativeLayout rootView;
+  private final DrawerLayout rootView;
+
+  @NonNull
+  public final AppBarLayout appBar;
 
   @NonNull
   public final BottomNavigationView bottomNavView;
 
   @NonNull
-  public final FrameLayout frameLayout;
+  public final DrawerLayout drawer;
 
   @NonNull
-  public final Toolbar toolbar;
+  public final FragmentContainerView fragmentHost;
 
-  private ActivityMainBinding(@NonNull RelativeLayout rootView,
-      @NonNull BottomNavigationView bottomNavView, @NonNull FrameLayout frameLayout,
-      @NonNull Toolbar toolbar) {
+  @NonNull
+  public final NavigationView navigationView;
+
+  @NonNull
+  public final MaterialToolbar toolbar;
+
+  private ActivityMainBinding(@NonNull DrawerLayout rootView, @NonNull AppBarLayout appBar,
+      @NonNull BottomNavigationView bottomNavView, @NonNull DrawerLayout drawer,
+      @NonNull FragmentContainerView fragmentHost, @NonNull NavigationView navigationView,
+      @NonNull MaterialToolbar toolbar) {
     this.rootView = rootView;
+    this.appBar = appBar;
     this.bottomNavView = bottomNavView;
-    this.frameLayout = frameLayout;
+    this.drawer = drawer;
+    this.fragmentHost = fragmentHost;
+    this.navigationView = navigationView;
     this.toolbar = toolbar;
   }
 
   @Override
   @NonNull
-  public RelativeLayout getRoot() {
+  public DrawerLayout getRoot() {
     return rootView;
   }
 
@@ -65,26 +80,40 @@ public final class ActivityMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.appBar;
+      AppBarLayout appBar = rootView.findViewById(id);
+      if (appBar == null) {
+        break missingId;
+      }
+
       id = R.id.bottomNavView;
       BottomNavigationView bottomNavView = rootView.findViewById(id);
       if (bottomNavView == null) {
         break missingId;
       }
 
-      id = R.id.frameLayout;
-      FrameLayout frameLayout = rootView.findViewById(id);
-      if (frameLayout == null) {
+      DrawerLayout drawer = (DrawerLayout) rootView;
+
+      id = R.id.fragmentHost;
+      FragmentContainerView fragmentHost = rootView.findViewById(id);
+      if (fragmentHost == null) {
+        break missingId;
+      }
+
+      id = R.id.navigationView;
+      NavigationView navigationView = rootView.findViewById(id);
+      if (navigationView == null) {
         break missingId;
       }
 
       id = R.id.toolbar;
-      Toolbar toolbar = rootView.findViewById(id);
+      MaterialToolbar toolbar = rootView.findViewById(id);
       if (toolbar == null) {
         break missingId;
       }
 
-      return new ActivityMainBinding((RelativeLayout) rootView, bottomNavView, frameLayout,
-          toolbar);
+      return new ActivityMainBinding((DrawerLayout) rootView, appBar, bottomNavView, drawer,
+          fragmentHost, navigationView, toolbar);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

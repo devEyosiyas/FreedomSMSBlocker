@@ -2,7 +2,7 @@
     <string-array name="language">
         <item>አማርኛ</item>
         <item>English</item>
-        <item>中文</item>>
+        <item>中文</item>
     </string-array>
 
     <string-array name="languageCode">
@@ -11,14 +11,14 @@
         <item>zh</item>
     </string-array>
 
-    <string name="app_name">Freedom SMS Blocker</string>
+    <string name="app_name">SMS Guard</string>
     <string name="insert">Insert</string>
     <string name="number">Number</string>
     <string name="send">SEND</string>
     <string name="update">Update</string>
     <string name="recipient">Recipient</string>
     <string name="enter_message">Enter message</string>
-    <string name="menu_sms">SMS</string>
+    <string name="menu_message">Messages</string>
     <string name="menu_block">Block</string>
     <string name="menu_setting">Setting</string>
     <string name="menu_about">About</string>
@@ -100,5 +100,13 @@
     <string name="crowdsource_access_granted">Access to Crowdsource granted!</string>
     <string name="crowdsource_access_denied">Enable internet connectivity to one-time activation for crowdsourcing data.</string>
     <string name="blocked_message_from">Blocked Message from %s</string>
+    <string name="menu_search">Search</string>
+    <string name="tab_inbox">Inbox</string>
+    <string name="tab_spam">Spam</string>
+    <string name="time_now">Now</string>
+    <string name="time_sec">%ds ago</string>
+    <string name="time_min">%dm ago</string>
+    <string name="time_hour">%dh ago</string>
+    <string name="time_yesterday">Yesterday</string>
 
 </resources>

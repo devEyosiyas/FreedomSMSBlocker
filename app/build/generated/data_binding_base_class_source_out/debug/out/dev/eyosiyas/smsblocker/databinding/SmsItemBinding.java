@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.cardview.widget.CardView;
 import androidx.viewbinding.ViewBinding;
-import de.hdodenhof.circleimageview.CircleImageView;
+import com.google.android.material.imageview.ShapeableImageView;
 import dev.eyosiyas.smsblocker.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -20,7 +20,7 @@ public final class SmsItemBinding implements ViewBinding {
   private final CardView rootView;
 
   @NonNull
-  public final CircleImageView UserProfile;
+  public final ShapeableImageView UserProfile;
 
   @NonNull
   public final TextView txtMessageBody;
@@ -31,7 +31,7 @@ public final class SmsItemBinding implements ViewBinding {
   @NonNull
   public final TextView txtTime;
 
-  private SmsItemBinding(@NonNull CardView rootView, @NonNull CircleImageView UserProfile,
+  private SmsItemBinding(@NonNull CardView rootView, @NonNull ShapeableImageView UserProfile,
       @NonNull TextView txtMessageBody, @NonNull TextView txtSenderName,
       @NonNull TextView txtTime) {
     this.rootView = rootView;
@@ -69,7 +69,7 @@ public final class SmsItemBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.UserProfile;
-      CircleImageView UserProfile = rootView.findViewById(id);
+      ShapeableImageView UserProfile = rootView.findViewById(id);
       if (UserProfile == null) {
         break missingId;
       }

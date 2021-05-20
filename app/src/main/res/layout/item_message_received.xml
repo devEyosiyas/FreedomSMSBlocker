@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="8dp">
 
-    <de.hdodenhof.circleimageview.CircleImageView
+    <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/SenderProfile"
-        app:tint="@color/colorPrimaryDark"
         android:layout_width="48dp"
         android:layout_height="48dp"
         android:layout_alignParentStart="true"
         android:layout_marginStart="8dp"
-        android:src="@drawable/ic_user" />
+        android:src="@drawable/ic_user"
+        app:shapeAppearanceOverlay="@style/circleImageView"
+        app:tint="@color/primaryColor" />
 
     <TextView
         android:id="@+id/txtSenderMessage"
@@ -23,8 +24,7 @@
         android:layout_toEndOf="@id/SenderProfile"
         android:background="@drawable/rounded_rectangle_inbox"
         android:maxWidth="240dp"
-        android:padding="8dp"
-        android:textColor="#ffffff" />
+        android:padding="8dp" />
 
     <TextView
         android:id="@+id/txtSenderTimestamp"

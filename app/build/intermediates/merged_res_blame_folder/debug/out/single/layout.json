@@ -20,12 +20,12 @@
         "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\fragment_message.xml"
     },
     {
-        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_crowd_source.xml",
-        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\fragment_crowd_source.xml"
-    },
-    {
         "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\keyword_management.xml",
         "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\keyword_management.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_crowd_source.xml",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\fragment_crowd_source.xml"
     },
     {
         "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\sms_item.xml",
@@ -34,6 +34,10 @@
     {
         "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\keyword_item.xml",
         "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\keyword_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_detail.xml",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\fragment_detail.xml"
     },
     {
         "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_whitelist.xml",
@@ -52,12 +56,20 @@
         "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_view_pager.xml",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\fragment_view_pager.xml"
+    },
+    {
         "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_setting.xml",
         "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\fragment_setting.xml"
     },
     {
         "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_block.xml",
         "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\fragment_block.xml"
+    },
+    {
+        "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\nav_header.xml",
+        "source": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\src\\main\\res\\layout\\nav_header.xml"
     },
     {
         "merged": "C:\\Users\\Dev Eyosiyas\\Documents\\GitHub\\FreedomSMSBlocker\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\blacklist_managment.xml",

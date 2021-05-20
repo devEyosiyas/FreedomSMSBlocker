@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/viewPagerFragment">
+    <fragment
+        android:id="@+id/viewPagerFragment"
+        android:name="dev.eyosiyas.smsblocker.fragment.ViewPagerFragment"
+        android:label="@string/menu_message"
+
+        tools:layout="@layout/fragment_view_pager">
+        <action
+
+            android:id="@+id/navigate_to_detail_fragment"
+            app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_viewPagerFragment_to_crowdSourceFragment"
+            app:destination="@id/crowdSourceFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/crowdSourceFragment"
+        android:name="dev.eyosiyas.smsblocker.fragment.CrowdSourceFragment"
+        android:label="@string/crowdsource"
+        tools:layout="@layout/fragment_crowd_source">
+        <action
+            android:id="@+id/action_crowdSourceFragment_to_viewPagerFragment"
+            app:destination="@id/viewPagerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="dev.eyosiyas.smsblocker.fragment.DetailFragment"
+        tools:layout="@layout/fragment_detail">
+        <action
+            android:id="@+id/navigate_to_view_pager"
+            app:destination="@id/viewPagerFragment" />
+        <argument
+            android:name="Key"
+            android:defaultValue="Empty"
+            app:argType="string" />
+        <argument
+            android:name="Display"
+            android:defaultValue="Empty"
+            app:argType="string" />
+    </fragment>
+</navigation>

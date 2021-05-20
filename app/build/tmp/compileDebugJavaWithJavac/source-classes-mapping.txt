@@ -6,10 +6,14 @@ dev/eyosiyas/smsblocker/databinding/ActivitySendMessageBinding.java
  dev.eyosiyas.smsblocker.databinding.ActivitySendMessageBinding
 dev/eyosiyas/smsblocker/databinding/ActivityMainBinding.java
  dev.eyosiyas.smsblocker.databinding.ActivityMainBinding
+dev/eyosiyas/smsblocker/databinding/NavHeaderBinding.java
+ dev.eyosiyas.smsblocker.databinding.NavHeaderBinding
 dev/eyosiyas/smsblocker/databinding/KeywordItemBinding.java
  dev.eyosiyas.smsblocker.databinding.KeywordItemBinding
 dev/eyosiyas/smsblocker/databinding/KeywordManagementBinding.java
  dev.eyosiyas.smsblocker.databinding.KeywordManagementBinding
+dev/eyosiyas/smsblocker/databinding/FragmentViewPagerBinding.java
+ dev.eyosiyas.smsblocker.databinding.FragmentViewPagerBinding
 dev/eyosiyas/smsblocker/dao/BlacklistDao_Impl.java
  dev.eyosiyas.smsblocker.dao.BlacklistDao_Impl
  dev.eyosiyas.smsblocker.dao.BlacklistDao_Impl$1
@@ -30,6 +34,8 @@ dev/eyosiyas/smsblocker/databinding/BlacklistManagmentBinding.java
  dev.eyosiyas.smsblocker.databinding.BlacklistManagmentBinding
 dev/eyosiyas/smsblocker/databinding/ItemMessageSentBinding.java
  dev.eyosiyas.smsblocker.databinding.ItemMessageSentBinding
+dev/eyosiyas/smsblocker/databinding/FragmentDetailBinding.java
+ dev.eyosiyas.smsblocker.databinding.FragmentDetailBinding
 dev/eyosiyas/smsblocker/dao/BlockedDao_Impl.java
  dev.eyosiyas.smsblocker.dao.BlockedDao_Impl
  dev.eyosiyas.smsblocker.dao.BlockedDao_Impl$1

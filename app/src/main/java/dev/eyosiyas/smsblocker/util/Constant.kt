@@ -12,7 +12,10 @@ object Constant {
     const val BLOCKING_RULE: String = "Blocking Rule"
     const val DATE_PATTERN: String = "MMM dd yyyy"
     const val TIME_PATTERN: String = "hh:mm:ss a"
+    const val DAY_PATTERN: String = "EEEE"
     const val DATE_TIME_PATTERN: String = "MMM dd yyyy hh:mm:ss a"
+    const val DATE_MONTH_PATTERN: String = "MMM dd"
+    const val DATE_MONTH_YEAR_PATTERN: String = "MMM dd yyyy"
     const val PATH_SHORT_CODE: String = "short-code"
     const val FIELD_NUMBER: String = "spam"
     const val FIELD_TIMESTAMP: String = "timestamp"
@@ -43,9 +46,12 @@ object Constant {
     val CONTENT_PROVIDER_SMS: Uri = Uri.parse("content://sms/")
     val CONTENT_PROVIDER_INBOX: Uri = Uri.parse("content://sms/inbox")
     const val SMS_BUNDLE: String = "pdus"
+    const val SMS_FORMAT: String = "format"
     const val NUCLEAR: String = "nuclear"
     const val STARTS_WITH: String = "startsWith"
     const val ENDS_WITH: String = "endsWith"
     val INPUT_LIMIT = InputFilter.LengthFilter(15)
     val INPUT_LIMIT_WHITELIST = InputFilter.LengthFilter(4)
+    const val EPOCH_MULTIPLIER = 1000L
+    const val DEFAULT_PROFILE: String = "Empty"
 }

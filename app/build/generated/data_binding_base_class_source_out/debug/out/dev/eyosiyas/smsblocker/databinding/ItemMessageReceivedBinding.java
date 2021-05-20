@@ -9,7 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import de.hdodenhof.circleimageview.CircleImageView;
+import com.google.android.material.imageview.ShapeableImageView;
 import dev.eyosiyas.smsblocker.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -20,7 +20,7 @@ public final class ItemMessageReceivedBinding implements ViewBinding {
   private final RelativeLayout rootView;
 
   @NonNull
-  public final CircleImageView SenderProfile;
+  public final ShapeableImageView SenderProfile;
 
   @NonNull
   public final TextView txtSenderMessage;
@@ -29,7 +29,7 @@ public final class ItemMessageReceivedBinding implements ViewBinding {
   public final TextView txtSenderTimestamp;
 
   private ItemMessageReceivedBinding(@NonNull RelativeLayout rootView,
-      @NonNull CircleImageView SenderProfile, @NonNull TextView txtSenderMessage,
+      @NonNull ShapeableImageView SenderProfile, @NonNull TextView txtSenderMessage,
       @NonNull TextView txtSenderTimestamp) {
     this.rootView = rootView;
     this.SenderProfile = SenderProfile;
@@ -65,7 +65,7 @@ public final class ItemMessageReceivedBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.SenderProfile;
-      CircleImageView SenderProfile = rootView.findViewById(id);
+      ShapeableImageView SenderProfile = rootView.findViewById(id);
       if (SenderProfile == null) {
         break missingId;
       }

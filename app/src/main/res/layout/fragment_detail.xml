@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/detailMessageBG"
+    android:orientation="vertical"
+    tools:context=".fragment.DetailFragment">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/detailMessageRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/container"
+        app:layout_constraintBottom_toTopOf="@+id/container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/ic_add" />
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="18dp"
+        android:layout_toEndOf="@id/fabAdd"
+        android:background="@drawable/sms_edit_text_bg"
+        android:orientation="horizontal"
+        android:padding="12dp"
+        android:weightSum="1">
+
+        <EditText
+            android:id="@+id/editMessageBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_weight="0.9"
+            android:background="@android:color/transparent"
+            android:hint="Type an SMS"
+            android:importantForAutofill="no"
+            android:inputType="text"
+            android:maxLines="6" />
+
+        <ImageButton
+            android:id="@+id/btnSendMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.1"
+            android:background="@null"
+            android:contentDescription="@string/app_name"
+            android:enabled="false"
+            android:src="@drawable/ic_send"
+            android:tint="@color/primaryColor" />
+    </LinearLayout>
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/editMessageBox"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentStart="true"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_marginStart="8dp"-->
+    <!--        android:layout_marginBottom="24dp"-->
+    <!--        android:layout_toStartOf="@+id/btnSendMessage"-->
+    <!--        android:background="@android:color/transparent"-->
+    <!--        android:hint="@string/enter_message"-->
+    <!--        android:importantForAutofill="no"-->
+    <!--        android:inputType="text"-->
+    <!--        android:maxLines="6" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/btnSendMessage"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_marginEnd="16dp"-->
+    <!--        android:layout_marginBottom="16dp"-->
+    <!--        android:background="?attr/selectableItemBackground"-->
+    <!--        android:enabled="false"-->
+    <!--        android:text="@string/send"-->
+    <!--        android:textSize="17sp" />-->
+
+</RelativeLayout>

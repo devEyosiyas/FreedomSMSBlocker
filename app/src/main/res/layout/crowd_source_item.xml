@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/crowdSourceCard"
     android:layout_width="match_parent"
     android:layout_height="60dp"
     android:layout_margin="5dp"
+    android:checkable="true"
     android:clickable="true"
     android:focusable="true"
     app:cardCornerRadius="10dp">
@@ -30,17 +32,6 @@
             android:layout_alignParentBottom="true"
             android:layout_marginEnd="15dp"
             android:layout_marginBottom="2dp" />
-
-        <ImageView
-            android:id="@+id/addCrowdSourcedBlacklist"
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="8dp"
-            android:contentDescription="@string/app_name"
-            android:src="@drawable/ic_insert"
-            app:tint="@color/colorPrimaryDark" />
     </RelativeLayout>
 
-
-</androidx.cardview.widget.CardView>
+</com.google.android.material.card.MaterialCardView>

@@ -1,6 +1,7 @@
 package dev.eyosiyas.smsblocker.service
 
 import android.content.*
+import android.os.Build
 import android.os.Bundle
 import android.telephony.SmsMessage
 import androidx.core.app.NotificationCompat
@@ -10,6 +11,7 @@ import dev.eyosiyas.smsblocker.model.Blocked
 import dev.eyosiyas.smsblocker.model.Keyword
 import dev.eyosiyas.smsblocker.model.Whitelist
 import dev.eyosiyas.smsblocker.util.Constant
+import dev.eyosiyas.smsblocker.util.Constant.SMS_FORMAT
 import dev.eyosiyas.smsblocker.util.Core
 import dev.eyosiyas.smsblocker.util.InformManager
 import dev.eyosiyas.smsblocker.util.PrefManager
@@ -27,18 +29,27 @@ class BlockerService : BroadcastReceiver() {
         var timestamp: Long = System.currentTimeMillis()
         val bundle: Bundle? = intent.extras
         val messages: Array<SmsMessage?>
-        if (bundle != null) {
-            val msgObjects: Array<*>? = bundle.get(Constant.SMS_BUNDLE) as Array<*>?
-            messages = arrayOfNulls(msgObjects!!.size)
-            for (i in messages.indices) {
-                messages[i] = SmsMessage.createFromPdu(msgObjects[i] as ByteArray?)
-                body.append(messages[i]!!.messageBody)
-                number = messages[i]!!.originatingAddress.toString()
-                timestamp = messages[i]!!.timestampMillis
-            }
-            GlobalScope.launch(Dispatchers.IO) {
-                createMessage(context, number, body.toString(), timestamp)
-            }
+
+        val format = bundle!!.getString(SMS_FORMAT)
+        val msgObjects: Array<*>? = bundle.get(Constant.SMS_BUNDLE) as Array<*>?
+        messages = arrayOfNulls(msgObjects!!.size)
+        for (i in messages.indices) {
+            messages[i] = if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
+                SmsMessage.createFromPdu(msgObjects[i] as ByteArray, format)
+            else
+                SmsMessage.createFromPdu(msgObjects[i] as ByteArray)
+            body.append(messages[i]!!.messageBody)
+            number = messages[i]!!.originatingAddress.toString()
+            timestamp = messages[i]!!.timestampMillis
+        }
+//            for (i in messages.indices) {
+//                messages[i] = SmsMessage.createFromPdu(msgObjects[i] as ByteArray?)
+//                body.append(messages[i]!!.messageBody)
+//                number = messages[i]!!.originatingAddress.toString()
+//                timestamp = messages[i]!!.timestampMillis
+//            }
+        GlobalScope.launch(Dispatchers.IO) {
+            createMessage(context, number, body.toString(), timestamp)
         }
     }
 
