@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Code Night SMS Blocker"
+rootProject.name = "Spam Blocker"
