@@ -6,11 +6,14 @@ import android.content.res.Configuration
 import android.database.Cursor
 import android.net.Uri
 import android.os.Build
+import android.os.Build.VERSION_CODES.M
 import android.os.Bundle
 import android.os.LocaleList
 import android.util.Log
 import android.view.*
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.loader.app.LoaderManager
@@ -24,6 +27,18 @@ import dev.eyosiyas.smsblocker.databinding.FragmentMessageBinding
 import dev.eyosiyas.smsblocker.event.MessageSelected
 import dev.eyosiyas.smsblocker.model.Message
 import dev.eyosiyas.smsblocker.util.Constant
+import dev.eyosiyas.smsblocker.util.Constant.CONTENT_PROVIDER_SMS
+import dev.eyosiyas.smsblocker.util.Constant.FIELD_BODY
+import dev.eyosiyas.smsblocker.util.Constant.FIELD_DATE
+import dev.eyosiyas.smsblocker.util.Constant.FIELD_NAME
+import dev.eyosiyas.smsblocker.util.Constant.FIELD_READ
+import dev.eyosiyas.smsblocker.util.Constant.FIELD_RECEIVED
+import dev.eyosiyas.smsblocker.util.Constant.FIELD_SEEN
+import dev.eyosiyas.smsblocker.util.Constant.FIELD_SENT
+import dev.eyosiyas.smsblocker.util.Constant.FIELD_TYPE
+import dev.eyosiyas.smsblocker.util.Constant.PERMISSION_REQUEST_READ_SMS
+import dev.eyosiyas.smsblocker.util.Constant.READ_SMS
+import dev.eyosiyas.smsblocker.util.Constant.SEND_SMS
 import dev.eyosiyas.smsblocker.util.Core
 import dev.eyosiyas.smsblocker.util.PrefManager
 import dev.eyosiyas.smsblocker.view.SendMessageActivity
@@ -65,7 +80,7 @@ class MessageFragment : Fragment(), MessageSelected, LoaderManager.LoaderCallbac
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         binder = FragmentMessageBinding.bind(inflater.inflate(R.layout.fragment_message, container, false))
         binder.fabSendMessage.setOnClickListener {
-            if (ContextCompat.checkSelfPermission((activity)!!, Constant.SEND_SMS) == PackageManager.PERMISSION_GRANTED) startActivity(Intent(context, SendMessageActivity::class.java)) else Toast.makeText(context, "You need permission", Toast.LENGTH_SHORT).show()
+            if (ContextCompat.checkSelfPermission((activity)!!, SEND_SMS) == PackageManager.PERMISSION_GRANTED) startActivity(Intent(context, SendMessageActivity::class.java)) else Toast.makeText(context, "You need permission", Toast.LENGTH_SHORT).show()
         }
         binder.smsListRecycler.layoutManager = LinearLayoutManager(requireContext())
         binder.smsListRecycler.adapter = MessageAdapter(this, messages())
@@ -73,14 +88,18 @@ class MessageFragment : Fragment(), MessageSelected, LoaderManager.LoaderCallbac
     }
 
     private fun messages(): List<Message> {
+        if (Build.VERSION.SDK_INT >= M && ContextCompat.checkSelfPermission(requireContext(), READ_SMS) == PackageManager.PERMISSION_DENIED) {
+            ActivityCompat.requestPermissions(requireActivity(), arrayOf(READ_SMS), PERMISSION_REQUEST_READ_SMS)
+            return emptyList()
+        }
         val messages: MutableList<Message> = ArrayList()
         val list: MutableList<String> = ArrayList()
-        val cursor: Cursor? = requireActivity().contentResolver.query(Constant.CONTENT_PROVIDER_SMS, null, null, null, null)
+        val cursor: Cursor? = requireActivity().contentResolver.query(CONTENT_PROVIDER_SMS, null, null, null, null)
         while (cursor!!.moveToNext()) {
-            if (!list.contains(cursor.getString(cursor.getColumnIndex(Constant.FIELD_NAME)))) {
-                list.add(cursor.getString(cursor.getColumnIndex(Constant.FIELD_NAME)))
-                val msg = Message(0, cursor.getString(cursor.getColumnIndex(Constant.FIELD_NAME)), Core.displayName(requireContext(), cursor.getString(cursor.getColumnIndex(Constant.FIELD_NAME))), if (cursor.getInt(cursor.getColumnIndex(Constant.FIELD_TYPE)) == 1) Constant.FIELD_RECEIVED else Constant.FIELD_SENT, cursor.getString(cursor.getColumnIndex(Constant.FIELD_BODY)), cursor.getInt(cursor.getColumnIndex(Constant.FIELD_READ)) != 0, cursor.getInt(cursor.getColumnIndex(Constant.FIELD_SEEN)) != 0, cursor.getLong(cursor.getColumnIndex(Constant.FIELD_DATE)))
-                msg.picture = Core.contactPicture(requireContext(), cursor.getString(cursor.getColumnIndex(Constant.FIELD_NAME)))
+            if (!list.contains(cursor.getString(cursor.getColumnIndex(FIELD_NAME)))) {
+                list.add(cursor.getString(cursor.getColumnIndex(FIELD_NAME)))
+                val msg = Message(0, cursor.getString(cursor.getColumnIndex(FIELD_NAME)), Core.displayName(requireContext(), cursor.getString(cursor.getColumnIndex(FIELD_NAME))), if (cursor.getInt(cursor.getColumnIndex(FIELD_TYPE)) == 1) FIELD_RECEIVED else FIELD_SENT, cursor.getString(cursor.getColumnIndex(FIELD_BODY)), cursor.getInt(cursor.getColumnIndex(FIELD_READ)) != 0, cursor.getInt(cursor.getColumnIndex(FIELD_SEEN)) != 0, cursor.getLong(cursor.getColumnIndex(FIELD_DATE)))
+                msg.picture = Core.contactPicture(requireContext(), cursor.getString(cursor.getColumnIndex(FIELD_NAME)))
                 messages.add(msg)
             }
         }
